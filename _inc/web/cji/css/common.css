@@ -1,0 +1,121 @@
+@import url('../css/page_style.css');
+@import url('../css/bbs_style.css');
+@import url("../html/edu/html/css/s-core-dream.css");
+.kakaotest {background:url('/html/edu/html/img/page/intro/cont_Intro_top_box.png') no-repeat; width: 500px; height: 600px;}
+
+/* Reset */
+html,body{width:100%;height:100%;}
+html>/**/body { overflow-y:scroll; }
+
+body,div,table,th,td,h1,h2,h3,h4,h5,form,fieldset,p,button,legend,pre,code,blockquote,input,textarea,button,select,ul,li,ol,dd,dl,dt{margin:0;padding:0; font-family:'맑은고딕','Malgun Gothic','돋움',Dotum,'굴림',tahoma,Gulim,NanumGothic,Helvetica,'Apple SD Gothic Neo',Sans-serif; font-size:12px; color:#6c6c6c;}
+img,fieldset,iframe,input,button{border:0 none;}
+input,select,textarea,button{vertical-align:middle;}
+dl,ul,ol,menu,li{list-style:none}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+legend{position:absolute; width:1px; height:1px; font-size:0; line-height:0; overflow:hidden;}
+caption {padding:0; height:0; font-size:0; line-height:0; overflow:hidden;}
+hr{display:none}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+iframe{vertical-align:top}
+a{color:#6c6c6c;text-decoration:none;}
+a:hover{color:#6c6c6c;text-decoration:none;}
+p {font-weight:bold;font-size:13px;color:#333;line-height:20px}
+
+/* Common */
+.blind,legend{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+.clear{clear:both}
+.f_l{float:left}
+.f_r{float:right}
+.ir_pm {display:block;overflow:hidden;font-size:0px;line-height:0;text-indent:-9999px} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {display:block;overflow:hidden;position:relative;z-index:-10;width:100%;height:100%} /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.show{display:block}
+.hide{display:none}
+.tbl, tbl table {border-collapse:collapse; border-spacing:0} /* 테이블 초기화 */
+.page table{margin:0 auto}
+.bold {font-weight:bold}
+.normal {font-weight:normal !important;}
+.vt_mid {vertical-align: middle}
+
+/* margin CSS */
+.mAuto{margin:auto !important;}.m0{margin:0 !important;}
+.mt0 {margin-top:0 !important}.mt3 {margin-top:3px !important;}.mt5 {margin-top:5px !important;}.mt10 {margin-top:10px !important;} .mt15 {margin-top:15px !important;} .mt20 {margin-top:20px !important;} .mt25 {margin-top:25px !important;} .mt30 {margin-top:30px !important;} .mt35 {margin-top:35px !important;} .mt40 {margin-top:40px !important;} .mt45 {margin-top:45px !important;} .mt50 {margin-top:50px !important;} .mt55 {margin-top:55px !important;}.mt60 {margin-top:60px !important;} .mt65 {margin-top:65px !important;}
+.mt70 {margin-top:70px !important;} .mt75 {margin-top:75px !important;}.mt80 {margin-top:80px !important;} .mt85 {margin-top:85px !important;}.mt90 {margin-top:90px !important;} .mt95 {margin-top:95px !important;}.mt100 {margin-top:100px !important;} .mt105 {margin-top:105px !important;}
+.mt150 {margin-top:150px !important;}.mt200 {margin-top:200px !important;}
+
+.mb0 {margin-bottom:0 !important}.mb3 {margin-bottom:3px !important;} .mb5 {margin-bottom:5px !important;} .mb10 {margin-bottom:10px !important;} .mb15 {margin-bottom:15px !important;} .mb20 {margin-bottom:20px !important;} .mb25 {margin-bottom:25px !important;} .mb30 {margin-bottom:30px !important;}.mb35 {margin-bottom:35px !important;} .mb40 {margin-bottom:40px !important;} .mb45 {margin-bottom:45px !important;} .mb50 {margin-bottom:50px !important;} .mb55 {margin-bottom:55px !important;}.mb60 {margin-bottom:60px !important;} .mb65 {margin-bottom:65px !important;}.mb70 {margin-bottom:70px !important;} .mb75 {margin-bottom:75px !important;}
+.mb80 {margin-bottom:80px !important;} .mb85 {margin-bottom:85px !important;}.mb90 {margin-bottom:90px !important;} .mb95 {margin-bottom:95px !important;}.mb100 {margin-bottom:100px !important;}
+
+.ml4perHf {margin-left:3.5% !important}.ml5per {margin-left:5% !important}
+.ml0 {margin-left:0 !important} .ml2 {margin-left:2px !important;}.ml3 {margin-left:3px !important;} .ml5 {margin-left:5px !important;} .ml7 {margin-left:7px !important;} .ml10{margin-left:10px !important;} .ml15{margin-left:15px !important;} .ml20{margin-left:20px !important;} .ml25{margin-left:25px !important;} .ml30{margin-left:30px !important;} .ml35{margin-left:35px !important;} .ml40 {margin-left:40px !important;} .ml45{margin-left:45px !important;} .ml50{margin-left:50px !important;} .ml55 {margin-left:55px !important;}.ml60 {margin-left:60px !important;}.ml65 {margin-left:65px !important;}.ml70 {margin-left:70px !important;} .ml75 {margin-left:75px !important;}
+.ml80 {margin-left:80px !important;} .ml85 {margin-left:85px !important;}.ml90 {margin-left:90px !important;} .ml95 {margin-left:95px !important;}
+.ml100 {margin-left:100px !important;}.ml130 {margin-left:130px !important;}
+
+.mr4perHf{margin-right:3.5% !important}.mr5per{margin-right:5% !important}
+.mr0 {margin-right:0 !important}.mr2{margin-right:2px !important;} .mr3{margin-right:3px !important;} .mr5{margin-right:5px !important;} .mr6{margin-right:6px !important;}.mr10 {margin-right:10px !important;} .mr15 {margin-right:15px !important;} .mr20 {margin-right:20px !important;} .mr25 {margin-right:25px !important;} .mr30 {margin-right:30px !important;} .mr35 {margin-right:35px !important;} .mr40 {margin-right:40px !important;} .mr45 {margin-right:45px !important;} .mr50 {margin-right:50px !important;} .mr55 {margin-right:55px !important;}.ml60 {margin-right:60px !important;}.ml65 {margin-right:65px !important;}.mr70 {margin-right:70px !important;} .mr75 {margin-right:75px !important;}
+.mr80 {margin-right:80px !important;} .mr85 {margin-right:85px !important;}.mr90 {margin-right:90px !important;} .mr95 {margin-right:95px !important;}.mr100 {margin-right:100px;}.mr105 {margin-right:105px !important;}
+
+/* padding CSS */
+.p0 {padding:0 !important}
+.pt0 {padding-top:0 !important}.pt5 {padding-top:5px !important;} .pt10 {padding-top:10px !important} .pt15 {padding-top:15px !important} .pt20 {padding-top:20px !important}.pt25 {padding-top:25px !important}.pt30 {padding-top:30px !important}.pt35 {padding-top:35px !important} .pt40 {padding-top:40px !important}.pt45 {padding-top:45px !important} .pt50 {padding-top:50px !important} .pt55 {padding-top:55px !important}
+.pt60 {padding-top:60px !important} .pt65 {padding-top:65px !important}.pt70 {padding-top:70px !important} .pt75 {padding-top:75px !important}.pt80 {padding-top:80px !important} .pt85 {padding-top:85px !important}.pt90 {padding-top:90px !important} .pt95 {padding-top:95px !important}.pt100 {padding-top:100px !important} .pt105 {padding-top:105px !important}.pt150 {padding-top:150px !important}.pt180 {padding-top:180px !important}.pt200 {padding-top:200px !important}
+
+.pb0 {padding-bottom:0 !important}.pb4{padding-bottom:4px !important} .pb5 {padding-bottom:5px !important} .pb10 {padding-bottom:10px !important} .pb15 {padding-bottom:15px !important} .pb20 {padding-bottom:20px !important} .pb25 {padding-bottom:25px !important} .pb30 {padding-bottom:30px !important} .pb35 {padding-bottom:35px !important} .pb40 {padding-bottom:40px !important}.pb45 {padding-bottom:45px !important} .pb50 {padding-bottom:50px !important}.pb55 {padding-bottom:55px !important}
+.pb60 {padding-bottom:60px !important} .pb65 {padding-bottom:65px !important}.pb70 {padding-bottom:70px !important} .pb75 {padding-bottom:75px !important}.pb80 {padding-bottom:80px !important} .pb85 {padding-bottom:85px !important}.pb90 {padding-bottom:90px !important} .pb95 {padding-bottom:95px !important}.pb100 {padding-bottom:100px !important} .pb105 {padding-bottom:105px !important}
+
+.pl0 {padding-left:0 !important}.pl5{padding-left:5px !important} .pl7{padding-left:7px !important} .pl10{padding-left:10px !important} .pl15{padding-left:15px !important} .pl20{padding-left:20px !important} .pl25{padding-left:25px !important}.pl30{padding-left:30px !important} .pl35{padding-left:35px !important}.pl40{padding-left:40px !important} .pl45{padding-left:45px !important} .pl50{padding-left:50px !important} .pl55{padding-left:55px !important}
+.pl60 {padding-left:60px !important} .pl65 {padding-left:65px !important}.pl70 {padding-left:70px !important} .pl75 {padding-left:75px !important}.pl80 {padding-left:80px !important} .pl85 {padding-left:85px !important}.pl90 {padding-left:90px !important} .pl95 {padding-left:95px !important}.pl100 {padding-left:100px !important} .pl105 {padding-left:105px !important}
+
+.pr0 {padding-right:0 !important} .pr5{padding-right:5px !important}.pr10{padding-right:10px !important}.pr15{padding-right:15px !important}.pr20{padding-right:20px !important}.pr25{padding-right:25px !important}.pr30{padding-right:30px !important}.pr35{padding-right:35px !important}.pr40{padding-right:40px !important}.pr45{padding-right:45px !important}.pr50{padding-right:50px !important}.pr55{padding-right:55px !important}
+.pr60 {padding-right:60px !important} .pr65 {padding-right:65px !important}.pr70 {padding-right:70px !important} .pr75 {padding-right:75px !important}.pr80 {padding-right:80px !important} .pr85 {padding-right:85px !important}.pr90 {padding-right:90px !important} .pr95 {padding-right:95px !important}.pr100 {padding-right:100px !important} .pr105 {padding-right:105px !important}
+
+/* Font-style */
+.font_9 { font-size:9px;}
+.font_10 { font-size:10px !important;}
+.font_11 { font-size:11px !important;}
+.font_12 { font-size:12px !important;}
+.font_13 { font-size:13px !important;}
+.font_14 { font-size:14px !important;}
+.font_15 { font-size:15px !important;}
+.font_16 { font-size:16px !important;}
+.font_17 { font-size:17px !important;}
+.font_18 { font-size:18px !important;}
+.font_19 { font-size:19px !important;}
+.font_20 { font-size:20px !important;}
+.font_21 { font-size:21px !important;}
+.font_22 { font-size:22px !important;}
+.font_23 { font-size:23px !important;}
+.font_24 { font-size:24px !important;}
+.font_25 { font-size:25px !important;}
+.font_26 { font-size:26px !important;}
+.font_27 { font-size:27px !important;}
+.font_28 { font-size:28px !important;}
+.font_29 { font-size:29px !important;}
+.font_30 { font-size:30px !important;}
+
+.font_dotum{font-family:'돋움','맑은고딕',Dotum,'굴림',tahoma,Gulim,NanumGothic,Helvetica,'Apple SD Gothic Neo',Sans-serif;}
+.font_tahoma{font-family:Tahoma, '돋움','맑은고딕',Dotum,'굴림',Gulim,NanumGothic,Helvetica,'Apple SD Gothic Neo',Sans-serif;}
+.font_gulim{font-family:'굴림','돋움','맑은고딕',Dotum,tahoma,Gulim,NanumGothic,Helvetica,'Apple SD Gothic Neo',Sans-serif;}
+.font_malgun{font-family:'맑은 고딕','돋움','굴림',Dotum,tahoma,Gulim,NanumGothic,Helvetica,'Apple SD Gothic Neo',Sans-serif !important;}
+.font_mgodic{font-family:'맑은고딕',tahoma,NanumGothic,Helvetica,'Apple SD Gothic Neo',Sans-serif;}
+
+/* Wys2 reset */
+#ct{word-break:break-all; text-align:justify;}
+#ct table{border-collapse: separate}
+#ct ul{padding-left:20px; display:block}
+#ct ul li{display:list-item; list-style:disc}
+#ct ol{padding-left:20px; display:block}
+#ct ol li{list-style:decimal;  display:list-item}
+#ct hr{display:block}
+#ct p, #ct div{font-size:inherit}
+
+.ct{word-break:break-all; text-align:justify;}
+.ct table{border-collapse: separate}
+.ct ul{padding-left:20px; display:block}
+.ct ul li{display:list-item; list-style:disc}
+.ct ol{padding-left:20px; display:block}
+.ct ol li{list-style:decimal;  display:list-item}
+.ct hr{display:block}
+.ct p, .ct div{font-size:inherit}
+

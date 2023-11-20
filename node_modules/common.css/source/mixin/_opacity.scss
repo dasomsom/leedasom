@@ -1,0 +1,13 @@
+// Opacity 透明度
+// 默认不兼容IE8以下,只需传入一个参数
+// 若需要兼容IE8以下时必须传入两个参数,且第二个参数的值为true;
+
+@mixin opacity ($opacity, $isIE:false) {
+  opacity: $opacity;
+
+  // IE8 filter
+  @if $isIE{
+    $opacity-ie: ($opacity * 100);
+    filter: alpha(opacity=$opacity-ie);
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collection detail</title>
+    <meta charset="UTF-8">
+    <!-- IE의 호환성 보기 모드 금지 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 스마트 장치에서의 해상도 균일화 처리 -->
+    
+    <!-- css 참조 -->
+    <link rel="stylesheet" href="../_assets/css/_public.css">
+    
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- JS / 플러그인 -->
+    <script type="text/javascript" src="../_assets/js/_public.js"></script>
+    <style>
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(".detail_container:not('.work_brd')").hide();
+
+            $(".tabmenu_round").find("li").click(function(i, e){
+                $(".tabmenu_round li").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+        function detailTab(sbj){
+            $(".tabmenu_round li").removeClass("active");
+            $(".detail_container").show();
+
+            if(sbj == "all"){
+                $(".tabmenu_round #work_all").addClass("active");
+                $(".detail_container").show();
+            } else{
+                $(".tabmenu_round #work_"+ sbj).addClass("active");
+                $(".detail_container:not('.work_"+ sbj +"')").hide();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="collection_detail">
+        <iframe name="topMenu" id="topMenu" title="탑프레임" src="../_inc/top.html" frameborder="0"></iframe>
+        <main>
+            <section>
+                <div class="half_full flex flex_btw">
+                    <div class="img_container">
+                        <div class="img_box">
+                            <div style="height:270px;width:100%;"><img src="/_assets/img/work_brd_5.jpg" alt="CJI EDU 로고" style="margin: auto;"></div>
+                            <img src="/_assets/img/detail_cji_ci.jpg" alt="CJI EDU 로고 디테일">
+                        </div>
+                        <div class="img_box">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                    <div class="txt_container">
+                        <div style="width: 60%;">
+                            <div>
+                                <div class="fontabril">중국어학사이트</div>
+                                <div class="flex flex_btw">
+                                    <ul class="tabmenu_round">
+                                        <li id="work_brd" onclick="detailTab('brd')" class="active"><a href="#self">BI</a></li>
+                                        <li id="work_web" onclick="detailTab('web')"><a href="#self">Site Renewal</a></li>                            
+                                        <li id="work_vmd" onclick="detailTab('vmd')"><a href="#self">Contents</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <section class="detail_container work_brd">
+                                <div>
+                                    <div class="fontabril" style="font-size: 5em;">BI Design</div>
+                                </div>
+                                <div class="txt_contdetail_box">
+                                    <div class="tab_btn">
+                                        <span href="#">설명</span>
+                                    </div>
+                                    <div class="tab_txt">
+                                        <div>설명탭에 대한 내용</div>
+                                    </div>
+                                    <div class="tab_icon_box">
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-illustrator--v1.png" alt="adobe-illustrator--v1"/>
+                                    </div>
+                                    <div>작업일자 : <span>2020.00.00</span></div>
+                                </div>
+                            </section>
+                            <section class="detail_container work_web">
+                                <div>
+                                    <div class="fontabril" style="font-size: 5em;">Site Renewal</div>
+                                </div>
+                                <div class="txt_contdetail_box">
+                                    <div class="tab_btn">
+                                        <span href="#">설명</span>
+                                    </div>
+                                    <div class="tab_txt">
+                                        <div>설명탭에 대한 내용</div>
+                                    </div>
+                                    <div class="tab_icon_box">
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-illustrator--v1.png" alt="adobe-illustrator--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-logo-shadow-tal-revivo.png" alt="css" class="icon_css"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/external-those-icons-fill-those-icons/48/000000/external-PHP-programming-and-development-those-icons-fill-those-icons.png" alt="php">
+                                    </div>
+                                    <div>작업일자 : <span>2020.00.00</span></div>
+                                </div>
+                            </section>
+                            <section class="detail_container work_vmd">
+                                <div>
+                                    <div class="fontabril" style="font-size: 5em;">Contents</div>
+                                </div>
+                                <div class="txt_contdetail_box">
+                                    <div class="tab_btn">
+                                        <span href="#">설명</span>
+                                    </div>
+                                    <div class="tab_txt">
+                                        <div>설명탭에 대한 내용</div>
+                                    </div>
+                                    <div class="tab_icon_box">
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-illustrator--v1.png" alt="adobe-illustrator--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-cascading-style-sheets-language-used-for-describing-the-presentation-of-a-document-logo-shadow-tal-revivo.png" alt="css" class="icon_css"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
+                                        <img width="48" height="48" src="https://img.icons8.com/external-those-icons-fill-those-icons/48/000000/external-PHP-programming-and-development-those-icons-fill-those-icons.png" alt="php">
+                                    </div>
+                                    <div>작업일자 : <span>2020.00.00</span></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <iframe name="footer" id="footer" title="푸터프레임" src="../_inc/footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

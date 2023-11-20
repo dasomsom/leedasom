@@ -1,0 +1,494 @@
+/*################################################################################################
+
+
+								■□■□■□■□■□     HappyCGI     ■□■□■□■□■□
+
+
+---------------------------------------------------------------------------------------------------------
+제목	  : 해패CGI 정보소개 솔루션 - 업체버전 스타일시트 [CSS (Cascading Style Sheets) ]
+제작자 : 윤동기
+이메일 : doobab@happycgi.com
+---------------------------------------------------------------------------------------------------------
+http://www.happycgi.com
+http://www.cgimall.co.kr
+---------------------------------------------------------------------------------------------------------
+고객센터전화 : 1566-1621
+고객지원게시판: http://www.cgimall.co.kr/happy_board/happy_board.cgi?db=info_qna (회원로그인후 작성가능)
+---------------------------------------------------------------------------------------------------------
+Last update : 2008.10.29
+---------------------------------------------------------------------------------------------------------
+Copyrightⓒ1997~2008 CGIMALL All rights reserved Powered By HappyCGI
+---------------------------------------------------------------------------------------------------------
+
+
+/***[ 도움말 : 읽어주세요! ] *******************************************************************************************************
+
+1. 아래는 각 템플릿파일 및 출력게시물 템플릿파일에 적용된 CSS 사항들입니다.
+2. 템플릿파일 및 출력게시물 템플릿파일에 적용된 기본적인 옵션 사항들을 여기에서 어느정도 수정하실 수 있습니다.
+3. 공통사항, 그룹사항 및 개별사항의 CSS 항목 내용들끼리 구분시켜 놓았습니다.
+4. 빠르게 찾기 위해서는 문서 편집툴에 기본 제공되는 글찾기 ( "Ctrl + F") 기능을 이용하여 해당 항목을 찾으시기 바랍니다.
+5. CSS 내용이 적용된 사항들을 사용하는 템플릿 파일명을 기재되어 있으니 수정시 참조하시기 바랍니다.
+6. 업체정보 관련 템플릿파일은 " html " 폴더에 들어 있습니다.
+7. 게시판 관련 템플릿파일은 "html_bbs" 폴더에 들어 있습니다.
+
+8. ★★ "CSS " 수정,편집에 관한 내용은 인터넷 검색 또는 관련 강좌를 참조하시기 바랍니다. ★★
+
+*************************************************************************************************************************************
+#################################################################################################*/
+
+
+
+
+/*** 기본 CSS 설정  *********************************************************************************************[ -- START -- ]***/
+body{margin:0px;}
+div{border-width:0px; border-style:solid; border-color:red;}
+img{border-width:0px; border-style:solid; border-color:green;}
+table{clear:both; border-width:0px; border-style:solid; border-color:blue;}
+td,tr,th{font-size:9pt; font-family:돋움;}
+a{color:black; text-decoration:none;}
+a:hover{color:green; text-decoration:underline;}
+
+
+
+/*** 툴팁레이어 ***/
+#dhtmltooltip{
+position:absolute;
+border-width:3px;
+border-style:solid;
+border-color:#555;
+padding: 2px;
+background-color: lightyellow;
+visibility: hidden;
+z-index: 100;
+}
+
+/*** 추천키워드 투명도설정 ***/
+.pick_keyword{filter:alpha(opacity:80);}
+
+/*** 기본 CSS 설정  *********************************************************************************************[ -- END -- ]***/
+
+
+
+
+
+
+
+
+/*** 게시판 :: 오늘 등록 게시물에 대한 날짜 색상설정 **************************************************/
+.today_bbs_date{color:#FF8F59;}
+
+
+
+
+
+
+
+
+
+/*** 레이아웃 구성에 대한 설정 - 커뮤니티 ( bbs_default.html ) [ START ] **************************************************/
+
+/*** 전체를 감싸는 레이어 ***/
+#wrapper_community{position:; width:940px; padding-bottom:15px; border:0 solid red;}
+
+	/*** 최상단 레이어 ***/
+	#top_community{width:100%; height:163px; margin:0 0 10 0; /*overflow:hidden;*/ border:0 solid red; text-align:center;}
+
+
+
+	/*** 본문 전체를 감싸는 레이어 ***/
+	#wrapper_contents_community{width:100%; height:2050px; border-width:0px; border-style:solid; border-color:gray;}
+
+
+
+	/*** 본문 좌측 레이어 ***/
+	#left_community{float:left; width:190px; margin-right:10px; background-color:#EBEBEB; border:0 solid green;}
+
+
+
+	/*** 본문 (컨텐츠)내용 레이어 ***/
+
+	/***[ 도움말 ] *******************************************************************************************************
+
+	아래의 항목들은 여기에서 설정하지 않고 각 템플릿 파일에서 조절해야 하는 부분입니다.
+
+	적용된 템플릿파일 >> bbs_default.html (껍데기템플릿) / bbs_index.html : 커뮤니티 메인페이지 ( 내용물 템플릿파일 )
+	#contents_community{float:right; width:740px; background:url('../img/mypg_main01c_mpcnt.jpg'); border:0 solid violet;}
+	*********************************************************************************************************************/
+
+
+
+	/*** 하단레이어 ***/
+	#bottom_community{width:100%; border:0 solid black;}
+
+	/*** 레이어별 그룹설정 [ start ] ***/
+	#left_community,#contents_community{height:100%; /*overflow:hidden;*/}
+	#bottom_community,#v_space_community,#category_menu{clear:both;}
+	/*** 레이어별 그룹설정 [ end ] ***/
+
+	/*** 여백 레이어 ( 세로 ) ***/
+	#v_space_community{height:10px; background-color:#FFF;}
+	#v_space_community_add{padding:5; background-color:#FFF;}
+	#v_space_community_add_2{padding:10; background-color:#FFF;}
+	#v_space_community,#v_space_community_add,#v_space_community_add_2{clear:both;}	/* 공통사항 */
+
+/*** 레이아웃 구성에 대한 설정 - 커뮤니티 ( bbs_default.html ) [ END ] **************************************************/
+
+
+
+
+
+
+
+
+
+
+/* 메인로고 박스 */
+#main_logo{width:480; overflow:hidden;}
+
+
+
+
+
+
+
+
+
+
+
+/*** 현재위치 포맷설정 (서브페이지 : 업체정보페이지) ***/
+.now_location{padding:3 0 0 5; font-size:11px;}	/* 현재위치 정보표시 부분의 칸 */
+.now_location_link{color:black;}	/* 현재위치 글자포맷 설정 */
+.now_location_link:hover{text-decoration:none;}	/* 현재위치 글자포맷 설정 (마우스오버시) */
+
+/*** 현재위치 모든페이지 공통사항 ***/
+#now_location{background-color:white;}
+
+
+
+
+
+
+
+
+
+
+/*** 상세정보검색 부분 (서브페이지) *********************************[ start ]*******/
+.detail_search_information{padding:21 17 17 17;}	/* 상세정보검색 선택폼 칸 부분설정 */
+
+.detailSearchTD01{width:105px;}	/* 검색지역선택, 카테고리선택, 검색단어입력 제목칸 부분 */
+.detailSearchTD02{}	/* 검색지역선택, 카테고리선택, 검색단어입력 정보선택폼 칸 부분 */
+
+	.areaSeachSelForm01TD{padding:0 5 0 0;}	 /* 검색지역선택의 지역선택폼 칸 부분 */
+	.areaSeachSelForm02TD{padding:0 5 0 0;}	 /* 검색지역선택의 구선택폼 칸 부분 */
+	.areaSeachSelForm03TD{padding:0 0 0 0;}	 /* 검색지역선택의 동선택폼 칸 부분 */
+
+	.categorySelForm01TD{padding:0 5 0 0;}	 /* 카테고리선택의 매장 선택폼 칸 부분 */
+	.categorySelForm02TD{padding:0 5 0 0;}	 /* 카테고리선택의 유료옵션 선택폼 칸 부분 */
+	.categorySelForm03TD{padding:0 0 0 0;}	 /* 카테고리선택의 검색옵션 선택폼 칸 부분 */
+
+	.seachWordINForm01TD{padding:0 5 0 0;}	 /* 검색단어입력의 단어 입력폼 칸 부분 */
+	.seachWordINForm02TD{padding:0 0 0 0;}	 /* 검색단어입력의 검색버튼 칸 부분 */
+		.searchWordINput{width:400px;height:20px; font-size:12px; background-attachment:fixed; border-width:1px; border-style:solid; border-color:#C0C0C0;}	/* 검색단어 입력폼 */
+
+	.td_VSpace{height:13px;}	/* 칸 높이 여백설정 */
+/*** 상세정보검색 부분 (서브페이지) *********************************[ end ]*******/
+
+
+
+
+
+
+
+
+
+/*** 커뮤니티 - 메인 ( bbs_index.html ) [ start ] *******************************************************/
+
+/*** 이미지 타이틀 ***/
+/*******************************************************************************
+ [ 도움말 ]
+ 이미지 타이틀 설정은 html_bbs / bbs_index.html 문서파일의 내용 상단에 위치
+ #community_title_image{}
+*******************************************************************************/
+
+
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 01 ] [ start ] - 업체뉴스 / 포토뉴스  ***/
+#community_board_01{height:320px; border:0 solid red;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 01 ] [ end ] ***/
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 01 - 1 ] [ start ] - 전문가칼럼 / 인테리어갤러리  ***/
+#community_board_01-1{height:150px; border:0 solid red;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 01 - 1 ] [ end ] ***/
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 02 ] [ start ] - 맛집이야기 ***/
+#community_board_02{height:173px; overflow:hidden; border:0 solid red;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 02 ] [ end ] ***/
+
+
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 03 ] [ start ] - 부동산뉴스 / 창업이야기 ***/
+#community_board_03{height:135px; overflow:hidden;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 03 ] [ end ] ***/
+
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 04 ] [ start ] - 구인정보 / 구직정보 ***/
+#community_board_04{height:190px;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 04 ] [ end ] ***/
+
+
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 05 ] [ start ] - 영화이야기 / 여행스케치 ***/
+#community_board_05{height:340px; overflow:hidden;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 05 ] [ end ] ***/
+
+
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 06 ] [ start ] - 웃음충전 / 재밌는사진 / 추천하고 싶은장소 / 이벤트 / 창업이야기 ***/
+#community_board_06{height:510px; overflow:hidden;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 06 ] [ end ] ***/
+
+
+
+
+/*** 커뮤니티 메인페이지 - 게시판 [ 07 ] [ start ]  - 우리끼리 묻고 답해요 / 자유게시판 ***/
+#community_board_07{height:185px; overflow:hidden;}	/* 전체를 감싸는 레이어 */
+/*** 커뮤니티 메인페이지 - 게시판 [ 07 ] [ end ] ***/
+
+
+
+/*** 커뮤니티 - 메인 ( bbs_index.html ) [ end ] *******************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** 커뮤니티 - 게시판 ( 현재 bbs_default.html에만 적용 << bbs_list.html / bbs_regist.html / bbs_modify.html / bbs_reply.html ) [ start ] *****************/
+
+/*** 게시판 내용부분 전체를 감싸는 레이어 ***/
+#community_board_contents{display:block; border:0 solid red;}
+
+
+/*** 게시판 내용부분 레이어 가로영역 크기설정 ( width 항목값을 변경하시면 됩니다. ) ***/
+/*** 아래항목은 내용물 템플릿파일 내용에 각각 삽입됨 ***/
+/*** 현재 bbs_default.html에만 적용 << bbs_list.html , bbs_detail.html , bbs_modify.html , bbs_regist.html , bbs_reply.html ***/
+/*#community_board_width{width:680px; margin:20 0 30 0; border-width:0px; border-style:solid; border-color:red;}*/
+
+
+/*** 커뮤니티 - 게시판 ( 현재 bbs_default.html에만 적용 << bbs_list.html / bbs_regist.html / bbs_modify.html / bbs_reply.html ) [ end ] ******************/
+
+
+
+
+
+
+
+
+
+
+
+/*** 카테고리메뉴 설정 항목들 *********************************************************************************************[ -- START -- ]***/
+
+/*** [ start ]*************************************************************************************************/
+/*** 카테고리메뉴 컨텐츠 내용부분 여백 및 기타설정 ***/
+.category_menu_padding{padding:20 0 14 10; background-color:#C9D3A3; text-align:center;}
+/*.category_menu_padding{padding:20 0 14 10; background-color:#F7F9EB; text-align:center;}*/
+
+/*** 카테고리메뉴 (좌측) 등록업체수 정보 [ start ] ***/
+/*** category_menu_main_detail.html		: 좌측 카테고리 부분 (메인페이지) ***/
+/*** category_menu_sub_detail.html		: 좌측 카테고리 부분 (서브페이지) ***/
+.cateMenuTD01{width:12px; height:19px; padding-left:5px}	/*** 아이콘 부분의 칸 TD ***/
+.cateMenuTD02{padding-top:2px;}	/*** 카테고리명 부분의 칸 TD ***/
+.cateMenuTD03{width:40px;}	/*** 등록업체수 정보부분의 칸 TD ***/
+
+/*** 카테고리메뉴 글자 포맷설정 ***/
+.cateMenuFmt{color:#DDD; font-size:12px; letter-spacing:-1px;}	/*** 카테고리명 ***/
+.cateMenuFmt:hover{color:#FFF; font-weight:100; text-decoration:none;}	/*** 카테고리명 ***/
+
+/*** 카테고리메뉴에 등록된 업체수 정보 ****/
+.printCount{padding:0 3 0 5; background-color:#296C32; color:#DDD; text-align:right; font-family:tahoma; font-size:10px}	/*** 등록업체수 정보 ***/
+/*** 카테고리메뉴 (좌측) 등록업체수 정보 [ end ] ***/
+/*** [ end ]*************************************************************************************************/
+
+
+/*** [ start ]*************************************************************************************************/
+/*** 카테고리메뉴 (전체) 등록업체수 정보 [ start ] ***/
+/*** category_menu_all_detail.html : 전체 카테고리 메뉴 부분 ***/
+#allCategoryN01{width:100%; margin:0 15 2 0; padding:2 7 2 7; border-width:1; border-style:solid; border-color:#97AB50; background-color:#E7EDCB;}	/*** 전체 메인 카테고리명 감싸는 레이어부분 ***/
+#allCategoryN02{width:100%; margin:0 15 5 0; padding:5 9 3 9; border-width:1; border-style:solid; border-color:#97AB50; background-color:#FFF;}	/*** 전체 하부 카테고리명 감싸는 레이어부분 ***/
+
+.cateMenuTD_A01{width:12px; height:19px; padding-left:5px}	 /*** 아이콘 부분의 칸 TD ***/
+.cateMenuTD_A02{padding:5 7 3 0;}	/*** 카테고리명 부분의 칸 TD ***/
+.cateMenuTD_A03{padding:0 4 0 0; text-align:right;}	/*** 전체 등록업체수 정보 부분의 칸 TD ***/
+.cateMenuTD_A04{font-size:11px; color:; line-height:13px; word-break:break-all;}	/*** 출력정보 하위카테고리 부분의 칸 TD ***/
+
+/*** 카테고리메뉴 글자 포맷 ***/
+.cateMenuFmt_A{color:#333; font-size:12px; font-weight:bold;}
+.cateMenuFmt_A:hover{color:#808000; font-weight:bold; text-decoration:none;}
+
+/*** 카테고리메뉴에 등록된 업체수 정보 ****/
+.printCount_A{padding:0 3 0 5; background-color:#296C32; color:#FFF; text-align:right; font-family:tahoma; font-size:10px}
+/*** 카테고리메뉴 (전체) 등록업체수 정보 [ end ] ***/
+/*** [ end ]*************************************************************************************************/
+
+
+
+
+
+/*** [ start ]*************************************************************************************************/
+/*** 카테고리메뉴  (서브-본문) 컨텐츠 내용부분 여백 및 기타설정 ***/
+.category_menu_padding_cnt{padding:7 0 7 0; background-color:#F7F9EB; text-align:center;}
+
+/*** 카테고리메뉴 (서브-본문) 등록업체수 정보 [ start ] ***/
+/*** category_menu_sub_detail.html : 서브페이지 카테고리 하부메뉴표시 부분 ***/
+#cntCategoryN01{width:100%; margin:0 7 2 0; padding:2 3 0 3;}	/*** 전체 메인 카테고리명 감싸는 레이어부분 ***/
+#cntCategoryN02{width:100%; margin:0 7 0 0; padding:0 3 0 3;}	/*** 전체 하부 카테고리명 감싸는 레이어부분 ***/
+
+.cateMenuTD_SA01{width:12px; height:19px; padding-left:5px}	 /*** 아이콘 부분의 칸 TD ***/
+.cateMenuTD_SA02{padding:5 7 1 0;}	/*** 카테고리명 부분의 칸 TD ***/
+.cateMenuTD_SA03{padding:3 4 0 0; text-align:right;}	/*** 전체 등록업체수 정보 부분의 칸 TD ***/
+.cateMenuTD_SA04{font-size:11px; color:#888; line-height:13px; word-break:break-all;}	/*** 출력정보 하위카테고리 부분의 칸 TD ***/
+
+/*** 카테고리메뉴 글자 포맷 ***/
+.cateMenuFmt_SA{color:#333; font-size:12px; font-weight:bold;}
+.cateMenuFmt_SA:hover{color:#808000; font-weight:bold; text-decoration:none;}
+
+/*** 카테고리메뉴에 등록된 업체수 정보 ****/
+.printCount_SA{padding:0 3 0 5; background-color:#296C32; color:#FFF; text-align:right; font-family:tahoma; font-size:10px}
+/*** 카테고리메뉴 (전체) 등록업체수 정보 [ end ] ***/
+/*** [ end ]*************************************************************************************************/
+
+/*** 카테고리메뉴 설정 항목들 *********************************************************************************************[ -- END -- ]***/
+
+
+
+
+
+
+
+
+
+
+
+
+/*** 기타 구성에 대한 포맷설정 사항 *********************************************************************************************[ -- START -- ]***/
+
+/*** 쪽지도착알림 갯수 (로그인박스부분) ***/
+.messege_count{font-family:MS Sans Serif; color:#EA1795; font-size:11px; font-weight:bold;}
+
+
+/*** 상세보기 페이지 메인박스의 홈페이지 정보 텍스트관련 설정 ( detail.html ) ***/
+.detailHomepage{color:white}
+.detailHomepage:hover{color:white; text-decoration:underline;}
+
+
+
+/*** 정보게시물 제목 좌측 여백설정 ( 좌측, 우측 레이어 ) ***/
+.title_padding{padding-left:11px;}
+
+/*** 본문 좌측레이어 컨텐츠 내용부분 여백설정 ***/
+.left_contents_padding{padding:8 13 5 13;}
+
+/*** 본문 중앙레이어 컨텐츠 내용부분 여백설정 [ start ] ***/
+.center_contents_padding{padding:12 18 12 18;}
+.center_contents_padding_board{padding:10 18 10 18;}	/*** 뉴스 : 게시판쪽 ***/
+.center_contents_padding_pick1{padding:12 18 10 18;}	/*** 추천업체쪽 ***/
+.center_contents_padding_pick2{padding:9 18 13 18;}	/*** 추천업체쪽 ***/
+.center_contents_padding_new{padding:12 18 10 18;}	/*** 신규업체쪽 ***/
+/*** 본문 중앙레이어 컨텐츠 내용부분 여백설정 [ end ] ***/
+
+/*** 본문 우측레이어 컨텐츠 내용부분 여백 및 기타설정 [ start ] ***/
+.right_contents_padding{padding:10 13 14 13;}
+/*.right_contents_padding_flashmap{padding:8 10 10 10;}	 /*** 지역검색 (플래시지도) 항목쪽으로 이동됨 ***/
+.right_contents_padding_board_ta{padding:5 1 10 1;}
+.right_contents_padding_vote1{padding:8 10 7 40; height:37px; font-size:8pt; color:#FFF;}	/*** 설문조사쪽 ***/
+.right_contents_padding_vote2{padding:13 13 15 23;}	/*** 설문조사쪽 ***/
+/*** 본문 우측레이어 컨텐츠 내용부분 여백 및 기타설정 [ end ] ***/
+
+
+
+/*** 지역검색 (플래시지도) ***/
+.right_contents_padding_flashmap{padding:8 10 10 10;}	 /*** [메인페이지] 지도검색쪽 ***/
+.left_contents_padding_flashmap{padding:8 10 0 10;}	 /*** [서브페이지] 지도검색쪽 ***/
+
+
+
+
+/*** 하부카테고리 글자색상 설정하기 ***/
+.sub_category{color:#666;}
+
+
+/*** 하단 Copyright 정보 내용부분 설정 ***/
+.bottom_menu{padding:2 7 0 7;}	/* 하단메뉴 */
+.bottom_menu_separator{width:20px; text-align:center;}	/* 하단메뉴 사이의 구분자 부분 */
+/* Copyright 내용 */
+.bottom_copyright_format{margin-top:0px; margin-right:0px; margin-bottom:0px; margin-left:-30px; list-style-type:none; line-height:14px; font-size:11px; color:#333;}
+
+
+/*** TOP MENU FORMAT [ start ] ***/
+#tdSpace{width:20px;}
+#topMenuFormat{font:100 12px 돋움; color:#FFF;}
+#topMenuLI{list-style-type:none; list-style-image:url('../img/arrow_point04.gif');}
+
+.topMenuFmt{color:#DDDDDD;}
+.topMenuFmt:hover{color:FFF; text-decoration:none;}
+/*** TOP MENU FORMAT [ end ] ***/
+
+
+/*** 접속통계 [ start ] ***/
+.countTD01{width:6px; text-align:right; padding-right:3px;}
+.countTD02{font-size:11px; color:#FFF;}
+.countTD03{}
+/*** 접속통계 [ end ] ***/
+
+
+/*** 사진, 이미지  기본 테두리 두께 설정들 ***/
+.imgBorder1px{border-width:1px; border-style:solid; border-color:#999}
+.imgBorder2px{border-width:2px; border-style:solid; border-color:#999}
+
+
+/*** 테이블 내용안 자동줄바꿈 ***/
+.wordBreak{word-break:break-all;}
+
+
+
+/*** 점선라인 ***/
+/* 사용된 부분 - 프리미엄업체, 추천업체 */
+.hrDotLine01{width:100%;  height:1px; background:url('../img/dotline_type03.gif'); margin:2 0 4 0;}
+
+/* 사용된 부분 - 신규업체 */
+.hrDotLine02{width:100%;  height:1px; background:url('../img/dotline_type03.gif'); margin:3 0 1 0;}	 /*** 점선라인 ***/
+
+/* 사용된 부분 - 일반목록 (서브페이지) */
+.hrDotLine03{width:98%;  height:1px; background:url('../img/dotline_type03.gif'); margin:3 0 1 0;}	 /*** 점선라인 ***/
+
+/* 사용된 부분 - 나의 결제내역정보(커뮤니티) */
+.hrDotLine04{width:99%;  height:1px; background:url('../img/dotline_type03.gif'); margin:2 0 3 0;}	 /*** 점선라인 ***/
+
+/* 사용된 부분 - 내가 등록한 업체정보 (커뮤니티 - rows_list_myreg_wait.html : 출력게시물 템플릿 ) */
+.hrDotLine05{width:98%;  height:1px; background:url('../img/dotline_type03.gif'); margin:4 0 2 0;}	 /*** 점선라인 ***/
+
+/* 사용된 부분 - 커뮤니티 메인 : 내가 등록한 업체정보 ( my_root.html ) */
+.hrSolidLine01{width:100%;  height:1px; background-color:#B8B8B8; margin:3 0 1 0;}	 /*** 실선라인 ***/
+
+
+/*** 리스트에 출력되는 홈페이지 주소에 대한 포맷설정 ***/
+.rowsListHomepage{color:gray;}
+
+
+/*** 기타 구성에 대한 포맷설정 사항 *********************************************************************************************[ -- END-- ]***/

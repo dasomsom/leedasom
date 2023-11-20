@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collection</title>
+    <meta charset="UTF-8">
+    <!-- IE의 호환성 보기 모드 금지 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 스마트 장치에서의 해상도 균일화 처리 -->
+    
+    <!-- css 참조 -->
+    <link rel="stylesheet" href="../_assets/css/_public.css">
+    
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- JS / 플러그인 -->
+    <script type="text/javascript" src="../_assets/js/_public.js"></script>
+    <style>
+        .collection {min-height: 100vh; padding : 0 60px 150px;}
+        main > section {margin: 120px 0px 70px; min-height: auto}
+        .title_mid {display: none !important}
+        .collection_list li div {display: none;}
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(".collection_list li").hover(function(i, e){
+                $(this).find("img:eq(0)").toggleClass("out");
+            });
+            
+            function contSwitch(val){
+                const pHtml = window.location.href;
+                const trim = pHtml.split("#");
+                $(".tabmenu_round li").removeClass("active");
+                $(".collection_list li").show();
+
+                if(trim[1]){    
+                    $(".tabmenu_round #"+ trim[1]).addClass("active");
+                    $(".collection_list li:not('."+ trim[1] +"')").hide();  
+                }
+            }
+
+            contSwitch();
+        });
+    </script>
+  </head>
+<body>
+    <div class="posi_r collection">
+        <iframe name="topMenu" id="topMenu" title="탑프레임" src="../_inc/top.html" frameborder="0"></iframe>
+        <main>
+            <section>
+                <div class="tc">
+                    <div class="fontabril" style="font-size: 10em;">Portfolio</div>
+                    <div class="flex just_ct mb40">
+                        <ul class="tabmenu_round">
+                            <li id="work_all" onclick="moveTab('all')" class="active"><a href="javascript:void(0);">All</a></li>
+                            <li id="work_brd" onclick="moveTab('brd')"><a href="javascript:void(0);">Branding</a></li>
+                            <li id="work_web" onclick="moveTab('web')"><a href="javascript:void(0);">Web</a></li>                            
+                            <li id="work_prod" onclick="moveTab('prod')"><a href="javascript:void(0);">Product</a></li>
+                        </ul>
+                        <ul class="tabmenu_round none">
+                            <li><a href="#">날짜순</a></li>
+                            <li class="none"><a href="#">제목순</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <ul class="collection_list">
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_web_hdauto.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_hdae.jpg" alt="hyundai">
+                        <img src="/_assets/img/webcover_hdae_2.jpg" alt="hyundai">
+                        <div>
+                            <h3 class="title_mid">현대오토에버 기업메시징 사용자 사이트 리뉴얼</h3>
+                            <div class="flex all_ct">
+                                <span>UI/UX Design 100%</span>
+                                <span class="date">2022.05 ~ 2022.09</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_web_lg.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_lg.jpg" alt="LGHello">
+                        <img src="/_assets/img/webcover_lg_2.jpg" alt="LGHello">
+                        <div>
+                            <h3 class="title_mid">LG Hello Vision 메시징 사이트</h3>
+                            <div class="flex all_ct">
+                                <span>WEB Publishing 100%</span>
+                                <span class="date">2022.05 ~ 2022.07</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_web_ssg.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_ssg.jpg" alt="신세계아이앤씨">
+                        <img src="/_assets/img/webcover_ssg_2.jpg" alt="신세계아이앤씨">
+                        <div>
+                            <h3 class="title_mid">신세계아이앤씨 메시징 사이트</h3>
+                            <div class="flex all_ct">
+                                <span>Design 100%, WEB Publishing 70%</span>
+                                <span class="date">2018.12 ~ 2019.02</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_prod">
+                    <a href="/_inc/collection_detail_supercle.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_7.jpg" alt="닥터슈퍼클">
+                        <img src="/_assets/img/work_brd_7_2.jpg" alt="닥터슈퍼클">
+                        <div>
+                            <h3 class="title_mid">건강식품 패키징 디자인, 로고 제작</h3>
+                            <div class="flex all_ct">
+                                <span>Package&BI Design 100%</span>
+                                <span class="date">2021.06 ~ 2021.08</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_web_smoa.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_smoa.jpg" alt="SMOA">
+                        <img src="/_assets/img/webcover_smoa_2.jpg" alt="SMOA">
+                        <div>
+                            <h3 class="title_mid">SMOA 메시징사업자협회 사이트</h3>
+                            <div class="flex all_ct">
+                                <span>UI/UX Design 100%, WEB Publishing 100%</span>
+                                <span class="date">2020.08 ~ 2020.06</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_cji.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_cji_m.jpg" alt="CJI에듀">
+                        <img src="/_assets/img/webcover_cji_m.jpg" alt="CJI에듀">
+                        <div>
+                            <h3 class="title_mid">중국어학사이트 모바일 리뉴얼</h3>
+                            <div class="flex all_ct">
+                                <span>UI/UX Design 100%, WEB Publishing 100%</span>
+                                <span class="date">202.07</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_vmd_cji.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_cji_pack.jpg" alt="CJI에듀">
+                        <img src="/_assets/img/webcover_cji_pack.jpg" alt="CJI에듀">
+                        <div>
+                            <h3 class="title_mid">중국어학사이트 컨텐츠 제작</h3>
+                            <div class="flex all_ct">
+                                <span>Design 100%, WEB Publishing 100%</span>
+                                <span class="date">2018.08 ~ 2022.10</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_brd">
+                    <a href="/_inc/collection_detail_ci_cji.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_6.jpg" alt="HSK logo">
+                        <img src="/_assets/img/work_brd_6_2.jpg" alt="HSK logo">
+                        <div>
+                            <h3 class="title_mid">중국어학 컨텐츠 로고</h3>
+                            <div class="flex all_ct">
+                                <span>Logo Design 100%</span>
+                                <span class="date">2021.11</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_brd">
+                    <a href="/_inc/collection_detail_jh.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_1.jpg" alt="JH스튜디오">
+                        <img src="/_assets/img/work_brd_1_2.jpg" alt="JH스튜디오">
+                        <div>
+                            <h3 class="title_mid">문화컨텐츠 브랜딩</h3>
+                            <div class="flex all_ct">
+                                <span>LOGO & Namecard Design 100%</span>
+                                <span class="date">2021.11</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_brd">
+                    <a href="/_inc/collection_detail_netoz.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_3_4.jpg" alt="Netoz">
+                        <img src="/_assets/img/work_brd_3.jpg" alt="Netoz">
+                        <div>
+                            <h3 class="title_mid">메시징사업회사 브랜딩</h3>
+                            <div class="flex all_ct">
+                                <span>LOGO & Namecard Design 100%</span>
+                                <span class="date">2021.11</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_brd">
+                    <a href="/_inc/collection_detail_brd_smoa.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_2.jpg" alt="SMOA">
+                        <img src="/_assets/img/work_brd_2.jpg" alt="SMOA">
+                        <div>
+                            <h3 class="title_mid">SMOA 메시징사업자협회 브랜딩</h3>
+                            <div class="flex all_ct">
+                                <span>CI&Namecard Design 100%</span>
+                                <span class="date">2020.08</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_brd">
+                    <a href="/_inc/collection_detail_wisesms.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_4.jpg" alt="특가문자">
+                        <img src="/_assets/img/work_brd_4.jpg" alt="특가문자">
+                        <div>
+                            <h3 class="title_mid">메시징서비스사이트 브랜딩</h3>
+                            <div class="flex all_ct">
+                                <span>LOGO Design 100%</span>
+                                <span class="date">2018.00</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_web_sms17.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_sms.jpg" alt="SMS17 모바일">
+                        <img src="/_assets/img/webcover_sms.jpg" alt="SMS17 모바일">
+                        <div>
+                            <h3 class="title_mid">메시징서비스사이트 모바일 화면 리뉴얼</h3>
+                            <div class="flex all_ct">
+                                <span>UI/UX Design 100%, WEB Publishing 100%</span>
+                                <span class="date">2020.08 ~ 2021.03</span>
+                            </div>
+                        </div>
+                    </a>
+                </li><!--
+                <li class="work_web">
+                    <a href="/_inc/web/page/webpage_1.html" class="flex align_vt">
+                        <img src="/_assets/img/work_web5.jpg" alt="SMS17 PC">
+                        <div>
+                            <h3 class="title_mid">메시징서비스사이트 PC 화면 리뉴얼</h3>
+                            <div class="flex all_ct">
+                                <span>UI/UX Design 100%, WEB Publishing 30%</span>
+                                <span class="date">2022.01 ~ 중단</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            -->
+                <li class="work_web">
+                    <a href="/_inc/collection_detail_web_wisecan.html" class="flex align_vt">
+                        <img src="/_assets/img/webcover_wisecan.jpg" alt="WISECAN">
+                        <img src="/_assets/img/webcover_wisecan_2.jpg" alt="WISECAN">
+                        <div>
+                            <h3 class="title_mid">메시징솔루션업체 소개 모바일/PC 사이트</h3>
+                            <div class="flex all_ct">
+                                <span>UI/UX Design 100%, WEB Publishing 100%</span>
+                                <span class="date">2019.</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_prod">
+                    <a href="/_inc/collection_detail_papa.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_8.jpg" alt="파파레시피">
+                        <img src="/_assets/img/work_brd_8_2.jpg" alt="파파레시피">
+                        <div>
+                            <h3 class="title_mid">화장품 브랜드 VMD, KIT 패키징</h3>
+                            <div class="flex all_ct">
+                                <span>Design 100%</span>
+                                <span class="date">2017.01 ~ 2017.07</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="work_prod">
+                    <a href="/_inc/collection_detail_lp.html" class="flex align_vt">
+                        <img src="/_assets/img/work_brd_9_2.jpg" alt="럭키플래닛">
+                        <img src="/_assets/img/work_brd_9.jpg" alt="럭키플래닛">
+                        <div>
+                            <h3 class="title_mid">여행용품 브랜드 제품&패키지, VMD</h3>
+                            <div class="flex all_ct">
+                                <span>Design 100%</span>
+                                <span class="date">2014.05 ~ 2016.06</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <iframe name="footer" id="footer" title="푸터프레임" src="../_inc/footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<public:component>
+<public:attach event="onload" onevent="doFix()" />
+
+<script type="text/javascript">
+function Host(){
+	/*
+	var Dns;
+	var subURL = "";
+	Dns=location.href;
+	Dns=Dns.split("//");
+	Dns="http://"+Dns[1].substr(0,Dns[1].indexOf("/")) + subURL;
+	return Dns;
+	*/
+
+	// YOON [2010-04-28] - www 있는 것과 없는 것 둘다 알아서 작동 되게끔
+	var Dns, DnsStr;
+	var domainWWW = "";
+	var DnsArr = new Array;
+	var DnsPartArr = new Array;
+	var subURL = ""; // /(슬러쉬) 붙이고 서브폴더명 적는다.
+
+	Dns = location.href;
+
+	DnsArr = Dns.split("//");	
+	DnsStr = DnsArr[1].substr(0,DnsArr[1].indexOf("/")) + subURL;
+	//alert(DnsStr);
+
+	DnsPartArr = DnsStr.split(".");
+	//alert(DnsPartArr[0]);
+
+	if(DnsPartArr[0] == "www"){
+		domainWWW = "www.";
+	}
+
+	Dns = "http://" + domainWWW + DnsStr;
+	//alert(Dns);
+
+	return Dns;
+}
+
+var Host;
+Host = Host();
+
+
+var blankImg = Host + "/css/iepngfix/blank.gif";
+var flt      = "DXImageTransform.Microsoft.AlphaImageLoader";
+
+function filt(s) {
+	var f = filters[flt];
+
+	if (f) {
+		f.enabled = !!s;
+		if(s) {
+			f.src = src;
+			f.sizingMethod = "scale";
+		}
+	} else if(s) {
+		style.filter = 'progid:'+flt+'(src="'+s+'",sizingMethod=scale)';
+	}
+}
+
+function doFix() {
+	if (tagName != "IMG" || !/MSIE (5\.5|6)/.test(navigator.userAgent) || src == blankImg) return;
+	if (!/\.png$/i.test(src)) return filt();
+
+	if (currentStyle.width == "auto" && currentStyle.height == "auto") style.width = offsetWidth + "px";
+	
+	filt(src);
+	src = blankImg;
+}
+
+doFix();
+</script>
+
+</public:component>

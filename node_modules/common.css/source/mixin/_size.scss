@@ -1,0 +1,10 @@
+// Sizing shortcuts
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 宽高一样
+@mixin square ($size) {
+  @include size($size, $size);
+}

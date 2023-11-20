@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+body {
+  color: #fff;
+  background: #4361ee;
+  font-family: "Sora", sans-serif;
+}
+
+footer {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+  height: 7em;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1rem);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+.slide__outer, .slide__inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+.slide__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.slide__container {
+  position: relative;
+  max-width: 1400px;
+  width: 100vw;
+  margin: 0 auto;
+  height: 90vh;
+  margin-bottom: 10vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 0 1rem;
+}
+.slide__heading {
+  --width: 200;
+  display: block;
+  text-align: left;
+  font-family: "Abril Fatface";
+  font-size: clamp(5rem, 15vw, 15rem);
+  font-variation-settings: "wdth" var(--width);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-shadow: 6px 5px 0px #b56576;
+  z-index: 999;
+  grid-area: 2/2/3/10;
+  align-self: end;
+}
+.slide__img-cont {
+  margin-top: 4rem;
+  grid-area: 2/1/7/8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.slide__img-cont img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide:nth-of-type(1) {
+  visibility: visible;
+}
+.slide:nth-of-type(1) .slide__content {
+  background-color: #5ea2df;
+}
+.slide:nth-of-type(1) .slide__content .slide__heading {
+  text-shadow: 6px 5px 0px #5ea2df;
+}
+
+.slide:nth-of-type(2) .slide__content {
+  background-color: #355070;
+}
+.slide:nth-of-type(2) .slide__content .slide__heading {
+  text-shadow: 6px 5px 0px #355070;
+}
+
+.slide:nth-of-type(3) .slide__content {
+  background-color: #b56576;
+}
+.slide:nth-of-type(3) .slide__content .slide__heading {
+  text-shadow: 6px 5px 0px #b56576;
+}
+
+.slide:nth-of-type(4) .slide__content {
+  background-color: #9a8c98;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.overlay__content {
+  max-width: 1400px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 90vh;
+  margin-bottom: 10vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.overlay__img-cont {
+  position: relative;
+  margin: 0;
+  grid-area: 6/6/10/11;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.overlay__img-cont img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: 50% 50%;
+}
+.overlay__img-cont img:hover {
+  cursor: pointer;
+}
+.overlay__count {
+  grid-area: 3/10/4/10;
+  font-size: clamp(3rem, 4vw, 15rem);
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  border-bottom: 7px white solid;
+}
+.overlay__btn {
+  grid-area: 4/10/4/10;
+  position: relative;
+  display: flex;
+  flex-direction: end;
+  margin-top: 30px;
+}
+.overlay__btn a {
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+.overlay__btn a:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px #7c7c7c;
+  text-shadow: 0px 0px 5px #7c7c7c;
+}
+
+@media screen and (min-width: 900px) {
+  .overlay__content,
+  .slide__container {
+    padding: 0 3rem;
+    margin-top: 10vh;
+    height: 80vh;
+  }
+  .overlay__img-cont {
+    /* grid-area: 5 / 5 / 10 / 11;5 / 4 / 10 / 11*/
+    grid-area: 6/6/10/11;
+  }
+  .overlay__count {
+    grid-area: 3/10/4/11;
+  }
+  .slide__img-cont {
+    margin-top: 0;
+    grid-area: 3/1/8/9; /*3 / 2 / 8 / 7*/
+  }
+  .slide__heading {
+    grid-area: 1/1/4/10;
+  }
+}
+@media all and (max-width: 780px) {
+  .slide__heading {
+    grid-area: 1/1/3/10;
+  }
+  .slide__img-cont {
+    grid-area: 3/1/7/8;
+  }
+  .overlay__count {
+    grid-area: 2/10/2/10;
+  }
+  .overlay__img-cont {
+    grid-area: 5/3/9/11 !important;
+  }
+}
+
+/*# sourceMappingURL=gsap_trans.css.map */

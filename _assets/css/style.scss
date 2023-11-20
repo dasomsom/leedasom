@@ -1,0 +1,859 @@
+/* 공통 
+SCSS 클래스 내부에 사용하는 버전 1: ($ + name) */
+$posi_r: relative;
+$posi_a :absolute;
+
+
+/* SCSS 클래스 내부에 사용하는 버전 2
+   * 상속/확장 (@mixin + name) 
+*/
+@mixin btn-shared {
+   display: inline-block;width: 100%;height: 100%;
+}
+
+@mixin zoom-in {
+   transform: scale(1.05);
+   transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+@mixin font-shared-abril {
+   font : {
+      family: "Abril Fatface"; 
+      weight: normal;
+   }
+}
+/* 공통 
+HTML에서 클래스 처럼 사용하는 버전 : (& + name) */
+
+.title {
+   &_sm {font-size: 16px;}
+   &_mid {font-size: 20px;}
+   &_big {font-size: 30px;}
+}
+
+.ptxt {
+   &_sm {font-size: 14px;}
+   &_mid {font-size: 16px;}
+   &_big {font-size: 20px;}
+}
+
+.flex {
+   &.all_ct {justify-content: space-between;align-items: center;}
+   &.vt_end {align-items: end;}
+   &.align_vt {flex-direction: column;}
+   &.stretch {align-items: stretch;}
+   &.just_ct {justify-content: center;}
+}
+
+/*color*/
+.c {
+   &.white{color:#FFF;}
+   &.black{color:#000;}
+   &.lightgray_7{color:#777;}
+}
+/* bg color*/
+.bg {
+   &.white {background: #FFF;}
+   &.black {background: #000;}
+   &.deepGr {background: #2c2c2c;}
+   &.lightgray_7 {background: #777;}
+   &.lightBl {background: rgba(155, 215, 255, 0.5);}
+}
+ 
+.posi {
+   &_r {position:relative}
+   &_a {position:absolute}
+   &_f {position:fixed}
+}
+
+/* nav
+---------------------------------------------------------------*/
+#topMenu{ 
+   width: 100%;
+   height: 52px;
+   background: transparent;
+   position: fixed;
+   z-index: 9;
+   top: 0;
+}
+.nav-bar-bg {
+	position: fixed;
+   width: calc(100% - 120px);
+   height: 52px;
+
+   nav {
+      line-height: 0;
+      align-items: center;
+      height: 60px;
+
+      #navmenu {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         li {
+            width: 25%;
+            text-align: center;
+         }
+      }
+      & a {
+         width: 30px;
+         display: inline-block;
+         color: rgb(99, 99, 99);
+         font-size: 18px;
+         height: 30px; 
+         line-height: 30px;
+         transition: all 300ms cubic-bezier(0.86, 0, 0.07, 1);
+      }
+
+      .ico_back img {position: absolute;opacity: 0;}
+      .ico_back img.up {z-index: 2;opacity: 1;}
+   }
+}
+
+#navmenu li .active {
+   color: #000;
+   border-bottom: 1px solid #000;
+}
+#navmenu li:hover a {
+   border-bottom: 1px solid #777;
+}
+
+.ic_nav {
+	width: 36px;
+   height: auto !important;
+   line-height: 0 !important;
+	transition: transform 750ms ease-in-out, 
+				width .5s, height .5s, top .5s, left .5s;
+	
+   span {
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(189, 189, 189);
+   }
+   &:hover * {
+      background-color: #000;
+   }
+}
+
+
+/*  공통 CSS
+---------------------------------------------------------------*/
+.container {
+   width:90%; 
+   margin:0 auto; 
+   padding: 50px 0;
+}
+
+.title {
+   line-height: 1.7; 
+   margin-bottom: 15px;
+   font: {
+      weight: 700;
+      size: 3em;
+   }
+}
+.sub_title {
+   font-size: 1.5em; 
+   line-height: 1.7;
+   margin-bottom: 20px;
+}
+/*
+main > section { 
+   margin: auto;
+   min-height: 900px;
+}
+*/
+.label_box {
+  display: flex;
+  justify-content: center;
+  gap: 0.7em;
+  margin-bottom: 25px;
+
+  .label{
+      $ui : #ff1df7;
+      $pub: #2525ff;
+      $prod: #ff1d52;
+      $conts: #ff1df7;
+      $logo: #ff8000;
+      
+      @mixin labelText($type,$text) {
+         content: $text;
+         color: $type;
+         border-color: $type;
+      }
+      &::after {
+         display: inline-block;
+         padding: 5px 15px;
+         border: 1px solid #eee;
+         border-radius: 50px;
+      }
+      &.ui::after {
+         @include labelText($ui, "UI/UX Design"); 
+      }
+      &.pub::after {
+         @include labelText($pub, "Publishing"); 
+      }
+      &.prod::after {
+         @include labelText($prod, "Product Design"); 
+      }
+      &.conts::after {
+         @include labelText($conts, "Contents Design"); 
+      }
+      &.logo::after {
+         @include labelText($logo, "LOGO Design"); 
+      }
+   }
+
+}
+
+/**
+  * #intro
+------------------------------------------------------------------
+*/
+.intro_cover div:not(.flex) {
+   position: $posi_r;
+   background-color: #eee
+}
+.intro_cover div:not(.flex):hover {
+   box-shadow: 0px 0px 5px #D9D9D9; 
+   cursor: pointer;
+   background-size: 200%;
+}
+
+#intro {
+   $h : calc(100% - 200px);
+   $dm :20px;
+   $url_img :'../../_assets/img/main_banner';
+
+   @mixin mainbanner($num,$type) {
+      background: url( $url_img + $num + '.' + $type) no-repeat;
+      background-size: cover;
+   }
+   
+   overflow: hidden;
+   .container {
+      width: 100%;
+      height: $h;
+      transform: translate(0,6%);
+      .intro_cover {
+         height: 100%;         
+         .title_big {
+            @include font-shared-abril;
+            font-size: 110px;
+            position: $posi_a;
+         }         
+         .title_sm {
+            @include font-shared-abril;
+            font-size: 60px;
+            position: $posi_a;
+         }
+         .cont_left {
+            width: 60%;
+            height: 100%;
+            margin-right: $dm;
+            .stretch {
+               height: 50%; 
+               margin-bottom: $dm;               
+               .cont_top_left {
+                  width: 30%; 
+                  margin-right: $dm;
+                  @include mainbanner(0, 'png');
+                  .title_sm {
+                     transform: rotate(90deg);
+                     top:60px; 
+                     left: -30px;
+                  }
+               }
+               .cont_top_right {
+                  width: 70%;
+                  @include mainbanner(3, 'jpg');
+                  .title_sm {
+                     right: 20px;
+                     bottom: 15px;
+                  }
+               }
+            }
+            .cont_bottom {
+               height: 50%;
+               @include mainbanner(4, 'jpg');
+               .title_big {
+                  bottom: 10px;
+                  left:20px
+               }
+            }
+            
+         }
+         .cont_right {
+            width: 40%; 
+            height: 100%;   
+            @include mainbanner(2, 'jpg'); 
+            background: {
+               //size: 85%;
+               position: center;
+            }
+            .title_big {
+               transform: rotate(-90deg);
+               top: 180px; right: -140px;
+            }
+         }   
+         .move:hover {
+            @include zoom-in;
+         }
+      }
+   }
+}
+
+/**
+  * #work_zip
+------------------------------------------------------------------
+*/
+#work_zip .title_big {line-height: 2;}
+
+.tabmenu_round {
+   margin-top: 5px;
+   display: flex;
+   $h : 37px;
+   $radius : $h;
+   $bg_color :#333;
+   li {
+      margin-right: 10px;
+      border: 1px solid #D9D9D9; 
+      overflow: hidden;
+      height: $h; line-height: $h;
+      border-radius: $radius / 2;
+   }   
+   a {
+      @include btn-shared;
+      width: inherit;
+      padding: 0 20px;
+      color: $bg_color;
+      background: #fff;
+   }
+   li.active a {background: $bg_color; color: #fff;}
+   li:not(.active):hover {
+      border-color: $bg_color;       
+      a {
+         color:#000;
+      }
+   }
+   /*서브 페이지에서 스크롤시 탭 TOP 고정*/
+   &.posi_f {
+      top:50px;
+      z-index: 33;
+   }
+}
+
+
+/* 목록 리스트 */
+$work_color :(
+   web  : orange,
+   brd  : royalblue,
+   prod : yellow,
+   vmd  : pink
+);
+@each $k, $v in $work_color {
+   .work_#{$k} .label{
+      background: $v;
+      
+   }
+}
+
+$work_type :(
+   web  : "UI/UX/Publishing",
+   brd  : "Branding",
+   prod : "Product",
+   vmd  : "VMD"
+);
+
+@each $k, $v in $work_type {
+   .work_#{$k} .label:before {
+      content: '#{$v}';
+   }
+}
+
+.web_list {
+   $c_lightgray : #999;
+   display: flex; margin-top: 50px;
+   flex : {
+      wrap: wrap;
+      direction: row; 
+   }
+   justify-content: space-between;
+
+   .cont_box {
+      width: 500px; 
+      flex-grow:0;
+      margin-bottom: 60px;
+      
+      a {
+         @include btn-shared;
+         height: 350px;
+         background: #eee; 
+         border-radius: 7px;
+         margin-bottom: 10px;
+         border:1px solid rgb(233, 233, 233);
+         overflow: hidden;
+         position: $posi_r;
+         span.label {
+            position: $posi_a;
+            left: 10px;
+            bottom: 10px;
+            display: block;
+            z-index: 22;
+            padding: 3px 10px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 3px;
+            display: none;
+         }
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      &:hover a{
+         box-shadow: 0px 0px 3px #aaa;
+      }
+      
+      .title_mid, .ptxt_mid {
+         margin: 5px 0;
+         line-height: 1.5;
+      }
+      div:last-child {
+         margin-top: 30px;
+         .date {
+            color: $c_lightgray;
+         }
+      }
+   }
+}
+
+
+#drawing {
+   $url_img :'../../_assets/img/drawing';
+   position: $posi_r;
+   min-height: 100%;
+   & .box {
+      position: $posi_a;
+      top:50px;
+      z-index: 22;
+      left: 50px;
+
+      h3 {
+         @include font-shared-abril;
+         font-size: 100px;
+      }
+      .imgbox {
+         margin: {
+            top: 40px;
+         }
+         width: 450px;
+         height: 500px;
+         background: #fff;
+      }
+   }
+
+   #drawing_slider{
+      overflow: hidden;
+      background: #f1f1f1;
+      padding: 50px 0;
+      width: 100%;
+      height: 650px;
+      ul{
+         height: 100%;
+         .item {
+            width: 300px;
+            height: 300px;
+            background: {
+               repeat: no-repeat;
+               size: 100%;
+               position: 50% 50%;
+            }
+            opacity: 0.3;
+         }
+         .item:hover {
+            opacity:1;
+         }
+      }
+   }
+
+   @for $i from 1 through 10 {
+      & .item:nth-child(#{$i}) {   
+         background-image : url("#{$url_img}/drwimg_#{$i}.png");
+      }
+   }
+   & .item:nth-child(10){
+      background-image : url("#{$url_img}/drwimg_10.jpg");
+   }
+   & .item:nth-child(odd){
+      align-self: end;
+   }
+}
+
+/* Detail Page */
+.detail_page {
+   margin-top: 30px;
+   .container{
+      padding: 50px 0 30px;
+      .title_big {
+       margin-bottom: 10px;
+       line-height: 1.3
+      }
+      .ptxt_mid {
+         margin-bottom: 30px;
+      }
+      .tabmenu_round {
+         width: 100%;
+         background-color: #fff;
+      }
+   }
+   .detail_img{
+      .box {
+         width: 100%; 
+         height: 80vh;
+         //background-color: #f7f7f7;
+      }
+      .box:not(:last-child){
+         margin-bottom: 20px;
+      }
+   }
+}
+
+
+
+
+#footer {
+   position: absolute;
+   bottom: -150px;
+   width: 100%;
+   border-top: 1px solid #eee;
+}
+.footer {
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   top: 50%;
+
+   & > section {
+      width: 20%;
+      opacity: 0.5;
+   }
+}   
+
+
+
+
+/* collection page 
+--------------------------------------------------------*/
+.collection_list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 30px;
+   grid-row-gap: 15px;
+   padding-bottom: 40px;
+   min-height: 600px;
+   // list css
+   li {
+      a {
+         width: 100%;
+         height: inherit;
+         position: relative;
+
+         img {
+            margin-bottom: 15px;
+            border: 1px solid #f1f1f1;
+            transition: all 1s;
+
+            &:first-child {
+               position: absolute;
+               z-index: 1;
+            }
+
+            &.out {
+               position: absolute;
+               z-index: -1;
+               transition: all 1s;
+               opacity: 0.7;
+            }
+         }
+
+         .title_mid {
+            font-weight: bold;
+            margin-bottom: 20px;
+         }
+
+         .date {
+            color: #999;
+            margin-left: 10px;
+         }
+      }
+   }
+}
+/* collection_detail page 
+--------------------------------------------------------*/
+.collection_detail {
+   width: 100%;
+   min-height: 100vh;
+   position: relative;
+   background-color: #ededed;
+   padding: 150px 60px;
+   overflow: hidden;
+
+   & > main {
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+   }
+
+   .txt_contdetail_box {
+      margin: 50px auto 0px;
+
+      & > div {
+         padding: 10px;
+         padding-top: 0;
+      }
+      .tab_icon_box {
+         margin: 10px 0 20px;
+         display: flex;
+         grid-column-gap: 1.2em;
+      }
+   }
+
+   .img_container {
+      padding: 60px;
+      background-color: #2c2c2c;
+
+      .img_box {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-column-gap: 2em;
+         grid-row-gap: 2em;
+         padding-bottom: 40px;
+         min-height: 600px;
+
+         & div {
+            box-shadow: 0px 0px 10px #000;
+            overflow: hidden;
+            border-radius: 10px;
+         }
+         .grid_full {
+            grid-column: 1/4;
+            border-radius: 15px;
+         }
+         .grid_full:first-child img {
+            width: 100%;
+         }
+         div:not(.grid_full) {
+            max-height: 460px;
+            background-color: #fff;
+            overflow: hidden;
+         }
+
+         .dum {
+            margin: 50px 0;
+            grid-column: 1/5 !important;
+            color: #636363;
+            box-shadow: none !important;
+         }
+      }
+   }
+   #footer {
+      bottom: 0 !important;
+   }
+ }
+ .slide_container {
+   padding: 10px 0 !important;
+ 
+   .slidebox {
+      width: 100%;
+      display: flex;
+      grid-column-gap: 1em;
+
+      li {
+         border: 5px solid #2c2c2c;
+         border-radius: 10px;
+         overflow: hidden;
+
+         a {
+            width: 100%;
+            opacity: 0.3;
+         }
+         &:not(.select):hover a {
+            opacity: 0.7;
+         }
+         &.select a {
+            opacity: 1;
+          }
+         &.select {
+            border-color: #FFF;
+          }
+      }
+   }
+ }
+
+/* collection_detail page << 백업 5:5 버전 >>
+  // .collection_detail > background: cornsilk;
+--------------------------------------------------------*/
+.collection_detail_2 {
+   width: 100%;
+   min-height: 100vh;
+   position: relative;
+   background-color: #2c2c2c;
+   color: #FFF;
+
+   & main, & section {
+      min-height: 100%;
+   }
+
+      .half_full {
+         /* 절반 풀 페이지*/
+         height: 100%;
+         align-items: flex-start;
+         grid-column-gap: 1.6rem;
+   
+         & > div {
+            width: 50%;
+         }
+
+         .img_container{
+            /* 왼쪽 이미지 창 */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 15px;
+
+            .img_box{
+               width: 100%;
+               /* min-height: 600px;*/
+               overflow: hidden;
+               display: flex;
+               flex-direction: column;
+               background-color: #fff;
+
+               & iframe {
+                  width: 100%;
+                  height: 100vh;
+               }
+            }
+         }
+         .txt_container{
+            /* 오른쪽 설명 창 */
+            position: sticky;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            & > div {width: 60%;}
+
+            .tabmenu_round a {
+               background: transparent;
+            }
+            .txt_contdetail_box {
+               margin-top: 30px;
+               & > div {
+                  padding: 10px;
+                  padding-top: 0;
+               }
+               .tab_btn{
+                  border-bottom: 1px solid #777;
+                  margin-bottom: 20px;
+
+                  a {
+                     display: inline-block;
+                     padding: 5px 20px;
+                  }  
+               }
+               .tab_txt {
+                  min-height: 150px;
+               }
+               .tab_icon_box {
+                  margin: 10px 0 20px;
+                  display: grid;
+                  grid-template-columns: repeat(10, 1fr);
+                  grid-column-gap: 20px;
+                  .icon_css{
+                     width: 30px !important;
+                     height: 30px !important;
+                     margin-top: 3px;
+                  }
+               }
+            }
+
+            .tabmenu_round li {
+               background: #333;
+               color: #fff;
+            }
+            .tabmenu_round li.active {
+               background: #fff;
+               color: #333 !important;
+            }
+         }
+      }
+}
+
+
+/* @media
+  - min : 커지는 순간부터 적용
+  - max : 작아지는 순간부터 적용
+*/
+// 태블릿
+@media all and (max-width: 1024px){
+	.nav-bar-bg {
+      width: calc(100% - 80px);
+    }
+    .nav-bar-bg > nav {
+      margin: 0;
+    }
+    .collection_list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .collection_detail {
+      padding: 150px 40px;
+    }
+    /*
+   .collection_detail_2 {
+      .half_full {
+         flex-direction: column-reverse;
+         & > div {
+            width: 100%;
+         }
+         .txt_container{
+            /* 오른쪽 설명 창 *
+            position: relative;
+            top: 0%;
+            transform: translateY(0%);
+            padding: 5%;
+
+            & > div {width: 100%;}
+         }
+      }
+   }*/
+}
+
+// 모바일
+@media all and (max-width: 780px){
+   .collection_list {
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .collection_detail {
+      .txt_container .txt_contdetail_box {
+         flex-direction: column-reverse;
+      }
+      .img_container .img_box {
+         display: flex;
+         flex-direction: column;
+         grid-row-gap: 1em;
+
+         & div:not(.grid_full) {
+            height: fit-content !important;
+         }
+         & br {display: none !important;}
+      }
+   }
+}

@@ -1,0 +1,518 @@
+.category{
+	width:999px;
+	margin:auto;
+	padding-top:20px;
+}
+.subTitle{
+	border-bottom:2px solid #000;
+	font-size:14px;
+	font-weight: 900;
+	height:30px;
+	line-height:30px;
+	margin-bottom:15px;
+	margin-top:30px;
+}
+.category .now_map a img{
+	vertical-align: top;
+}
+
+/*book*/
+.book , .relationBooks{
+	border:1px solid #d8d8d8;
+	width:100%;
+	
+}
+.book{
+	height:450px;
+}
+.book h1{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-indent: 25px;
+	font-size:16px;
+	font-weight: 600;
+	border-bottom:1px solid #D8D8D8;
+    background: linear-gradient( to right, #f7f7f7 50%, #f6f6f6, #f8f8f8, #f9f9f9 );
+}
+.book div{
+	float: left;
+}
+.book ul{
+	width:210px;
+	height:360px;
+	padding:20px;
+	border-right:1px solid #D8D8D8;
+	overflow: auto;
+}
+.book ul li{
+	width:210px;
+	height:40px;
+	text-indent: 20px;
+	font-size:18px;
+	line-height:40px;
+	cursor: pointer;
+}
+.book ul li.action{
+	background:#e5000c;
+	color:#fff;
+}
+.book ul li:hover{
+	background:#e5000c;
+	color:#fff;
+}
+
+.book .bookImgBox{
+	padding:20px 30px;
+	width:240px;
+	text-align: center;
+}
+.bookImgBox .bookImg{
+	margin-bottom:15px;
+}
+/*MP3다운*/
+.book .mp3Down{
+	width:110px;
+	height:24px;
+	line-height:24px;
+	font-size:14px;
+	font-weight: bold;
+	color:#0064c1;
+	cursor: pointer;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+.book .mp3Down:hover{
+	opacity:0.8;
+	border-bottom: 1px solid #0064c1;
+}
+.book .mp3Down:before{
+	content: url('/html/edu/html/img/btn/icon_download_blue.png');/*'../img/fileDown.png'*/
+    margin-right: 5px;
+    vertical-align: bottom;
+	
+}
+.bookImgBox button:not(.mp3Down) {
+	width:80px;
+	height:24px;
+	line-height:24px;
+	font-size:14px;
+}
+.bookImgBox button::before{
+	content: url('../img/magnifier.png');
+	vertical-align: sub;
+    margin-right: 3px;
+}
+/*미리보기*/
+.bookImgBox button:not(.mp3Down):hover{
+	border-bottom: 1px solid #202020;
+}
+.book .bookInfoBox{
+	padding-top:20px;
+}
+.bookInfoBox table{
+	width:425px;
+}
+.bookInfoBox table tr{
+	height:35px;
+	width:100%;
+	line-height:35px;
+}
+.bookInfoBox table tr td{
+	font-size:13px;
+}
+.bookInfoBox table tr td:first-child{
+	width:90px;
+}
+
+.bookInfoBox table .price{
+	color:#df3a00;
+}
+/*
+.bookInfoBox table .price::before{
+	content: url('../img/price.png');
+	vertical-align: middle;
+    margin-right: 10px;
+}
+.bookInfoBox table .price::after{
+	content: "원";
+	color:#202223;
+	margin-left:5px;
+}
+*/
+.bookInfoBox table .mp3Down{
+	width:105px;
+	height:20px;
+	border:1px solid #000;
+	border-radius: 2px;
+	line-height:18px;
+	background:#fff;
+	font-size:11px;
+	color:#202223;
+	cursor: pointer;
+}
+.bookInfoBox table .mp3Down:before{
+	content: url('../img/fileDown.png');
+    margin-right: 3px;
+    vertical-align: middle;
+	
+}
+.bookInfoBox table input{
+	width: 35px;
+    height: 25px;
+    text-align: right;
+    padding-right: 10px;
+    position: absolute;
+    top:0;
+}
+
+.bookInfoBox table .amountBox{
+	width:100px;
+	height:25px;
+	position: relative;
+	float: none;
+	top: 5px;
+	
+}
+.bookInfoBox table .btnBox{
+	position: absolute;
+	width:15px;
+	height:29px;
+	border:1px solid #dbdbdb;
+	top:0;
+	right: 34px;
+}
+.bookInfoBox table .btnBox div{
+	width:15px;
+	height:14px;
+	position: absolute;
+	line-height:14px;
+	cursor:pointer;
+	text-align: center;
+}
+.bookInfoBox table .btnBox .up{
+	top:0px;
+	border-bottom:1px solid #DBDBDB;
+}
+.bookInfoBox table .btnBox .down{
+	bottom:0px;
+}
+.bookInfoBox table tfoot div{
+	float: left;
+	height:40px;
+	width: 180px;
+	text-align: center;
+	line-height:40px;
+	margin-top:15px;
+	font-weight: 800;
+	margin-right:8px;
+	font-size:14px;
+	cursor: pointer;
+	font-family:'f_Score_reg';
+}
+.bookInfoBox table .buyBtn{
+	color:#fff;
+	background:#e5000c;
+
+}
+.bookInfoBox table .buyBtn:after{
+	content: "▶";
+	margin-left:5px;
+}
+.bookInfoBox table .cartBtn{
+	border:1px solid #565656;
+	color:#565656
+}
+.bookInfoBox table .scrapBtn{
+	width:120px;
+	border:1px solid #c1c1c1;
+	background:#eeeeee;
+	color:#333;
+	margin-right:0;
+}
+/*bookEND*/
+
+/*relationBooks*/
+.relationBooks{
+	height:305px;
+	margin-bottom:25px;
+}
+.relationBooks ul{
+	margin-top:30px;
+	height:245px;
+	padding:0 20px;
+	overflow:hidden;
+	
+}
+.relationBooks ul li{
+	height:245px;
+	padding:0 20px;
+	float: left;
+	cursor: pointer;
+}
+.relationBooks ul li .bookImg{
+	width:150px;
+	height:180px;
+	margin-bottom:15px;
+}
+.relationBooks ul li p{
+	text-indent: 5px;
+	width:150px;
+	height: 14px;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal !important;
+	
+}
+.relationBooks ul li .bookTitle{
+	font-size:13px;
+	color:#000;
+	font-weight: 800;
+	line-height:1;
+}
+.relationBooks ul li .writer{
+	font-size:11px;
+	color:#999;
+	font-weight: 700;
+	margin-top:3px;
+	line-height:1;
+}
+.relationBooks ul li .price{
+	font-size:13px;
+	color:#ed4143;
+	font-weight: 800;
+	margin-top:3px;
+	line-height:1;
+}
+/*relationBooksEND*/
+
+/*bookInfo*/
+.bookInfo{
+	width:100%;
+}
+.bookInfo .tabBox{
+	width:100%;
+	height:40px;
+}
+.bookInfo .tabBox li{
+	float: left;
+	width:247px;
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	background:#fafafa;
+	border:1px solid #dcdcdc;
+	border-bottom:2px solid #222;
+	font-weight: 700;
+	font-size:15px;
+	cursor: pointer;
+	
+}
+
+.bookInfo .tabBox li:nth-child(1),
+.bookInfo .tabBox li:nth-child(3){
+	border-right:none;
+}
+.bookInfo .tabBox li:nth-child(2){
+	border-right:none;
+}
+.bookInfo .tabBox li.action{
+	border:2px solid #222;
+	border-bottom:none;
+	background:#fff;
+}
+.bookInfo .tap{
+	width:100%;
+	height:30px;
+	font-size:16px;
+	font-weight:800;
+	color:#333;
+	line-height:30px;
+	margin-top:15px;
+	border-bottom:1px solid #d1d1d1;
+
+}
+.bookInfo .tapContent{
+	min-height:250px;
+	margin-bottom:20px;
+	white-space: pre-line;
+	font-size:16px;
+	line-height: 1;
+	padding:5px 10px;
+}
+/*bookInfoEND*/
+/*popup*/	
+.popup{
+	display:none;
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.7);
+	top:0;
+	left:0;
+}
+.popup .bookPopup{
+	position:absolute;
+	width:1150px;
+	height:700px;
+	background:#fff;
+	top:50%;
+	left:50%;
+	margin-top:-350px;
+	margin-left:-575px;
+}
+.popup .bookPopup .popupHeader{
+	color:#fff;
+	background:#e7002d;
+	text-indent: 15px;
+	height:35px;
+	line-height:35px;
+	position: relative;
+}
+.popup .bookPopup .popupHeader .remove{
+	position:absolute;
+	width:50px;
+	height:35px;
+	line-height:35px;
+	top:0;
+	right:10px;
+	text-align: center;
+	cursor: pointer;
+}
+.popup .bookPopup .popupBottom{
+	width:100%;
+	position:absolute;
+	height:15px;
+	background:#e7002d;
+	bottom:0;
+}
+.popup .bookPopup .popupContent{
+	width:100%;
+	height:650px;
+	position:relative;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox{
+	position:absolute;
+	width:220px;
+	height:600px;
+	border-left:1px dotted #dbdbdb;
+	background:#f7f7f7;
+	right:0;
+	top:0;
+	padding:25px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .pageBox{
+	width:100%;
+	height:35px;
+	text-align: right;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .pageBox button{
+	border:none;
+	background:none;
+	font-size:13px;
+	height:15px;
+	line-height:15px;
+	vertical-align: top;
+	cursor: pointer;
+	
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .pageBox button.action{
+	color:#e7002d;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .pageBox span{
+	font-size:14px;
+	font-weight: 800;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .bookInfo{
+	padding:20px 0;
+	border-top:1px solid #333;
+	border-bottom:1px solid #333;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .bookInfo table th{
+	font-size:16px;
+	font-weight: 800;
+	height:30px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .bookInfo table td{
+	font-size:13px;
+	height:20px;
+	line-height:20px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .bookInfo table td:first-child{
+	width:65px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .bookInfo table .price{
+	color:#e7002d;
+	font-weight: 900;
+	font-size:15px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .bookInfo table .price::before{
+	content: url('../img/price.png');
+	vertical-align: middle;
+    margin-right: 5px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .btnBox{
+	width:100%;
+	margin-top:20px;
+	height:45px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .btnBox div{
+	width:45px;
+	height:45px;
+	border:1px solid #333;
+	background:#fff;
+	margin-right:15px;
+	float: left;
+	background-image: url('../img/plus&minusBtn.png');
+	background-repeat: no-repeat;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .btnBox .plus{
+	background-position:15px 15px;
+}
+.popup .bookPopup .popupContent .bookViewUtilBox .btnBox .minus{
+	background-position: -40px 15px;
+}
+
+.popup .bookPopup .popupContent .bookViewBox{
+	position:relative;
+	width:819px;
+	height:590px;
+	padding:30px;
+	left:0;
+	top:0;
+}
+.popup .bookPopup .popupContent .bookViewBox button{
+	width:30px;
+	height:650px;
+	position: absolute;
+    outline:none;
+	top:0;
+	border:none;
+	background:none;
+	cursor: pointer;
+}
+.popup .bookPopup .popupContent .bookViewBox .rightBtn{
+	right:0;
+	background-image: url(../img/popupRightBtn.png);
+	background-position: center;
+	background-repeat:no-repeat;
+	
+}
+.popup .bookPopup .popupContent .bookViewBox .leftBtn{
+	left:0;
+	background-image: url(../img/popupLeftBtn.png);
+	background-position: center;
+	background-repeat:no-repeat;
+}
+
+.popup .bookPopup .popupContent .bookViewBox .bookView{
+	width:819px;
+	height:590px;
+	overflow:hidden;
+}
+.popup .bookPopup .popupContent .bookViewBox .bookView img{
+	width:819px;
+	height:590px;
+}

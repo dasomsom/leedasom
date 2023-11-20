@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+	window.onload = function(){
+		try{
+			var controller = new VgControllerClient({
+				target_window: document.getElementsById('myVideo').contentWindow
+				
+			});
+			controller.set_repeat_start(10);
+			controller.set_repeat_end(20);
+			//controller.on('done', function() {
+			//	controller.play();
+			//});
+		}catch(e){
+			// Videogateweay Controller Library는 window.postMessage API를 이용하기 때문에
+			// 해당 기능을 지원하지 않는 웹브라우져에서는 동작하지 않습니다.
+			// 이 부분에 적절한 fail-over 코드를 추가하여 주십시요.
+		}
+	};
+	$(document).ready(function() {
+
+		$("#bg_pack_preview").css({'cursor':'url("./img/page/cont_pack999_cursor.png")'});
+		$("#bg_pack_preview li").click(function(){
+			var i = $(this).index();
+			var i_cont = $(".cont_pack_preview *");
+			i_cont.eq(i).removeClass('hide');
+			i_cont.not(i_cont.eq(i)).addClass('hide');
+
+			if($(this).hasClass("playBtn") == false){
+				$("#bg_pack_preview li").removeClass("select");
+				$(this).addClass("select");
+				$("#myVideo")[0].src = "http://v.kr.kollus.com/";
+			}
+		});
+		$(".playBtn").on("click",function(){
+			$("#myVideo")[0].src = "http://v.kr.kollus.com/AcOisQXZ?autoplay=1";
+		});
+		$("#inner_contents").parent().css("width","100%");
+		//$("#inner_contents").parents("#wrap").css("min-width","1300px");
+	});
+
+	</script>
+	<style>
+		img {vertical-align: text-bottom;}
+		#contents {text-align:center}
+			.bg_comm_pack {width: 100%;}
+			#bg_pack_top {height: 900px; background:#36b2ee;overflow:hidden }
+				#bg_pack_top > div{position:absolute;}
+				#bg_pack_top .bottom {width: 100%;height:100vh;bottom:0;background:url('./img/page/bg_pack999_city.png')bottom no-repeat; background-size: cover; }
+				#bg_pack_top .cont1 {z-index:33;width: 850px;height: 520px; right:-80px;bottom:-20px;background:url('./img/page/bg_pack999_hand.png')top right no-repeat; }
+
+			#eventDiv{height: 1119px;}
+				#eventDiv .top {height: 580px;background:url('./img/page/bg_pack999_eventTop01.jpg') center no-repeat; background-size: cover;}
+				#eventDiv .bottom { top: -5px;}
+					#eventDiv .bottom .cont1 {height:5px;background:url('./img/page/bg_pack999_eventBt01.png') repeat-x;}
+					#eventDiv .bottom .cont2 {background:url('./img/page/bg_pack999_eventBt02.jpg')left bottom no-repeat; background-size: cover; }
+
+			#bg_pack_preview {padding-top: 150px;}
+					#bg_pack_preview li{font-size: 27px;font-family: 'f_Score_mid'; color: #848484; width: 23%;vertical-align: middle;}
+					#bg_pack_preview li:not(.playBtn):before {content:'';display: inline-block;margin-right:10px; width: 41px; height: 37px;background:url('./img/page/icon_check_off.png') no-repeat;vertical-align: bottom;}
+					#bg_pack_preview li:not(.playBtn):hover {color: #404040;}
+					#bg_pack_preview li.select:not(.playBtn):before{background:url('./img/page/icon_check_on.png') no-repeat;}
+					#bg_pack_preview li.select:not(.playBtn) {color: #404040;}
+					#bg_pack_preview .playBtn {background: #ff3667; color: #fff; font-size: 20px;padding: 5px;border-radius:20px;width: 17%;margin-left: 30px;}
+				.cont_pack_preview{width: 752px; height: 650px;background:url('./img/page/cont_pack999_preview02.png') top center no-repeat;margin:40px auto 0;}
+					.cont_pack_preview img {margin-top: 23px; margin-left: -10px;}
+					.cont_pack_preview #myVideo {margin: 80px 5px 0 0;}
+				/*
+				#bg_pack_preview > div {position: relative;  width: 535px;}
+					#bg_pack_preview .prevwBox {width:535px;position: absolute; top:33%;left: 50%;margin-left: -267px;overflow: hidden;}
+					#myVideo {width:100%;}
+					#playBtn {position:absolute;width:100%; height:100%; top:-10px;z-index:999;cursor: pointer }
+				*/
+			#cjiPatent {background: url('./img/page/bg_packV2_mid04.jpg')center no-repeat;background-size: cover}
+				#bg_pack_bottom > div:first-child {height: 675px;background:#36b2ee url('./img/page/bg_pack999_city.png')bottom no-repeat; background-size: cover;}
+
+			#notice_999 {background:#EEE; height:300px; text-align:left}
+				#notice_999 > div {width:900px; margin:auto;padding:20px 0;}
+				#notice_999 > div > div{color:#494949;}
+				#notice_999 > div > .bold {margin-bottom:3px;line-height:2}
+				#notice_999 > div > .bold:first-child {border-bottom:1px solid; margin-bottom:10px;}
+	</style>
+</head>
+<body>
+	<div id="contents">
+		<div id="inner_contents">
+			<div id="bg_pack_top" class="bg_comm_pack relative">
+				<!-- 배경 -->
+				<div class="cont1"><!--상단 -> 핸드폰--></div>
+				<div class="bottom"><!--하단 -> 건물--></div>
+				<!--// 배경 -->
+				<div class="mainPageImg" style="z-index:22;left: 50%; top: 5%;margin-left: -500px">
+					<div class="relative">
+						<img src="./img/page/cont_pack999_title.png">
+					</div>
+				</div>
+			</div>
+			<div class="bg_comm_pack" style="background:#ffdc7c">
+				<img src="./img/page/cont_pack999_mainTopMid_01_m.jpg">
+				<a href="javascript:;" class="pointer">
+					<img src="./img/page/btn_pack999_default.jpg">
+				</a>
+				<img src="./img/page/cont_pack999_mainTopMid_02.jpg">
+			</div>
+
+			<!-- 패키지 특장점 --> 
+			<div class="bg_comm_pack" style="background:#ececec">
+				<img src="./img/page/cont_pack999_mid01.jpg">
+			</div>
+			<div class="bg_comm_pack" style="background:#f5f5f5">
+				<img src="./img/page/cont_pack999_mid02.jpg">
+			</div>
+			
+			<!-- 닥치고999 컨텐츠 미리보기 -->
+			<div id="bg_pack_preview" class="bg_comm_pack">
+				<img src="./img/page/cont_pack999_preview01.png">
+				<div id="contents">
+					<ul class="inline mt50">
+						<li class="select pointer">발음 연습</li>
+						<li class="pointer">문법 + 단어</li>
+						<li class="pointer">활용 예문</li>
+						<li class="playBtn pointer">강좌 미리보기 <img src="./img/page/icon_play_gray.png"></li>
+					</ul>
+					<div class="cont_pack_preview">
+						<img src="./img/page/cont_pack999_preview03.png">
+						<img src="./img/page/cont_pack999_preview04.png" class="hide">
+						<img src="./img/page/cont_pack999_preview05.png" class="hide">
+						<iframe id="myVideo" frameborder="0" width="88%" height="57%" style="background: #fff"></iframe>
+						<!--
+						<video controls id="myVideo" class="hide"><source type="video/mp4" src="http://www.cjiedu.com/movie_file/cont_pack999_view.mp4"></video>-->
+					</div>
+				</div>
+			</div>
+
+			<!-- PDF 제공 -->
+			<div class="bg_comm_pack mt100" style="background:url('./img/page/bg_pack999_mid03.jpg') repeat-x">
+				<img src="./img/page/cont_pack999_mid03.jpg">
+			</div>
+
+			
+
+			<!-- 구성 혜택 -->
+			<div id="bg_pack_bottom">
+				<div class="bg_comm_pack">
+					<img src="./img/page/cont_pack999_title.png" class="pt100">
+				</div>
+				<div class="bg_comm_pack" style="background:#ffdc7c; margin-top: -2px;">
+					<img src="./img/page/cont_pack999_end_01_2.png" style="margin-top: -20px;">
+					<a href="javascript:;" class="pointer">
+						<img src="./img/page/btn_pack999_default.jpg">
+					</a>
+					<img src="./img/page/cont_pack999_mainTopMid_02.jpg">
+				</div>
+			</div>
+			<div class="bg_comm_pack" style="background:#242424">
+				<img src="./img/page/cont_pack999_end_04.jpg">
+			</div>
+			<div id="notice_999" class="pb10">
+				<div>
+					<div class="bold" style="font-size: 15px">구매시 유의사항</div>
+					<div class="bold">환불규정</div>
+					<div>1) 강좌별 강의 파일을 여는 즉시 해당 강의의 1강을 수강한 것으로 간주된다.<br>
+						2) PDF 파일 다운로드시 강의 수강으로 간주된다.<br>
+						3) 위약금 기준 : 사이트에 명시된 강의 정가(수강료)의 10% ~ 20%<br>
+						4) 컨텐츠 이용 금액 = 이용한 컨텐츠 1강좌 금액 X 수강한 강좌 수<br>
+						5) 카드사 PG수수료 발생시 차감 후 환불
+					</div>
+					<div class="bold" style="margin:25px 0 5px ">패키지 일시정지 안내</div>
+					<div style="line-height:18px;margin-top:5px">
+						<div>
+							1) 수강 중 부득이하게 수강을 할 수 없는 상활일 때 일시정지 기능을 사용할 수 있습니다.<br>
+							2) 1년에 1회 최대 30일까지 이용 가능 합니다. <span style="padding-left: 5px">(예: 2년 수강시 2회 최대 60일까지 정지 기능)</span><br>
+							3) 일시정지는 CJI에듀 메일로 신청합니다.<span style="padding-left: 5px">(학습지원센터 : <span style="border-bottom: 1px solid">help@cjiedu.com</span>)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+main {background-color: #f7f7f7;}
+/**
+------------------------------------------------------------------
+  * 메 뉴 + 하 단
+------------------------------------------------------------------
+*/
+#topMenu{ width:100%;height: 52px;background: transparent;position: fixed; z-index: 9; }
+
+/* nav
+---------------------------------------------------------------*/
+.nav-bar-bg {
+	position: fixed; width: 100%; height: 52px;line-height: 52px;
+}
+header nav {width: 90%; margin: auto;/*display: flex;justify-content: end;*/}
+#navmenu {width: 50%; display: flex;justify-content: space-between;align-items: center;}
+#navmenu li {width: 25%;text-align: center;}
+#navmenu li a {display: inline-block;width: 50%; color: #333;height: 30px; line-height: 30px;font-weight: bold;transition: all 300ms cubic-bezier(0.86, 0, 0.07, 1);}
+#navmenu li:hover a {border-bottom: 1px solid #777;}
+.ic_nav {
+	width: 36px;
+	position: absolute; z-index: 900;
+	right: 10px; top: 20px;
+	transform: translate(-50%, -50%);
+	transition: transform 750ms ease-in-out, 
+				width .5s, height .5s, top .5s, left .5s;
+	cursor: pointer;
+}
+
+/* Icon 4 */
+
+#nav-icon4 {
+	width: 50px; height: 45px;
+	position:absolute; z-index: 900;
+	left: 10px; top: 5px; 
+	transform: scale(0.6,0.6) !important;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* hidden-nav
+---------------------------------------------------------------*/
+.hidden-nav {
+	width: 100%; height: 100%;
+	background-color: #5f4b8b;
+	display: none; position: fixed; z-index: 500; 
+}
+.navlist {
+	margin:auto;
+	text-align: center;
+}
+.navlist li a {
+	display: inline-block;
+	width: 100%;
+	/*font-family: 'Noto Sans KR', sans-serif;*/
+	font-size: 50px;
+	line-height: 2; 
+	font-weight: 500 !important;
+	opacity: 0.5;
+}
+.navlist li:hover a {
+	color: #ffc83e; 
+	opacity: 1;
+}
+.dum:after { margin-right: 200px; }
+
+/**
+  * footer
+------------------------------------------------------------------
+*/
+footer {
+	width: 100%; display: table; height: 100%;
+	background-color: #000;
+	overflow:hidden; 
+	/*font-family: 'Noto Sans KR', sans-serif;*/
+	position: relative;
+}
+footer > div:first-child {
+	display: table-cell;
+	vertical-align: bottom;
+	padding-bottom: 30px;
+} 
+.dm {height: 60%;}
+footer h1 {
+	padding: 0 10px 30px 10px; 
+	font-weight: 700;
+	font-size: 1.3em;
+}
+footer > div:first-child > div:last-child > h1 {
+	color:#91baff;
+	height: 70px; line-height: 2;
+}
+footer > div:first-child > div:last-child > .typed-cursor {
+	display: none !important;
+	opacity: 0!important;
+}
+#infome {
+	margin: auto;
+	border-top: 1px solid;
+	padding-top: 35px;
+	overflow: hidden;
+}
+#infome > li {
+	margin-bottom: 10px;
+}
+#infome > li a {
+	display: inline-block;
+	width: 300px; height: 60px;
+	background: url(../img/cont-mob.png) no-repeat;
+}
+#infome > li:nth-child(2) a {
+	background-position: 0 -90px;
+}
+#infome > li:nth-child(3) a {
+	background-position: 0 -176px;
+}
+#infome > li:last-child a {
+	background: 0;
+	text-align: left; margin-top: 5px;
+	color: #eee;
+}
+#infome > li:last-child a img{
+	width: 52px; height: 38px;
+	vertical-align: middle;
+	margin-right: 25px;
+}
+#infome .pc-btn {
+	display: none;
+}
+#fin {
+	font-size: .7em; 
+	color: #666;
+	line-height: 1.4;
+	margin-bottom: 30px;
+}
+#fin:hover {
+	color: #eee;
+}
+footer > .nav-bar-bg {
+	position: absolute;
+	bottom: 0; left: 0; 
+	z-index: 55; width: 100%;
+}
+/* 카피라이트
+---------------------------------------------------------------*/
+
+.nav-bar-bg p {
+	width: 100%;
+	color: #666; box-shadow: 1px -1px 1px #222;
+	text-align: center;
+	line-height: 3; font-size: 14px;
+}
+
+@media (min-width: 668px) {
+	#nav-icon4 {
+		/* opacity: 0; */
+	}
+	footer { height: 140%; }
+	header ul{
+		display: block;
+	}
+	.logo{
+		line-height: 1;
+	}
+}
+@media (min-width: 1200px) {
+
+	.logo {
+		left: 100px;
+	}
+	.dm { height: 45%; }
+	#infome > li { 
+		border-right: 1px solid #666; 
+		margin-bottom: 0;
+	}
+	#infome > li:last-child { border-right: none; }
+	#infome > li a {
+		display: inline-block;
+		width: 110px; height: 120px;
+		background: url(../img/cont_pc.png) no-repeat;
+	}
+	#infome > li:nth-child(2) a {
+		background-position: -170px 0;
+	}
+	#infome > li:nth-child(3) a {
+		background-position: -355px 0;
+	}
+	#infome .pc-btn {
+		display: inline-block;
+	}
+	#infome > li:last-child a img{
+		width: 52px; height: 38px;
+		vertical-align: middle;
+		margin-right: 0;
+	}
+	#infome > li:last-child a {
+		line-height: 3.2;
+		text-align: center;
+	}
+	#infome .mob-btn {
+		display: none;
+	}
+}

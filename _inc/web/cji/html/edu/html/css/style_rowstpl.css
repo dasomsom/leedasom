@@ -1,0 +1,810 @@
+/*** 게시물 템플릿의 홈페이지 출력정보 링크색상설정 ***/
+.rowsListHomepage{color:;}
+.rowsListHomepage:hover {color:;}	/* 마우스 오버시 글자색 설정 */
+
+
+
+
+/*** 게시물 출력 템플릿파일에 적용된 CSS 사항들 *********************************************************************************************[ -- START -- ]***/
+
+/***[ 도움말 ] *******************************************************************************************************
+
+1. 아래는 각 출력게시물 템플릿파일에 적용된 CSS 사항들입니다.
+2. 출력게시물 템플릿파일에 기본적인 옵션 사항들을 여기에서 수정하실 수 있습니다.
+3. ★★ "CSS "★★ 관련 강좌를 참조하시기 바랍니다.
+*********************************************************************************************************************/
+
+/***  업체정보 게시물 출력 템플릿파일 [ start ] ***/
+
+/***================ [ 갤러리, 포토형 ] ===================***/
+
+/*** upso_list_photo01.html ***/
+/*---[ 프리미엄업체 정보 1 ]---*/
+.rowsInfoPhotoN01{font-size:12px;color:#003663; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN01:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN01Td1{padding:7 6 3 6; line-height:15px;}	/*** 출력정보 제목부분의 칸 TD ***/
+.rowsInfoPhotoN01Td2{padding:7 12 5 12; height:37px; font-size:11px; color:#555; text-align:justify;}	/*** 출력정보 설명부분의 칸 TD ***/
+
+
+
+/*** upso_list_photo02.html ***/
+/*---[ 프리미엄업체 정보 2 ]---*/
+.rowsInfoPhotoN02{font-size:12px;color:#003663; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN02:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN02Td1{padding:3 6 0 6; line-height:14px; text-align:center;}	/*** 출력정보 제목부분의 칸 TD ***/
+
+
+
+/*** upso_list_photo03.html ***/
+/*---[ 프리미엄업체 정보 3 ]---*/
+.rowsInfoPhotoN03{font-size:12px;color:#003663; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN03:hover{text-decoration:none; }	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN03Td{padding:4 0 0 0; line-height:14px;}	/*** 출력정보 부분의 칸 TD ***/
+.rowsInfoPhotoN03div{width:100%;font-size:11px; color:#555; text-align:; padding-right:10px;}	/*** 출력정보 설명부분 DIV ***/
+
+
+
+/*** upso_list_photo04.html ***/
+/*---[ 추천업체 정보 1 ]---*/
+.rowsInfoPhotoN04{font-size:12px;color:#007130; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN04:hover{text-decoration:none; }	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN04Td{padding:4 0 0 0; line-height:15px;}	/*** 출력정보 부분의 칸 TD ***/
+.rowsInfoPhotoN04div{width:100%;font-size:11px; color:#555; text-align:; padding-right:10px;}	/*** 출력정보 설명부분 DIV ***/
+.rowsInfoPhotoN04div2{margin:0 0 5 0;}	/*** 출력정보 제목부분에 적용 ***/
+
+
+
+/*** upso_list_photo05.html ***/
+/*---[ 추천업체 정보 2 ]---*/
+.rowsInfoPhotoN05{font-size:12px;color:#024F1E; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN05:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN05Td1{padding:1px; border-width:1px; border-style:solid; border-color:#CCC; background-color:white;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN05Td2{padding:3 6 0 6; line-height:14px; text-align:center;}	/*** 출력정보 제목부분의 칸 TD ***/
+
+
+
+/*** upso_list_photo06.html ***/
+/*---[ 신규업체 정보 1 ]---*/
+.rowsInfoPhotoN06{font-size:12px;color:#024F1E; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN06:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN06font{font-size:11px; color:#555; line-height:12px;}	/*** 출력정보 짧은설명 부분에 적용 ***/
+.rowsInfoPhotoN06Td1{}	/*** 출력정보 제목부분의 칸 TD ***/
+.rowsInfoPhotoN06Td2{}	/*** 출력정보 기타정보부분의 칸 TD ***/
+
+
+/*** upso_list_photo07.html ***/
+/*---[ 신규업체 정보 2 ]---*/
+.rowsInfoPhotoN07{font-size:12px;color:#024F1E; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN07:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN07Td1{padding:1px; border-width:2px; border-style:solid; border-color:#CCC; background-color:white;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN07Td2{padding:3 6 0 6; line-height:14px; text-align:center;}	/*** 출력정보 제목부분의 칸 TD ***/
+
+
+
+/*** upso_list_photo08.html ***/
+/*---[ 쿠폰업체 정보 ]---*/
+.rowsInfoPhotoN08{font-size:12px;color:#E8E8E8; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN08:hover{color:white; text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN08TdAll{padding:0 12 3 0;}
+.rowsInfoPhotoN08Td1{padding:5 4 4 4; text-align:center; background-color:#7A818D;}	/*** 출력정보 제목부분의 칸 TD ***/
+.rowsInfoPhotoN08Td2{padding:5 6 2 6; line-height:14px; text-align:center; font-size:11px;}	/*** 출력정보 주소부분의 칸 TD ***/
+.rowsInfoPhotoN08Td3{padding:3 6 0 6; line-height:14px; text-align:center;}	/*** 출력정보 쿠폰보기 버튼부분의 칸 TD ***/
+.rowsInfoPhotoN08Td4{width:102px; padding:3 1 6 6;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN08div{width:86px; height:68px; padding:2px; background-color:white; border-width:1px; border-style:solid; border-color:#BBB;}	/*** 출력정보 사진부분에 적용 ***/
+
+
+
+
+/*** upso_list_photo09.html ***/
+/*---[ 프리미엄업체 정보 1 ]----------------[ 서브페이지] */
+.rowsInfoPhotoN09{font-size:12px;color:#FFF; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN09:hover{color:#FFF; text-decoration:underline; }	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN09Td{padding:4 0 0 0; color:#EEE; line-height:14px; font-size:11px;}	/*** 출력정보 부분의 칸 TD ***/
+.rowsInfoPhotoN09div{width:100%;font-size:11px; color:#EEE; text-align:; padding-right:10px; margin:0 0 0 0;}	/*** 출력정보 설명부분 DIV ***/
+.rowsInfoPhotoN09div2{color:#DDD; margin:0 0 6 0;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN09div3{height:40px; color:#DDD; margin:0 0 7 0; border:0 solid red;}	/*** 출력정보 등록지역, 전화번호 부분에 적용 ***/
+
+
+/*** upso_list_photo10.html ***/
+/*---[ 프리미엄업체 정보 2 ]----------------[ 서브페이지] */
+.rowsInfoPhotoN10{font-size:12px;color:#FFF; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN10:hover{color:#FFF; text-decoration:underline; }	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN10Td{padding:4 0 0 0; color:#EEE; line-height:13px; font-size:11px;}	/*** 출력정보 부분의 칸 TD ***/
+.rowsInfoPhotoN10div{width:100%;font-size:11px; color:#EEE; text-align:; padding-right:10px; margin:7 0 0 0;}	/*** 출력정보 설명부분 DIV ***/
+.rowsInfoPhotoN10div2{color:#DDD; margin:0 0 5 0;}	/*** 출력정보 제목부분에 적용 ***/
+
+
+/*** upso_list_photo11.html ***/
+/*---[ 인기업체 정보 1 ]----------------[ 서브페이지] */
+.rowsInfoPhotoN11{font-size:12px;color:#0072BC; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN11:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN11Td1{padding:1px; border-width:1px; border-style:solid; border-color:#BBB; background-color:white;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN11Td2{padding:3 6 0 6; line-height:15px; text-align:center;}	/*** 출력정보 제목부분의 칸 TD ***/
+
+
+/*** upso_list_photo12.html ***/
+/*---[ 인기업체 정보 2 ]----------------[ 서브페이지] */
+.rowsInfoPhotoN12{font-size:12px;color:#0072BC; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN12:hover{text-decoration:none; }	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN12Td{padding:2 0 0 0; color:#333; line-height:13px; font-size:11px;}	/*** 출력정보 부분의 칸 TD ***/
+.rowsInfoPhotoN12div{width:95px; height:55px; padding:1px; border-width:1px; border-style:solid; border-color:#CCC; background-color:#FFF;}	/*** 출력정보 사진부분 DIV ***/
+.rowsInfoPhotoN12div2{color:#DDD; margin:0 0 5 0;}	/*** 출력정보 제목부분에 적용 ***/
+
+
+/*** upso_list_photo13.html ***/
+/*---[ 추천업체 정보 1 ]----------------[ 서브페이지] */
+.rowsInfoPhotoN13{font-size:12px;color:#037232; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN13:hover{text-decoration:underline;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN13Td1{padding:2px; border-width:1px; border-style:solid; border-color:#BBB; background-color:white;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN13Td2{padding:3 6 0 6; line-height:15px; text-align:center;}	/*** 출력정보 제목부분의 칸 TD ***/
+
+
+
+/*** upso_list_photo14.html ***/
+/*---[ 내가 등록한 업체 정보 1 ]---*/
+.rowsInfoPhotoN14{font-size:12px;color:#DA3800; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN14:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN14Cate{font-size:11px;color:#484848;}	/*** 카테고리 출력정보 부분의 칸에 적용 ***/
+.rowsInfoPhotoN14Cate:hover{text-decoration:none;}	/*** 카테고리 출력정보 부분의 칸에 적용 ***/
+.rowsInfoPhotoN14Td1{height:27px; padding:0 1 4 1;}	/*** 출력정보 제목부분의 칸 TD ***/
+.rowsInfoPhotoN14Td2{}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN14Td3{text-align:center; padding:3 3 1 3;}	/*** 출력정보 옵션아이콘출력 부분의 칸 TD ***/
+.rowsInfoPhotoN14Td4{padding:2 0 2 0; font-size:11px; color:#555;}	/*** 출력 기본정보 표시부분의 칸 TD ***/
+.rowsInfoPhotoN14Td5{padding:7 4 5 4; font-size:11px; color:#555; letter-spacing:0px;}	/*** 출력정보 짧은설명부분의 칸 TD ***/
+
+
+
+/*** upso_list_photo15.html ***/
+/*---[ 내가 등록한 업체 정보 2 ]---*/
+.rowsInfoPhotoN15{font-size:12px;color:#024F1E; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN15:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN15Td1{background-color:#FFF;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN15Td2{padding:4 0 0 0; text-align:center;}	/*** 출력정보 제목 부분의 칸 TD ***/
+.rowsInfoPhotoN15Td3{height:13px; padding:0 0 0 0; text-align:center; color:#555;}	/*** 출력정보 등록지역/등록일 부분의 칸 TD ***/
+.rowsInfoPhotoN15Td4{height:13px; padding:0 0 0 0; text-align:center; color:#555; letter-spacing:-3px;}	/*** 출력정보 옵션아이콘정보 부분의 칸 TD ***/
+
+
+
+
+/*** upso_list_photo16.html ***/
+/*---[ 내가 등록한 업체 정보 4 ]---*/
+.rowsInfoPhotoN16{font-size:12px;color:#024F1E; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN16:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsInfoPhotoN16Td1{background-color:#FFF;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsInfoPhotoN16Td2{padding:4 0 0 0; text-align:center;}	/*** 출력정보 제목 부분의 칸 TD ***/
+.rowsInfoPhotoN16Td3{height:13px; padding:0 0 0 0; text-align:center; color:#555;}	/*** 출력정보 등록지역/등록일 부분의 칸 TD ***/
+.rowsInfoPhotoN16Td4{height:13px; padding:0 0 0 0; text-align:center; color:#555; letter-spacing:-3px;}	/*** 출력정보 옵션아이콘정보 부분의 칸 TD ***/
+
+
+
+
+
+
+/***================ [ 목록형 ] ===================***/
+
+/*** upso_list_rows_photo01.html (사진출력이 되는 리스트형) ***/
+
+/*---[ 업체정보 일반목록형 (사진출력표시 포함) ----------------[ 서브페이지] */
+/*******************************************************************************************************************************
+아래 항목은 리스트의 각 항목 제목으로 된 부분의 칸크기와 동기화(같게)하기 위함입니다.
+************************************************************************************************************************
+[추가설명]
+리스트 항목 각 요소들(사진, 업체명/설명, 옵션아이콘, 담당자/연락처, 주소)의 칸과
+업체정보출력 게시물 템플릿에 나오는 각 항목요소의 칸과 가로크기를 동일하게 맞추기 위해서 입니다.
+************************************************************************************************************************
+/* .list_itemTD_blankN01{width:3px;}	 /* 왼쪽여백 */
+/* .list_itemTDN01{width:81px; text-align:center;}	 /* 사진 */
+/* .list_itemTDN02{width:225px; text-align:center;}	 /* 업체명/설명 */
+/* .list_itemTDN03{width:79px; text-align:center;}	 /* 옵션아이콘 */
+/* .list_itemTDN04{width:110px; text-align:center;}	 /* 담당자/연락처 */
+/* .list_itemTDN05{width:231px; text-align:center;}	 /* 주소 */
+/* .list_itemTD_blankN02{width:3px;}	 /* 오른쪽여백 */
+/* .list_itemTD_separator{width:2px;}	/* 구분자 세로라인 */
+/*******************************************************************************************************************************/
+#rowsListPhotoN01Td1Div{width:66px; height:40px; text-align:center; padding:1 1 1 1; border-width:1px; border-style:solid; border-color:#CCC; background-color:white;}	/*** 사진 부분의 칸 TD ***/
+#rowsListPhotoN01Td2Div{width:100%; text-align:center;}	/*** 업체명/설명 부분의 칸 TD ***/
+	.rowsListPhotoN01Td2A{}	/* 업체 제목명 부분의 칸 */
+		.rowsListPhotoN01{font-size:12px;color:#296C32; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+		.rowsListPhotoN01:hover{color:black; text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+	.rowsListPhotoN01Td2B{font-size:8pt; color:gray;}	/* 설명 부분의 칸 */
+#rowsListPhotoN01Td3Div{width:100%; text-align:center;}	/*** 출옵션아이콘 부분의 칸 TD ***/
+#rowsListPhotoN01Td4Div{width:100%; text-align:center;}	/* 담당자/연락처 부분의 칸 */
+#rowsListPhotoN01Td5Div{width:100%; text-align:left; padding:0 5 0 5;}	/* 주소/홈페이지주소 내용을 감싸는 레이어 */
+	.rowsListPhotoN01Td5DivHome{}
+.rowsListPhotoTD_separator{width:2px;}	/* 구분자 세로라인 */
+
+
+
+
+
+
+
+
+/*** rows_list_settlement01.html (리스트형) ***/
+
+/*---[ 나의 결제한 내역정보 - 목록형 ----------------[ 마이페이지 - my_room.html ] */
+/*******************************************************************************************************************************
+아래 항목은 리스트의 각 항목 제목으로 된 부분의 칸 크기와 동기화(같게)하기 위함입니다.
+************************************************************************************************************************
+[추가설명]
+리스트 항목 각 요소들(번호, 연락처, 결제비용, 결제일, 결제방식, 입금여부, 상세정보)의 칸과
+업체정보출력 게시물 템플릿에 나오는 각 항목요소의 칸과 가로크기를 동일하게 맞추기 위해서 입니다.
+************************************************************************************************************************
+/*.mypg_settlement_list_itemTD_blankN01{width:5px;}	 /* 왼쪽여백 */
+/*.mypg_settlement_list_itemTDN01{width:58px; text-align:center;}	 /* 번호 */
+/*.mypg_settlement_list_itemTDN02{width:90px; text-align:center;}	 /* 연락처 */
+/*.mypg_settlement_list_itemTDN03{width:108px; text-align:center;}	 /* 결제비용 */
+/*.mypg_settlement_list_itemTDN04{width:86px; text-align:center;}	 /* 결제일 */
+/*.mypg_settlement_list_itemTDN05{width:92px; text-align:center;}	 /* 결제방식 */
+/*.mypg_settlement_list_itemTDN06{width:91px; text-align:center;}	 /* 입금여부 */
+/*.mypg_settlement_list_itemTDN07{width:; text-align:center;}	 /* 상세정보 */
+/*.mypg_settlement_list_itemTD_blankN02{width:5px;}	 /* 오른쪽여백 */
+/*.mypg_settlement_list_itemTD_separator{width:2px;}	/* 구분자 세로라인 */
+/*******************************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+/*** rows_list_myreg_wait.html / rows_list_myreg_waitmod.html / rows_list_myreg_regular.html (리스트형) ***/
+
+/*---[ 내가 등록한 업체정보 - 대기중인 업체정보 / 수정 후 재등록 대기중인 업체정보 / 정식 등록된 업체정보 - 목록형 ----------------[ 마이페이지 - my_regist_info.html ] */
+/*******************************************************************************************************************************
+아래 항목은 리스트의 각 항목 제목으로 된 부분의 칸 크기와 동기화(같게)하기 위함입니다.
+************************************************************************************************************************
+[추가설명]
+리스트 항목 각 요소들(사진, 카테고리/업체명, 주소, 홈피마감일, 업체정보관리툴)의 칸과
+업체정보출력 게시물 템플릿에 나오는 각 항목요소의 칸과 가로크기를 동일하게 맞추기 위해서 입니다.
+
+[ rows_list_myreg_wait.html - 등록 대기중인 업체정보 ]**********************************************************************
+/* .rowsTBLheight_myRegist_INFO{height:23px;}	 /* 게시물 템플릿 한 칸의 높이 설정 */
+/* .mypage_myregist_info_wait_List_itemTD_blankN01{width:5px;}	 /* 왼쪽여백 */
+/* .mypage_myregist_info_wait_List_itemTDN01{width:58px; text-align:center;}	 /* 사진 */
+/* .mypage_myregist_info_wait_List_itemTDN02{width:90px; text-align:center;}	 /* 카테고리/업체명 */
+/* .mypage_myregist_info_wait_List_itemTDN03{width:108px; text-align:center;}	 /* 주소 */
+/* .mypage_myregist_info_wait_List_itemTDN04{width:86px; text-align:center;}	 /* 홈피마감일 */
+/* .mypage_myregist_info_wait_List_itemTDN05{width:92px; text-align:center;}	 /* 업체정보관리툴 */
+/* .mypage_myregist_info_wait_List_itemTD_blankN02{width:5px;}	 /* 오른쪽여백 */
+/* .mypage_myregist_info_wait_List_itemTD_separator{width:2px;}	/* 구분자 세로라인 */
+/*******************************************************************************************************************************
+
+[ rows_list_myreg_waitmod.html - 수정 후 재등록 대기중인 업체정보 ]******************************************************
+/* .rowsTBLheight_myRegist_INFO{height:23px;}	 /* 게시물 템플릿 한 칸의 높이 설정 */
+/* .mypage_myregist_info_waitMod_List_itemTD_blankN01{width:5px;}	 /* 왼쪽여백 */
+/* .mypage_myregist_info_waitMod_List_itemTDN01{width:58px; text-align:center;}	 /* 사진 */
+/* .mypage_myregist_info_waitMod_List_itemTDN02{width:90px; text-align:center;}	 /* 카테고리/업체명 */
+/* .mypage_myregist_info_waitMod_List_itemTDN03{width:108px; text-align:center;}	 /* 주소 */
+/* .mypage_myregist_info_waitMod_List_itemTDN04{width:86px; text-align:center;}	 /* 홈피마감일 */
+/* .mypage_myregist_info_waitMod_List_itemTDN05{width:92px; text-align:center;}	 /* 업체정보관리툴 */
+/* .mypage_myregist_info_waitMod_List_itemTD_blankN02{width:5px;}	 /* 오른쪽여백 */
+/* .mypage_myregist_info_waitMod_List_itemTD_separator{width:2px;}	/* 구분자 세로라인 */
+/*******************************************************************************************************************************
+
+[ rows_list_myreg_regular.html - 정식 등록된 업체정보]*********************************************************************
+/* .rowsTBLheight_myRegist_INFO{height:23px;}	 /* 게시물 템플릿 한 칸의 높이 설정 */
+/* .mypage_myregist_info_Regular_List_itemTD_blankN01{width:5px;}	 /* 왼쪽여백 */
+/* .mypage_myregist_info_Regular_List_itemTDN01{width:58px; text-align:center;}	 /* 사진 */
+/* .mypage_myregist_info_Regular_List_itemTDN02{width:90px; text-align:center;}	 /* 카테고리/업체명 */
+/* .mypage_myregist_info_Regular_List_itemTDN03{width:108px; text-align:center;}	 /* 주소 */
+/* .mypage_myregist_info_Regular_List_itemTDN04{width:86px; text-align:center;}	 /* 홈피마감일 */
+/* .mypage_myregist_info_Regular_List_itemTDN05{width:92px; text-align:center;}	 /* 업체정보관리툴 */
+/* .mypage_myregist_info_Regular_List_itemTD_blankN02{width:5px;}	 /* 오른쪽여백 */
+/* .mypage_myregist_info_Regular_List_itemTD_separator{width:2px;}	/* 구분자 세로라인 */
+/*******************************************************************************************************************************/
+
+/***  rows_list_myreg_wait.html / rows_list_myreg_waitmod.html / rows_list_myreg_regular.html 공유 항목사항들 ***/
+#rowsListMyRegInfoN01Td1Div{width:66px; height:41px; text-align:; padding:1 1 1 1; border-width:1px; border-style:solid; border-color:#CCC; background-color:white;}	/*** 사진 부분의 칸 TD ***/
+#rowsListMyRegInfoN01Td2Div{width:100%; text-align:left; padding:0 5 0 5;}	/*** 카테고리/업체명 부분의 칸 TD ***/
+	.rowsListMyRegInfoN01Td2s01{font-size:12px;color:#296C32; font-weight:600;}	/*** 출력정보 제목부분의 칸 TD ***/
+		.rowsListMyRegInfoN01{color:#005826;}	/* 출력정보 제목부분에 적용 */
+		.rowsListMyRegInfoN01:hover{color:black; text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+
+	.rowsListMyRegInfoN01Td2s02{}	/* 카테고리 정보출력 부분을 전체를 포함하는 칸 */
+		.rowsListMyRegInfoN01Td2s02s01{font-size:8pt; color:gray; padding:2 0 0 4;}	/* 카테고리 정보출력 부분의 칸 */
+
+#rowsListMyRegInfoN01Td3Div{width:100%; text-align:left; padding:0 7 0 7;}	/*** 주소 부분의 칸 TD ***/
+#rowsListMyRegInfoN01Td4Div{width:100%; text-align:center; padding:0 3 0 3;}	/* 홈피마감일 부분의 칸 */
+#rowsListMyRegInfoN01Td5Div{width:100%; text-align:center; padding:0 5 0 5;}	/* 업체정보관리툴 */
+	.rowsListMyRegInfoN01Td5DivHome{}
+.rowsListMyRegInfoTD_separator{width:2px;}	/* 구분자 세로라인 */
+
+
+
+
+
+
+
+
+
+
+
+/*** upso_list_rows_photo02.html (사진출력이 되는 리스트형) ***/
+.rowsListPhotoN02Cate{font-size:11px;color:#484848;}	/*** 카테고리 출력정보 부분의 칸에 적용 ***/
+.rowsListPhotoN02Cate:hover{text-decoration:none;}	/*** 카테고리 출력정보 부분의 칸에 적용 ***/
+
+.rowsListPhotoN02TD1{width:81px; text-align:center;}	 /* 사진 */
+	#rowsListPhotoN02Td1Div{width:66px; height:40px; text-align:center; padding:1 1 1 1; border-width:1px; border-style:solid; border-color:#CCC; background-color:white;}	/*** 사진 부분의 칸 TD ***/
+
+.rowsListPhotoN02TD2{width:140px; text-align:center;}	 /* 업체명,옵션아이콘,카테고리정보 부분의 칸 */
+	#rowsListPhotoN02Td2Div{width:140px; text-align:center; overflow:hidden;}	/*** 업체명,옵션아이콘,카테고리정보를 감싸는 레이어 ***/
+		.rowsListPhotoN02Td2A{}	/* 업체 제목명 부분의 칸 */
+			.rowsListPhotoN02{font-size:12px;color:#296C32; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+			.rowsListPhotoN02:hover{color:black; text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+
+		.rowsListPhotoN02Td2B{letter-spacing:-3px; padding-bottom:0px;}	/* 옵션아이콘(프리미엄,인기,추천,신규.쿠폰) 부분의 칸 */
+		.rowsListPhotoN02Td2C{font-family:Tahoma; font-size:11px; color:gray;}	/* 카테고리 정보출력 부분의 칸 */
+
+.rowsListPhotoN02TD3{width:75px; font-size:11px; text-align:center; line-height:13px;}	 /* 담당자/등록지역/등록일 부분의 칸 */
+	#rowsListPhotoN02Td3Div{width:100%; text-align:center;}	/* 담당자/등록지역/등록일을 감싸는 레이어  */
+
+.rowsListPhotoN02TD4{width:; text-align:;}	 /* 짧은설명 */
+	#rowsListPhotoN02Td4Div{width:100%; text-align:left; font-size:11px; color:gray; line-height:13px; padding:0 5 0 5;}	/* 짧은설명 내용을 감싸는 레이어 */
+
+.rowsListPhotoN02TD_separator{width:2px;}	/* 구분자 세로라인 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***================ [ 갤러리 목록형 ] ===================***/
+
+/*** upso_list_rows_photo_gallery01.html (갤러리형) ***/
+/*---[ 업체정보 일반목록형 (갤러리형) (사진출력표시 포함) ----------------[ 서브페이지] */
+.rowsListPhotoGalleryN02{font-size:12px;color:#0072BC; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsListPhotoGalleryN02:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+.rowsListPhotoGalleryN02Td1{padding:1px; border-width:1px; border-style:solid; border-color:#BBB; background-color:white;}	/*** 출력정보 사진부분의 칸 TD ***/
+.rowsListPhotoGalleryN02Td2{padding:3 6 0 6; line-height:15px; text-align:center; word-break:break-all;}	/*** 출력정보 제목부분의 칸 TD ***/
+
+/*******************************************************************************************************************************/
+/***  업체정보 게시물 출력 템플릿파일 [ end ] ***/
+
+
+
+
+
+
+
+
+/*** upso_list_rows_photo_coupon01.html (갤러리형) ***/
+/*** 쿠폰업체 출력게시물 ***/
+.rowsListPhotoCouponN01{color:#597436; font-family:맑은 고딕, 돋움; font-size:9pt; font-weight:bold;}
+.rowsListPhotoCouponN01:hover{color:#F75600; text-decoration:none;}
+
+
+
+
+
+
+
+/*** upso_list_rows_photo_scrap01.html (갤러리형) ***/
+/*---[ 내가 스크랩한 업체정보 - 목록형 (갤러리형) (사진출력표시 포함) ----------------[ 마이페이지 - my_room.html ] */
+#rowsListPhotoScrapN01AllDiv{position:; width:130px; margin-bottom:20px; border:0 solid red;}	 /*** 출력정보 내용을 전체를 감싸는 레이어 ***/
+	#scrapDelButton{position:absolute; top:1px; left:8px;}	/* 스크랩정보 지우기버튼 */
+	.rowsListPhotoScrapN01AllTD{padding:5 0 0 0; background-color:white;}	/* 출력정보 전체부분을 감싸는 칸 */
+	.rowsListPhotoScrapN01Td1{padding:9 2 2 2; text-align:center;}	 /* 출력정보 제목부분의 칸 */
+	.rowsListPhotoScrapN01Td1Del{height:101px; text-align:center; color:#F76464;}	 /* 삭제된 업체정보 안내문구 부분의 칸 */
+	.rowsListPhotoScrapN01{font-size:12px;color:#0072BC; font-weight:600;}	/*** 출력정보 제목부분에 적용 ***/
+	.rowsListPhotoScrapN01:hover{text-decoration:none;}	/*** 출력정보 제목부분에 적용 ***/
+	.rowsListPhotoScrapN01Td2{text-align:center;}	 /* 출력정보 사진 부분의 칸 */
+	.rowsListPhotoScrapN01Td3{text-align:center; padding:3 0 3 0; color:#555;}	 /* 출력정보 연락처 부분의 칸 */
+	.rowsListPhotoScrapN01Td4{height:50px; font-size:8pt; color:gray; line-height:13px; padding:4 5 3 5;}	 /* 출력정보 짧은설명 부분의 칸 */
+/*******************************************************************************************************************************/
+/***  업체정보 게시물 출력 템플릿파일 [ end ] ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***  게시판 게시물 출력 템플릿파일 [ start ] ***/
+/*** ------------------------------------------------------------------------------------------------------
+		게시판 게시물 제목 색상 변경은 [ inc / function.php ] 파일을 열어서 $board_title_color 변수명의
+		값을 색상코드값으로 설정하시면 됩니다.
+------------------------------------------------------------------------------------------------------ ***/
+
+/***================ [ 갤러리, 포토형 ] ===================***/
+
+/*** bbs_rows_output_photo_01.html ***/
+/*---[ 전문가칼럼 : 게시판 ]---*/
+.rowsPhotoN01{font-size:11px;color:#003663; font-weight:600;}	/*** 카테고리정보표시 부분에 적용 ***/
+.rowsPhotoN01:hover{text-decoration:none;}
+.rowsPhotoN01a{font-size:11px; color:#555;}
+
+
+
+/*** bbs_rows_output_photo_02.html ***/
+/*---[ 포토갤러리 : 게시판 ]---*/
+.rowsPhotoN02{font-size:11px; color:#555;}	 /* 게시물 제목 */
+.rowsPhotoN02:hover{color:green; text-decoration:none;}	 /* 게시물 제목 */
+/*.rowsPhotoN02{font-size:11px; color:#DDD;}	 /* 게시물 제목 */
+/*.rowsPhotoN02:hover{color:#FFF; text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN02Td{padding:3 0 10 0; text-align:center; font-size:11px;}	/* 게시물 제목칸 TD */
+
+
+
+/*** bbs_rows_output_photo_03.html ***/
+/*---[ 여행스케치 : 게시판 ]---*/
+.rowsPhotoN03{font-size:11px; color:#555;}	 /* 게시물 제목 */
+.rowsPhotoN03:hover{color:green; text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN03Td{padding:3 0 9 0; word-break:break-all;}	/* 게시물 제목칸 TD */
+
+
+
+/*** bbs_rows_output_photo_04.html ***/
+/*---[ 여행스케치 : 게시판 ]---*/
+.rowsPhotoN04{font-size:11px; color:#555;}	 /* 게시물 제목 */
+.rowsPhotoN04:hover{color:green; text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN04Td{padding:3 0 9 0; word-break:break-all;}	/* 게시물 제목칸 TD */
+
+
+
+/*** bbs_rows_output_photo_05.html ***/
+/*---[ 맛집이야기 : 게시판 ]---*/
+.rowsPhotoN05a{margin-bottom:4px;}	 /* 게시물 제목 */
+.rowsPhotoN05b{font-size:11px; color:#555; line-height:12px;}	 /* 게시물 내용 */
+.rowsPhotoN05Td{padding:8 10 7 10; word-break:break-all;}	/* 게시물 내용칸 TD */
+
+
+
+/*** bbs_rows_output_photo_06.html ***/
+/*---[ 인테리어갤러리 : 게시판 ]---*/
+.rowsPhotoN06{color:#003663; font-weight:600; letter-spacing:-1;}	 /* 게시물 제목 */
+.rowsPhotoN06:hover{text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN06Td1{padding:5 6 4 6; word-break:break-all;}	/* 게시물 내용칸 TD - 제목 */
+.rowsPhotoN06Td2{padding:1px; border-width:1px; border-style:solid; border-color:#CCC; background-color:#FFF;}	/* 게시물 내용칸 TD - 사진 */
+.rowsPhotoN06Td3{padding:5 7 8 7; color:#555; line-height:14px; font-size:11px; word-break:break-all;}	/* 게시물 내용칸 TD - 내용 */
+
+
+
+
+/*** bbs_rows_output_photo_07.html ***/
+/*---[ 인테리어갤러리 : 게시판 ]---*/
+.rowsPhotoN07{color:#003663; font-weight:600; font-size:11px; text-align:justify;}	 /* 게시물 제목 */
+.rowsPhotoN07:hover{text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN07Td1{padding:1px; border-width:1px; border-style:solid; border-color:#CCC; background-color:#FFF;}	/* 게시물 내용칸 TD - 사진 */
+.rowsPhotoN07Td2{padding:4 6 6 6; word-break:break-all;}	/* 게시물 내용칸 TD - 제목 */
+
+
+
+/*** bbs_rows_output_photo_08.html ***/
+/*---[ 영화이야기 : 게시판 ]---*/
+.rowsPhotoN08{color:#003663; font-size:11px; text-align:justify;}	 /* 게시물 제목 */
+.rowsPhotoN08:hover{text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN08Td{padding:5 0 3 0; text-align:center;}	/* 게시물 내용칸 TD - 제목 */
+
+
+
+
+/*** bbs_rows_output_photo_09.html ***/
+/*---[ 맛집이야기 : 게시판 ]---*/
+.rowsPhotoN09{font-size:11px; color:#555;}	 /* 게시물 제목 */
+.rowsPhotoN09:hover{color:#000; text-decoration:none;}	 /* 게시물 제목 */
+.rowsPhotoN09Td{padding:3 0 5 0; text-align:left; font-size:11px; word-break:break-all;}	/* 게시물 제목칸 TD */
+#rowsPhotoN09TBL{width:60px;}	/* 테이블 가로크기 설정 */
+#rowsPhotoN09Img{width:60px; border-width:1px; border-style:dotted; border-color:#008040;}	/* 사진 가로크기 설정 */
+
+
+
+
+
+
+/*** bbs_rows_newslist01.html ***/
+/*---[ 커뮤니티 메인페이지 : 업체뉴스 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_newslist01{font-family:맑은 고딕,돋움; font-size:14pt; font-weight:bold; letter-spacing:-1px;}
+.bbs_rows_title_newslist01:hover{text-decoration:none;}
+
+/* 카테고리명 표시글자 설정 */
+.bbs_category_newslist01{color:#E36203; font-size:8pt;}
+.bbs_category_newslist01:hover{text-decoration:none;}
+
+
+
+
+
+
+
+/*** bbs_rows_photogallery01.html ***/
+/*---[ 커뮤니티 메인페이지 : 포토뉴스 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery01{font-family:맑은 고딕,돋움; font-size:10pt; font-weight:100; letter-spacing:-1px;}
+.bbs_rows_title_photogallery01:hover{text-decoration:none;}
+/* 카테고리명 표시글자 설정 */
+.bbs_category_photogallery01{color:#E36203; font-size:8pt;}
+.bbs_category_photogallery01:hover{text-decoration:none;}
+
+
+
+
+
+
+/*** bbs_rows_photogallery02.html ***/
+/*---[ 커뮤니티 메인페이지 : 맛집이야기 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery02{font-family:돋움; font-size:12px; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_photogallery02:hover{text-decoration:none;}
+
+
+
+
+
+
+/*** bbs_rows_photogallery03.html ***/
+/*---[ 커뮤니티 메인페이지 : 구인정보게시판 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery03{font-family:맑은 고딕,돋움; font-size:12px; color:#005826; font-weight:100; line-height:13px; letter-spacing:-1px;}
+.bbs_rows_title_photogallery03:hover{text-decoration:underline;}
+
+
+
+
+
+/*** bbs_rows_photogallery04.html / bbs_rows_movie.html (영화이야기 목록부분에 사용됨) ***/
+/*---[ 커뮤니티 메인페이지 : 영화이야기 내용 1 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery04{font-family:맑은 고딕,돋움; font-size:12px; font-weight:bold; line-height:13px; letter-spacing:-1px;}
+.bbs_rows_title_photogallery04:hover{text-decoration:none;}
+
+
+
+
+/*** bbs_rows_photogallery05.html ***/
+/*---[ 커뮤니티 메인페이지 : 영화이야기 내용 2 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery05{font-family:맑은 고딕,돋움; font-size:12px; font-weight:bold; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photogallery05:hover{text-decoration:none;}
+
+
+/*** bbs_rows_photogallery06.html ***/
+/*---[ 커뮤니티 메인페이지 : 영화이야기 내용 3 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery06{font-family:맑은 고딕,돋움; font-size:12px; font-weight:bold; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photogallery06:hover{text-decoration:none;}
+
+
+
+
+
+/*** bbs_rows_photogallery07.html ***/
+/*---[ 커뮤니티 메인페이지 : 여행스케치 내용 1 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery07{font-family:맑은 고딕,돋움; font-size:12px; font-weight:bold; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photogallery07:hover{text-decoration:none;}
+
+
+
+/*** bbs_rows_photogallery08.html ***/
+/*---[ 커뮤니티 메인페이지 : 여행스케치 내용 2 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery08{font-family:맑은 고딕,돋움; font-size:12px; font-weight:100; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photogallery08:hover{text-decoration:none;}
+
+
+
+
+/*** bbs_rows_photogallery09.html ***/
+/*---[ 커뮤니티 메인페이지 : 인테리어 갤러리 / 재밌는사진 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery09{font-family:맑은 고딕,돋움; font-size:12px; font-weight:100; line-height:13px; letter-spacing:0px; padding:5 5 5 5;}
+.bbs_rows_title_photogallery09:hover{text-decoration:none;}
+
+
+
+/*** bbs_rows_photogallery10.html ***/
+/*---[ 커뮤니티 메인페이지 : 추천하고 싶은 장소 내용 1 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery10{font-family:맑은 고딕,돋움; font-size:12px; font-weight:bold; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photogallery10:hover{text-decoration:none;}
+
+
+/*** bbs_rows_photogallery11.html ***/
+/*---[ 커뮤니티 메인페이지 : 추천하고 싶은 장소 내용 2 ]---*/
+/* 제목글자 설정 */
+.bbs_rows_title_photogallery11{font-family:맑은 고딕,돋움; font-size:12px; font-weight:bold; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photogallery1:hover{text-decoration:none;}
+
+
+
+
+
+/*** bbs_rows_photolist01.html ***/
+/*---[ 커뮤니티 메인페이지 : 구직정보게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_photolist01{font-family:맑은 고딕,돋움; font-size:12px; color:#005826; font-weight:bold; line-height:13px; letter-spacing:0px;}
+.bbs_rows_title_photolist01:hover{text-decoration:underline;}
+
+
+
+/*** bbs_rows_photolist02.html ***/
+/*---[ 커뮤니티 메인페이지 : 전문가칼럼게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_photolist02{font-family:맑은 고딕,돋움; font-size:12px; color:#005826; font-weight:bold; line-height:13px; letter-spacing:-1px;}
+.bbs_rows_title_photolist02:hover{text-decoration:underline;}
+
+
+
+
+
+
+
+/***================ [ 목록형 ] ===================***/
+
+/*** bbs_rows_output_01.html ***/
+/*---[ 일일조회 TOP 5 ]---*/ /*---[ 전문가칼럼 : 게시판 ]---*/ /*---[ 우리끼리 묻고답해요 : 게시판 ]---*/
+.rowsN01{font-size:11px; color:#003663; font-weight:100}	 /* 카테고리정보표시 부분에 적용 */
+.rowsN01:hover{text-decoration:none;}
+.rowsN01Td{letter-spacing:-1px;}
+
+
+/*** bbs_rows_output_02.html ***/
+/*---[ 구인정보,구직정보 : 게시판 ]---*/
+.rowsN02{font-size:12px;}	/* 게시물 제목 부분에 적용 */
+
+
+
+/*** bbs_rows_output_03.html ***/
+ /*---[ 공지사항 : 게시판 ]---*/
+.rowsN03Td{letter-spacing:-1px;}
+
+
+
+/*** bbs_rows_output_04.html ***/
+ /*---[ 유머이야기 : 게시판 ]---*/
+.rowsN04{font-size:11px; color:#003663; font-weight:100}
+.rowsN04Td{letter-spacing:-1px; height:21px; padding-top:2px;}
+.rowsN04Td2{color:#FF4E00; text-align:right;}
+
+
+
+/*** bbs_rows_output_05.html ***/
+ /*---[ 자유게시판 : 게시판 ]---*/
+.rowsN05Td{letter-spacing:-1px; font-size:13px; height:21px;}
+
+
+
+/*** bbs_rows_output_06.html ***/
+ /*---[ 뉴스 : 게시판 ]---*/
+.rowsN06Td{letter-spacing:0px; font-size:13px; height:21px;}	/* 게시물 내용칸 TD - 제목*/
+.rowsN06TdN02{text-align:right; color:gray;}	/* 게시물 등록일 칸 TD */
+
+
+/*** bbs_rows_output_06a.html ***/
+ /*---[ 뉴스 : 게시판 ]---*/
+.rowsN06Td_a{letter-spacing:0px; font-size:13px; height:19px; font-weight:600;}	/* 게시물 내용칸 TD - 제목 Bold*/
+
+
+
+/*** bbs_rows_output_07.html ***/
+ /*---[ 공지사항 : 로그인페이지(new_login.php) ]---*/
+.rowsN07Td{letter-spacing:0px; font-size:13px; height:27px;}	/* 게시물 내용칸 TD - 제목*/
+
+
+
+
+
+
+
+
+
+
+/*** bbs_rows_list01.html ***/
+ /*---[ 커뮤니티 메인페이지 - 업체뉴스 게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list01{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list01:hover{text-decoration:none;}
+
+/* 카테고리명 표시글자 설정 */
+.bbs_category_list01{color:#E36203; font-size:8pt;}
+.bbs_category_list01:hover{text-decoration:none;}
+
+
+
+
+
+
+/*** bbs_rows_list02.html ***/
+ /*---[ 커뮤니티 메인페이지 - 부동산뉴스 게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list02{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list02:hover{text-decoration:none;}
+
+
+
+
+
+/*** bbs_rows_list03.html ***/
+ /*---[ 커뮤니티 메인페이지 - 창업뉴스 게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list03{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list03:hover{text-decoration:none;}
+
+
+
+
+/*** bbs_rows_list04.html ***/
+ /*---[ 커뮤니티 메인페이지 - 웃음충전 / 우리끼리 묻고답해요 게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list04{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list04:hover{text-decoration:none;}
+
+
+
+/*** bbs_rows_list05.html ***/
+ /*---[ 커뮤니티 메인페이지 - 이벤트 / 창업이야기 게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list05{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list05:hover{text-decoration:none;}
+
+
+
+
+/*** bbs_rows_list06.html ***/
+ /*---[ 커뮤니티 메인페이지 - 자유게시판 게시판 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list06{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list06:hover{text-decoration:none;}
+
+
+
+
+
+
+
+
+/*** bbs_rows_list_normal.html ***/
+ /*---[ 커뮤니티 리스트페이지 - 일반목록형 ]---*/
+
+/* 제목글자 설정 */
+.bbs_rows_title_list_normal{font-family:돋움; font-size:9pt; font-weight:100; letter-spacing:0px;}
+.bbs_rows_title_list_normal:hover{text-decoration:none;}
+
+
+
+
+/***  게시판 게시물 출력 템플릿파일 [ end ] ***/
+
+
+/*** 출력게시물 템플릿파일에 적용된 사항 *********************************************************************************************[ -- END -- ]***/

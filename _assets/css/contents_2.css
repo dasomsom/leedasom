@@ -1,0 +1,63 @@
+
+/**
+------------------------------------------------------------------
+  * 메인
+------------------------------------------------------------------
+*/
+
+
+/*  공통 CSS
+---------------------------------------------------------------*/
+.container {width:90%; margin:0 auto; padding: 50px 0;}
+
+.title {font-size: 3em;line-height: 1.7; margin-bottom: 15px;font-weight: 700;}
+.sub_title {font-size: 1.5em; line-height: 1.7;margin-bottom: 20px;}
+
+.popup_window {position: fixed;width: 100%; height: 100%;background: rgba(0,0,0,0.5);left: 0;top: 0;}
+.popup_window .container {background: #fff;border-radius: 10px;width: 80%;height: 80%;padding: 0px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.popup_window .popup_nav a {display: inline-block;width: 50px; height: 50px;position: absolute;background-size:55px; border-radius: 50%;}
+.popup_window .prev {left: -70px; top: 50%; transform: translate(-50%,0); background: url('../../_assets/img/btn_slider_left.png') center no-repeat;}
+.popup_window .next {right: -90px; top: 50%;background: url('../../_assets/img/btn_slider_right.png') center no-repeat;}
+.popup_window .popup_nav a:hover {box-shadow: 0px 0px 10px #aaa;}
+.popup_window .slider_imgbox {width: 100%; height: 100%;overflow: hidden;}
+.popup_window .imgbox {height: 100%; display: flex;flex-wrap: wrap;}
+.popup_window .imgbox li{width: 100%;}
+/**
+  * #intro
+------------------------------------------------------------------
+*/
+main > section {border-bottom: 1px solid #aaa; margin: auto;height: 100%;}
+/* #intro, #skill {border-bottom: 1px solid #aaa;} */
+
+.title_h3 {font-size: 30px;font-weight: bold;line-height: 2;}
+.tabmenu_round {display: flex;}
+.tabmenu_round li {padding: 0 5px;margin-right: 10px;border: 1px solid #D9D9D9;}
+/**
+  * #work_visual
+------------------------------------------------------------------
+*/
+#work_visual .title {line-height: 1.2; margin-bottom: 50px;}
+#work_visual .cont:first-child {width: 20%;}
+#work_visual .cont:last-child {width: 70%;}
+
+
+
+/**
+  * #work_web
+------------------------------------------------------------------
+*/
+@media (min-width: 668px) {
+
+	.web_list {flex-direction:column;}
+
+}
+.web_list {display: flex; flex-wrap: wrap;flex-direction: row;}
+.cont_box {background: #eee;}
+.web_list .cont_box {width: calc(33% - 10px); height: 240px; margin: 0 10px 10px 0;}
+.web_list .cont_box:nth-child(3n) {margin-right: 0;}
+
+
+.pro_grid {display: flex; align-items:stretch; height: calc(100vh - 2px);}
+.pro_grid .grid_left{width: 30%;}
+.pro_grid .grid_right{width: 70%;}
+.project_iframe {width: 100%;height: 100%;}

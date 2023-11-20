@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
+	<link rel="stylesheet" href="./css/aos.css" type="text/css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="./js/aos.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../m/css/swiper-bundle.css">
+	<script type="text/javascript" src="../../../m/js/swiper-bundle.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#inner_contents").parent().css("width","100%");
+		//$("#inner_contents").parents("#wrap").css("min-width","1300px");
+		$(".right_menu").css("right","2%");
+
+		var cont_mid = $("#bg_pack_top").offset().top;
+		$(window).scroll(function(){
+			var window_posi = $(this).scrollTop();
+			
+			/* 타입1 :모집중 BAR*/
+			if(cont_mid <= window_posi){
+				$(".showBar").addClass("fixed");
+			}else{
+				$(".showBar").removeClass("fixed");
+			}
+		});
+
+		/* 쿠폰 */
+		var commLink = "./img/page/";
+		var targetCPimg01 = "cont_onlineZoom_mainTopMid_02";
+		var targetCPimg02 ="cont_onlineZoom_mid_07_3";
+		$(".couponArea").hover(function(){
+			if($(this).hasClass("pointer") == true){
+				$(this).parent().prev().prop('src', commLink + targetCPimg01 + '_on.jpg');
+			} else{
+				$(this).prop('src', commLink + targetCPimg02 + '_on.jpg');
+			}
+		}, function(){
+			if($(this).hasClass("pointer") == true){
+				$(this).parent().prev().prop('src', commLink + targetCPimg01 + '_off.jpg');
+			} else{
+				$(this).prop('src', commLink + targetCPimg02 + '_off.jpg');
+			}
+		});
+
+		$("map[name='goEvent'] area").click(function(){
+			var divId = $("#paybackEvent_detail");
+			var divIdtop = Math.floor($(divId).offset().top + 50);
+			$('body,html').animate({scrollTop: divIdtop},500);
+		});
+
+		$("map[name='goEvent2'] area").click(function(){
+			var divId = $("#paybackEvent");
+			var divIdtop = Math.floor($(divId).offset().top + 130);
+			$('body,html').animate({scrollTop: divIdtop},500);
+		});
+
+		/*신청하기 버튼 스크롤*/
+		$(".cont_showBar .btn_scroll").click(function(){
+			var divId = $("#sign_studyclass");
+			var divIdtop = Math.floor($(divId).offset().top - 100);
+			$('body,html').animate({scrollTop: divIdtop},500);
+		});
+
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000
+		});
+		
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 5,
+			spaceBetween: 30,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				//disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		});
+	});
+
+	</script>
+	<style>
+		img {vertical-align: text-bottom;}
+		#contents {text-align:center}
+			.bg_comm_pack {width: 100%;}
+			#bg_pack_top {background:linear-gradient(to bottom, #f5f5f4,#ded7cd);overflow:hidden }
+				#bg_pack_top > div{position:absolute;width: 100%; height: 905px; background:linear-gradient(to top, transparent 93%,#dad9d7 );}
+
+				.product img {position:absolute;}
+				
+				.plan01 .cont01 {background:url('./img/page/bg_onlineZoom_mid_02.jpg') repeat-x}
+					.plan01 .imgBox {left: 50%; margin-left: -500px; width: 1000px;}
+						.plan01 .imgBox img:not(:last-child) {margin-right: 15px}
+						.plan01 .imgBox img {box-shadow: 0px 0px 10px #aaa}
+						
+					.plan02 .imgBox {left: 50%; margin-left: -500px; width: 1000px;}
+					.plan02 .imgBox span {position: absolute;border-radius: 10px;display: inline-block;overflow: hidden;box-shadow: 0px 0px 7px #a5a5a5;}
+			
+				.plan03 .cont01 {width: 1000px; height: 700px; margin:auto; position: relative;}
+					.plan03 .cont01 .box{position: absolute;width: 820px; height: 140px; background: #fff; box-shadow: 0px 0px 7px #054a3d; text-align:center}
+					.plan03 .cont01 .box:first-child {width: 850px;}
+						.plan03 .cont01 .top {font-family: 'f_Score_bold'; color: #ff4444; font-size: 30px;letter-spacing: -1px;padding: 28px 0 20px}
+						.plan03 .cont01 p {font-family: 'f_Score_light'; color: #222; font-size: 18px; }
+				.plan03 .cont02 {position: relative;text-align: center; height: 713px;background:#f5f5f5}
+				.plan03 .cont03 {background:#fff297;}
+
+			#study_review {border-bottom: 1px solid #bfbfbf}
+				#study_review .swiper-container {padding: 30px 10px; width:95%; margin: auto; }
+					#study_review .swiper-slide {width:300px; border-radius: 10px; box-shadow:0px 0px 10px #aaa; overflow: hidden;margin-right:30px}
+						#study_review .swiper-slide img {width: 100%;}
+					#study_review .swiper-button-next, #study_review .swiper-button-prev {top:0; width: 150px; height: 100%;}
+			:root {--swiper-theme-color: #000;}
+
+			/* 미라클모닝 back_up 
+			#std_Schedule {background:url('./img/page/bg_onlineZoom_cont_06.jpg') repeat-x; }
+				#std_Schedule .cont01 {width:1000px; margin: auto;height: 425px;}
+					#std_Schedule .cont01 .box {width: 840px; height: 217px;top:40px; right:35px;}
+						#std_Schedule .cont01 .box > div:not(.clear) {width: 267px;margin-left: 10px;}
+							#std_Schedule .cont01 .box > div * {font-size: 18px}
+							#std_Schedule .cont01 .box .date {height: 110px;}
+								#std_Schedule .cont01 .box .date > div {position:absolute;width: 100%; font-family: 'f_Score_bold';font-size: 35px}
+									#std_Schedule .cont01 .box .date .mm {top : -20px;color: #fff;}
+										#std_Schedule .cont01 .box .date .mm span{font-size: 55px;}
+									#std_Schedule .cont01 .box .date .day {bottom:6px; font-size: 38px; color: #fffe99}
+							#std_Schedule .cont01 .box .register {padding-top: 14px;line-height: 1.8; margin-left: 25px;}
+								#std_Schedule .cont01 .box .register div{color: #000 ;}
+								#std_Schedule .cont01 .box .register div:last-child {text-indent:50px;}
+			*/
+			#sign_studyclass {height: 800px;background:url('./img/page/bg_onlineZoom_cont_06.jpg') repeat-x; }
+				#sign_studyclass th {font-size: 20px; background: #ffc567; color: #000; border: 15px solid #fff; border-top: 0; border-left: 0;border-radius: 10px 0 0 0;border-bottom-width: 5px;font-family: 'f_Score_reg';}
+				#sign_studyclass tbody tr th {border-bottom: 0;border-radius: 0 0 0 10px}
+				#sign_studyclass .dateBg td{background:#ff2a52; color: #fff; border: 0; height: 50px;border-right: 5px solid #e9e4c6; padding-top: 10px;}
+				#sign_studyclass .dateBg:nth-child(2) td {border: 5px solid #e9e4c6; border-top: 0; border-left: 0;padding-top:0}
+				#sign_studyclass .dateBg .bordPinkL {border-left:5px solid #ff2a52 !important; }
+				#sign_studyclass .dateBg .bordPinkR {border-right:5px solid #ff2a52 !important; }
+				#sign_studyclass .bordIvoryL {border-left:5px solid #e9e4c6 !important; }
+				#sign_studyclass td {color:#000; height: 30px; font-size: 16px;font-family: 'f_Score_reg';}
+				#sign_studyclass thead td {font-weight: bold;font-size: 25px;}
+				#sign_studyclass thead tr:not(.dateBg) td {font-size: 18px;padding: 10px 0 0;background:#fff; color: #555}
+				#sign_studyclass thead tr:not(.dateBg) td.textRight {font-size:20px;padding-right:30px;border-right:5px solid #e9e4c6;color: #000}
+				#sign_studyclass thead tr:not(.dateBg) td.textLeft {padding-left:20px;font-family: 'f_Score_light';}
+				#sign_studyclass thead tr:last-child td {padding-bottom:20px;}
+				#sign_studyclass .mm {font-size: 35px;}
+				#sign_studyclass .day{font-size: 27px; color: #ffe17d}
+				#sign_studyclass tbody td {height: 70px; background:#e9e4c6}
+				#sign_studyclass tbody td div {font-family: 'f_Score_reg'; color: #000;font-size: 18px;width: 95%; margin: 10px; height:50px; line-height: 50px; font-weight: bold;background:#fff;border-radius: 5px;}
+				#sign_studyclass tbody td:last-child:before {content:'or'; width: 40px; height: 40px;line-height: 40px; display: inline-block;/*float:left;*/ border-radius: 20px;background: #e9e4c6;margin-left: -20px;margin-top: 14px; }
+
+			/* 환급 이벤트 */
+				#paybackEvent .product {top: 0px;position: absolute;height: 700px;left: 50%;margin-left: -500px;}
+				#paybackEvent .bg {width: 100%;height: 16px;background:url('./img/page/bg_onlineZoom_mid_07.jpg') repeat-x}
+				#paybackEvent_detail {border-bottom: 1px solid #d5d5d5;padding-bottom: 15px}
+					#paybackEvent_detail div{width: 1000px; margin: auto;position: relative;}
+						#paybackEvent_detail a {position: absolute; bottom: 0; right: 225px;background: #fff;margin: 10px auto;display: inline-block;padding:0 20px; border-radius: 15px; border: 1px solid #aaa;text-align: right;display:inline-block;line-height: 2.2;font-size: 13px}
+						#paybackEvent_detail a:hover {background: #f1f1f1}
+					#paybackEvent .notice_event {background: #fdfdfd;display: none;border-bottom: 2px solid #aaa;}
+						#paybackEvent .notice_event > div {text-align: left;width: 960px; margin: auto; padding: 40px 20px;}
+						#paybackEvent .notice_event > div div{font-size: 15px}
+
+			.endding div{width: 1000px; margin: auto;height: 88px; line-height: 88px;color: #fff !important;font-size: 20px}
+
+			
+			#notice_999 {background:#EEE;text-align:left; padding-bottom: 100px}
+				#notice_999 > div {width:990px; margin:auto;padding:20px 0;}
+				#notice_999 > div > div{color:#494949;font-size: 13px;line-height:1.7}
+				#notice_999 > div > .bold {margin-bottom:3px;line-height:2}
+				#notice_999 > div > .bold:first-child {border-bottom:1px solid; margin-bottom:10px;}
+				#notice_999 > div * {font-size: 13px;line-height:1.7}
+				#notice_999 > div.part2Title {background: #3b85c5;width:970px;margin-top: 40px;font-size: 13px;color: #fff; padding: 5px 10px;}
+				#notice_999 > div.part2 {width: 960px;margin: auto; }
+					#notice_999 > div th {background: #737373 !important}
+
+		.showBar {position: relative;height:70px;overflow: hidden; background: #007862;}
+			.cont_showBar {width: 1000px; margin:auto;}
+				.cont_showBar .title span {font-family: 'f_Score_mid';letter-spacing: -2px;color: #ffde00 ; line-height: 70px;font-size: 40px;}
+				.cont_showBar .title img{vertical-align: sub}
+				.cont_showBar .date {color: #fff ;font-size: 20px;line-height: 90px;}
+			.cont_showBar .btn {display: inline-block; width: 160px; height: 50px;line-height: 50px; margin-top: 8px;background: #ffde00; color: #000; font-family: 'f_Score_bold';font-size: 20px;border: 1px solid #000; border-radius: 5px; }
+			.cont_showBar .btn:hover {background: #ffbd3c}
+			.cont_showBar .btn:first-child {background: #fff}
+			.cont_showBar .btn:first-child:hover {background:#f1f1f1}
+		.showBar.fixed {position: fixed; bottom:0;z-index: 9999; box-shadow: -1px 0 5px #333;background: #ff4444;}
+		/*반짝임 효과*/
+		.blinking {-webkit-animation:blink 1s ease-in-out infinite alternate; -moz-animation:blink 1s ease-in-out infinite alternate; animation:blink 1s ease-in-out infinite alternate;}
+		@-webkit-keyframes blink{ 0% {opacity:0;} 100% {opacity:1;} }
+		@-moz-keyframes blink{ 0% {opacity:0;} 100% {opacity:1;} }
+		@keyframes blink{ 0% {opacity:0;} 100% {opacity:1;} }
+
+	</style>
+</head>
+<body>
+	<div id="contents">
+		<div id="inner_contents">
+			<!--스터디 모집바-->
+			<div class="showBar bg_comm_pack">
+				<div class="cont_showBar">
+					<div class="f_l">
+						<div class="f_l title">
+							<span class="month mr10">1月</span>
+							<span class="blinking">수강생 모집 중<i>!</i></span>
+						</div>
+						<div class="f_l ml20 date">
+							모집기간 : <span>~ 2022.01.04 까지</span>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="f_r"><a href="#sign_studyclass" class="btn mr10 btn_scroll">강의 일정보기</a><a href="javascript:;" class="btn">수강 신청하기</a></div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!--스터디 모집바-->
+
+			<div id="bg_pack_top" class="bg_comm_pack">
+				<div></div>
+				<img src="./img/page/bg_mainAll_onlineZoom_00.png">
+			</div>
+
+			<!--상단혜택-->
+			<div class="bg_comm_pack pt20" style="background:#00b69e">
+				<img src="./img/page/cont_onlineZoom_mainTopMid_01.jpg">
+				<div id="eventDiv">
+					<img src="./img/page/cont_onlineZoom_mainTopMid_02_off.jpg" usemap="#couponP">
+					<map name="couponP">
+						<area shape="rect" coords="284,267,707,517" class="pointer couponArea" href="javascript:;">
+					</map>
+				</div>
+				
+				<!-- 구성품 한눈에 보기 -->
+				<div style="width: 1000px;height: 750px; margin: auto;">
+					<div class="product relative">
+						<div style="width: 800px;margin: auto;height: 640px;top: 30px;left: 50%;margin-left: -400px;" class="absolute">
+							<img src="./img/page/cont_onlineZoom_mainTopMid_03_1.png" style="top: 260px;width: 15%;left: 0px;z-index: 9;">
+							<img src="./img/page/cont_packv4_mainTop_prod02.gif" style="left:30px;width: 66%;top: 280px">
+							<img src="./img/page/cont_packv4_mainTop_prod03.png" style="left:-10px; bottom: -80px; width: 100%;">
+						</div>
+					</div>
+					<img src="./img/page/cont_onlineZoom_mainTopMid_03.jpg">
+				</div>
+				<!--// 구성품 한눈에 보기 -->
+				<img src="./img/page/cont_onlineZoom_mainTopMid_04.jpg">
+				<!-- 이벤트 바로가기 -->
+				<div>
+					<img src="./img/page/cont_onlineZoom_mainTopMid_05.jpg" usemap="#goEvent">
+					<map name="goEvent">
+						<area shape="rect" coords="230,0,770,68" class="pointer" href="#paybackEvent_detail">
+					</map>
+				</div>
+				<!--// 이벤트 바로가기 -->
+				<img src="./img/page/cont_onlineZoom_mainTopMid_06.jpg">
+				<img src="./img/page/cont_onlineZoom_mainTopMid_07.jpg">
+				<div>
+					<img src="./img/page/btn_onlineZoom_mainEnd.jpg" usemap="#buyPage01">
+					<map name="buyPage01">
+						<area shape="rect" coords="230,0,770,68" class="pointer" href="javascript:;">
+					</map>
+				</div>
+				<img src="./img/page/cont_onlineZoom_mainTopMid_08.jpg">
+			</div>
+
+			<!-- full패키지 x 라이브 화상 -->
+			<div class="bg_comm_pack" style="background:#007862">
+				<img src="./img/page/btn_onlineZoom_mainTopFull.jpg" usemap="#goEvent2">
+				<map name="goEvent2">
+					<area shape="rect" coords="76,23,922,93" class="pointer" href="javascript:;">
+				</map>
+			</div>
+			<!--// full패키지 x 라이브 화상-->
+
+
+			<!-- 이런분께 추천 --> 
+			<div class="bg_comm_pack pt100 plan01">
+				<img src="./img/page/cont_onlineZoom_mid02_1.png">
+				<div class="cont01 relative">
+					<div class="absolute imgBox">
+						<img src="./img/page/cont_onlineZoom_mid02_2.jpg" data-aos="fade-up" data-aos-offset="0">
+						<img src="./img/page/cont_onlineZoom_mid02_3.jpg" data-aos="fade-up" data-aos-offset="200">
+						<img src="./img/page/cont_onlineZoom_mid02_4.jpg" data-aos="fade-up" data-aos-offset="400">
+					</div>
+					<img src="./img/page/cont_onlineZoom_mid02_5.jpg" style="margin-top:400px">
+				</div>
+			</div>
+
+			<!-- 화상수업 설명 시작 -->
+			<div class="bg_comm_pack pt100 plan02">
+				<img src="./img/page/cont_onlineZoom_mid03_1.png"><br>
+				<div class="relative mt100" style="height: 530px; background:url('./img/page/cont_onlineZoom_mid03_2.png')top center no-repeat">
+					<div class="relative imgBox">
+						<span data-aos="fade" data-aos-offset="200" style="left:-40px; top:130px"><img src="./img/page/cont_onlineZoom_mid03_3.png"></span>
+						<span data-aos="fade" data-aos-offset="200" style="left:150px; top:280px; z-index:2"><img src="./img/page/cont_onlineZoom_mid03_4.png"></span>
+						<span data-aos="fade" data-aos-offset="200" style="right:-5px; top:260px"><img src="./img/page/cont_onlineZoom_mid03_5.png"></span>
+						<span data-aos="fade" data-aos-offset="100" style="right:60px; top:30px"><img src="./img/page/cont_onlineZoom_mid03_6.png"></span>
+					</div>
+				</div>
+			</div>
+
+			<!-- 특장점 - 플랜 -->
+			<div class="bg_comm_pack pt100 plan03" style="background:#0c7a66">
+				<img src="./img/page/cont_onlineZoom_mid04_0.jpg">
+				<div class="cont01">
+					<div class="box" style="top:45px;" data-aos="fade-right" data-aos-offset="100">
+						<div class="top">인강만으로 부족한 스피킹 훈련을 전문강사와 함께<i>!</i></div>
+						<p>쌍방향 수업을 통해 충분한 연습이 가능하며, 이해가 안되는 부분은 부연 설명도 들을 수 있습니다.</p>
+					</div>
+					<div class="box" style="top:205px;left: 90px" data-aos="fade-right">
+						<div class="top">실시간 발음 교정<i>!</i></div>
+						<p>중국어의 큰 걸림돌 성조 발음을 완벽 마스터 할 수 있도록 실시간으로 체크해드립니다.</p>
+					</div>
+					<div class="box" style="top:363px;right:0" data-aos="fade-right">
+						<div class="top">1:1 맞춤형 코칭</div>
+						<p>녹음 또는 연습문제 과제 수행을 통해 1:1 코칭을 덤으로 받으실 수 있습니다.</p>
+					</div>
+					<div class="box" style="top:520px;left:90px" data-aos="fade-right">
+						<div class="top">그룹별 커뮤니티 형성<i>!</i></div>
+						<p>동기들과 함께 서로 응원하며 학습을 끝까지 완주할 수 있습니다.</p>
+					</div>
+				</div>
+				<div class="cont02">
+					<img src="./img/page/cont_onlineZoom_mid04_1.png">
+				</div>
+				<div class="cont03 pt60">
+					<img src="./img/page/cont_onlineZoom_mid04_2.jpg">
+				</div>
+			</div>
+
+			<!-- 수강생 후기-->
+			<div id="study_review" class="pt100">
+				<img src="./img/page/cont_onlineZoom_mid05.png">
+				<div class="swiper-container mt50 mb20">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_07.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_01.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_02.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_03.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_04.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_05.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_06.jpg">
+						</div>
+						<div class="swiper-slide">
+							<img src="./img/page/onlineStudy_kko_00.jpg">
+						</div>
+					</div>
+
+					<div class="swiper-button-next" style="background:linear-gradient(to left, #ffffff, transparent);right:0"></div>
+					<div class="swiper-button-prev" style="background:linear-gradient(to right, #ffffff, transparent);left:0"></div>
+				</div>
+			</div>
+
+			<!--라이브 화상수업 시간표 -->
+			<!-- 미라클모닝 -->
+			<div id="sign_studyclass" class="mt30">
+				<img src="./img/page/cont_onlineZoom_mid06_1.png" class="pt45">
+				<table style="width:1000px; margin :30px auto" cellspacing="0" cellpadding="0">
+				<col width="17%"><col width="12%"><col width=""><col width="12%"><col width=""><col width="12%"><col width="">
+				<thead>
+				<tr class="dateBg">
+					<th rowspan="4">날짜</th>
+					<td colspan="2" class="bordPinkL"style="border-radius: 10px 0 0 0"><span class="mm">12</span>月</td>
+					<td colspan="2"><span class="mm">1</span>月</td>
+					<td colspan="2" class="bordPinkR" style="border-radius: 0 10px 0 0"><span class="mm">2</span>月</td>
+				</tr>
+				<tr class="dateBg">
+					<td colspan="2" class="bordPinkL">매주 <span class="day">화</span>요일</td>
+					<td colspan="2">매주 <span class="day">수</span>요일</td>
+					<td colspan="2" class="bordPinkR">매주 <span class="day">목</span>요일</td>
+				</tr>
+				<tr>
+					<td class="textLeft bordIvoryL">- 개강일 : </td>
+					<td class="textRight">12/7</td>
+					<td class="textLeft">- 개강일 : </td>
+					<td class="textRight">1/5</td>
+					<td class="textLeft">- 개강일 : </td>
+					<td class="textRight">2/3</td>
+				</tr>
+				<tr>
+					<td class="textLeft bordIvoryL">- 접수마감 : </td>
+					<td class="textRight">~ <span>12/6</span>까지</td>
+					<td class="textLeft">- 접수마감 : </td>
+					<td class="textRight">~ <span>1/4</span>까지</td>
+					<td class="textLeft">- 접수마감 : </td>
+					<td class="textRight">~ <span>2/2</span>까지</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th>시간</th>
+					<td colspan="3"><div>AM 07:00 ~ 07:40</div></td>
+					<td colspan="3"><div>AM 07:50 ~ 08:30</div></td>
+				</tr>
+				</tbody>
+				</table>
+				<img src="./img/page/cont_onlineZoom_mid06_3.png">
+			</div>
+
+			<!-- backup
+			<div id="std_Schedule" class="mt30">
+			<img src="./img/page/cont_onlineZoom_mid06_1.png" class="pt45">
+				<div class="cont01 mt30 relative">
+					<div class="absolute box">
+						!-- 수강날짜 --
+						<div class="f_l">
+							<div class="date relative">
+								<div class="mm"><span>12</span>月</div>
+								<div class="day">화</div>
+							</div>
+							<div class="register bold">
+								<div>12월 7일</div>
+								<div>~12/6까지</div>
+							</div>
+						</div>
+						<div class="f_l">
+							<div class="date relative">
+								<div class="mm"><span>1</span>月</div>
+								<div class="day">수</div>
+							</div>
+							<div class="register bold">
+								<div>1월 5일</div>
+								<div>~1/4까지</div>
+							</div>
+						</div>
+						<div class="f_l">
+							<div class="date relative">
+								<div class="mm"><span>2</span>月</div>
+								<div class="day">목</div>
+							</div>
+							<div class="register bold">
+								<div>2월 3일</div>
+								<div>~2/2까지</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<img src="./img/page/cont_onlineZoom_mid06_2.png">
+				</div>
+			</div>
+		-->
+
+			<!-- event(할인 + 환급) -->
+			<div id="paybackEvent">
+				<img src="./img/page/cont_onlineZoom_mid_07_1.jpg">
+				<div style="background: #f1f1f1;">
+					<div class="bg"></div>
+					<!-- 구성품 한눈에 보기 -->
+					<div class="relative">
+						<div class="product">
+							<img src="./img/page/cont_onlineZoom_mainTopMid_03_1.png" style="top: 30px;left: 40px;z-index: 9;">
+							<img src="./img/page/cont_packv4_mainTop_prod02.gif" style="margin:60px 0 0 70px">
+							<img src="./img/page/cont_packv4_mainTop_prod03_2.png" style="top:-60px">
+						</div>
+						<img src="./img/page/cont_onlineZoom_mid_07_2.jpg" usemap="#buyPage_pack">
+						<map name="buyPage_pack">
+							<area shape="rect" coords="535,662,964,732" href="javascript:;" class="pointer">
+						</map>
+					</div>
+					<!--// 구성품 한눈에 보기 -->
+					
+					<a href="javascript:;"><img src="./img/page/cont_onlineZoom_mid_07_3_off.jpg" class="couponArea"></a>
+				</div>
+
+				<div style="background: url('./img/page/bg_onlineZoom_cont_07.jpg') repeat-x">
+					<img src="./img/page/cont_onlineZoom_mid_07_4.jpg">
+				</div>
+				<div id="paybackEvent_detail">
+					<div>
+						<img src="./img/page/cont_onlineZoom_mid_07.jpg">
+						<a href="javascript:;" onClick="$('.notice_event').slideToggle();$(this).parents('#paybackEvent_detail').next().toggleClass('on')">환급 EVENT 유의사항 보기</a>
+					</div>
+				</div>
+				<div class="notice_event">
+					<div>
+						<div class="bold mb20">■ 환급 유의사항 </div>
+						<div>
+							1) 환급은 화상수업 출석 100%, 인강 출석 100%, 과제 제출 100% 미션 달성 시, 5개월의 학습과정이 끝난 후 신청하시면 됩니다.<br><br>
+							2) 화상 수업 출석은 담임선생님이 관리하며, 인강 출석은 시스템으로 자동 관리 됩니다. <br><br>
+							3) 과제는 당일 저녁 12시까지 제출해야 인정됩니다. <br><br>
+							4) 환급은 결제하신 수단으로 진행됩니다. <span style="color:red">이때 제세공과금 22%가 공제됩니다.</span><br><br>
+							※ 본 환급 이벤트는 2021년 5월 15일~8월 8일 구매 고객에 한해 진행됩니다.
+						</div>
+						<div class="bold mt40 mb20">■ 환급 신청 안내</div>
+						<div>
+							1) 신청 방법 : 예금주(고객명과 일치해야 함), 은행명, 계좌번호, 주민등록번호 13자리를 담임선생님에게 제출합니다.<br><br>
+							※ 단, 신용카드 결제한 경우에는 카드 결제 내역 환불 처리 예정임.<br><br>
+							※ 회원의 주민등록 번호를 수집하는 목적은 원천세징수 신고 용도로만 사용되며, 환급처리 후 개인정보는 즉시 파기됩니다.<br><br>
+							※ 이름과 계좌번호 예금주명이 다를 경우, 환급이 진행되지 않을 수 있습니다.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// event(할인 + 환급) -->
+
+			<!--하단혜택-->
+			<div class="bg_comm_pack pt20 pb50">
+				<img src="./img/page/cont_onlineZoom_mainTopMID00.jpg" usemap="#buyPage02">
+				<map name="buyPage02">
+					<area shape="rect" coords="578,1025,977,1097" href="javascript:;" class="pointer">
+				</map>
+			</div>
+
+			<div class="bg_comm_pack endding mt50" style="background: #242424">
+				<div class="f_Score_mid textLeft">
+					구매시 유의사항
+				</div>
+			</div>
+			<div id="notice_999">
+				<div>
+					<div class="bold">패키지 일시정지 안내</div>
+					<div style="line-height:18px;margin-top:5px">
+						<div>
+							1) 수강 중 부득이하게 수강을 할 수 없는 상활일 때 일시정지 기능을 사용할 수 있습니다.<br>
+							<span class="ml15" style="border-bottom: 1px solid;">단, 이는 인강으로 제한합니다. <span class="bold" style="color: red;border-bottom: 1px solid red">(개인 사정에 의한 화상 수업 불참은 책임지지 않습니다.)</span></span><br>
+							2) 1년에 1회 최대 30일까지 이용 가능 합니다.<span style="padding-left: 5px">(예 : 2년 수강시 2회, 최대 60일까지 정지 가능)</span><br>
+							3) 일시정지는 CJI에듀 메일로 신청합니다.<span style="padding-left: 5px">(학습지원센터 : <span style="border-bottom: 1px solid">help@cjiedu.com</span>)</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="part2Title">
+					<b>환불/배송 안내</b>
+				</div>
+
+				<div class="part2">
+					<div class="bold">패키지 환불규정</div>
+					<div style="line-height:18px;margin:5px 0 0 10px">
+						<b>1. 교재</b>
+						<div style="margin:5px">
+							1) 환불시 왕복 배송료(6,000원)는 본인 부담 입니다.<br>
+							2) 배송 완료 시점 기준 7일 이내에 고객센터로 반품/환불 의사를 밝히고, 반송 교재는 수령일 기준 2주일 이내에 당사로 도착해야 됩니다.<br>
+							3) 교재에 낙서, 훼손, 파손 등 이상이 있을경우 환불이 안될 수 있습니다.
+						</div>
+						<b>2. 동영상 강의</b>
+						<table class="table_refund" style="width:700px;height:100px;text-align:center;margin:5px; background: #fff">
+						<colgroup>
+							<col style="width:120px"><!-- 결제 후 경과기간 -->
+							<col style="width:140px"><!-- 컨텐츠 이용진도 -->
+							<col><!-- 환불 내역 -->
+						</colgroup>
+						<tr>
+							<th>결제 후 경과기간</th>
+							<th>컨텐츠 이용진도</th>
+							<th>환불 내역</th>
+						</tr>
+						<tr>
+							<td rowspan="2">7일 이내</td>
+							<td>5강 이하</td>
+							<td style="text-align:left;padding-left:10px">전액 환불</td>
+						</tr>
+						<tr>
+							<td style="border-left:1px solid #D3DFE9;">5강 이상</td>
+							<td style="text-align:left;padding-left:10px">이용한 컨텐츠 정가에서 컨텐츠 이용금액 및 위약금(10%) 차감 후 환불</td>
+						</tr>
+						<tr>
+							<td>7일 이상</td>
+							<td>무관</td>
+							<td style="text-align:left;padding-left:10px">환불불가</td>
+						</tr>
+						</table>
+					</div>
+				</div>
+				<div class="part2">
+					<div class="bold">화상 강의</div>
+					<div>1) 결제 후 7일 이내, 화상 강의를 한 번도 하지 않은 경우 : 전액 환불<br>
+						2) 결제 후 7일 이후 : 환불 불가
+					</div>
+				</div>
+				<div class="part2">
+					<div class="bold">상품 배송 안내</div>
+					<div style="line-height:18px;margin:5px 0 0 10px">
+						<table class="table_refund" style="width:450px;height:100px;text-align:center;margin:5px;background: #fff">
+						<colgroup>
+							<col style="width:120px"><!-- 결제 후 경과기간 -->
+							<col style="width:140px"><!-- 컨텐츠 이용진도 -->
+							<col><!-- 환불 내역 -->
+						</colgroup>
+						<tr>
+							<th>결제일</th>
+							<th>결제시간</th>
+							<th>출고일정</th>
+						</tr>
+						<tr>
+							<td rowspan="2">평일</td>
+							<td>13시 이전</td>
+							<td style="padding-left:10px">당일 출고</td>
+						</tr>
+						<tr>
+							<td style="border-left:1px solid #D3DFE9;">13시 이후</td>
+							<td style="padding-left:10px">다음 영업일 출고</td>
+						</tr>
+						<tr>
+							<td>주말/공휴일</td>
+							<td>무관</td>
+							<td style="padding-left:10px">다음 영업일 출고</td>
+						</tr>
+						</table>
+						<div style="margin:5px 0 0 10px">
+							※ 출고 후 영업일기준 1~2일이내 배송됩니다. 단, 주문상품의 재고상황에 따라 출고 일자는 변경될 수 있으며, 배송업체 사정에 따라 배송이 지연될 수 있습니다.<br>
+							※ 주소 미기재 및 불명확한 주소 입력으로 인한 상품 미 수령시에는 본사에서 책임지지 않으니 주소지를 명확하게 기입 부탁드립니다.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+</body>
+</html>

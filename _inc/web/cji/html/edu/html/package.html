@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css">
+	<link rel="stylesheet" href="./css/aos.css" type="text/css" />
+	<script type="text/javascript" src="./js/aos.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$("#playBtn").on("click", function() {
+				$(this).css('display','none');
+				$("#myVideo").trigger("play");
+			});
+			
+			/*$(".pack_hovEvent img").hover(function(){
+
+				$(this).css('cursor','pointer');
+				$(".pack_hovEvent img").removeClass("hide");
+				$(this).addClass("hide");
+			});*/
+			$("#btn_another a").click(function(){
+				$("#btn_another .cont").removeClass('select');
+				$(this).parent().addClass('select');
+				
+				var sel = $(this).index();
+				$("#div_another > div ").addClass("hide");
+				$("#div_another > div ").eq(sel).removeClass("hide");
+			});
+
+			$("#inner_contents").parent().css("width","100%");
+			
+			$(".couponArea").hover(function(){
+				$(this).prop('src', './img/page/cont_onlineZoom_mid_07_3_on.jpg');
+			}, function(){
+				$(this).prop('src', './img/page/cont_onlineZoom_mid_07_3_off.jpg');
+			});
+
+			$("area.goEvent").click(function(){
+				var divId = $("#paybackEvent_detail");
+				var divIdtop = Math.floor($(divId).offset().top + 50);
+				$('body,html').animate({scrollTop: divIdtop},500);
+			});
+
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		});
+
+	</script>
+	<style>
+		/*반짝임 효과*/
+		.blinking {-webkit-animation:blink 1s ease-in-out infinite alternate; -moz-animation:blink 1s ease-in-out infinite alternate; animation:blink 1s ease-in-out infinite alternate;}
+		@-webkit-keyframes blink{ 0% {opacity:0;} 100% {opacity:1;} }
+		@-moz-keyframes blink{ 0% {opacity:0;} 100% {opacity:1;} }
+		@keyframes blink{ 0% {opacity:0;} 100% {opacity:1;} }
+		/*업다운 효과*/
+		.moving {-webkit-animation:moveupdw 1s ease-in-out infinite alternate; -moz-animation:moveupdw 1s ease-in-out infinite alternate; animation:moveupdw 1s ease-in-out infinite alternate;}
+		@-webkit-keyframes moveupdw{ 0% {bottom:0px;} 100% {bottom:-5px;} }
+		@-moz-keyframes moveupdw{ 0% {bottom:0px;} 100% {bottom:-5px;} }
+		@keyframes moveupdw{ 0% {bottom:0px;} 100% {bottom:-5px;} }
+
+		#contents {text-align:center}
+			.bg_comm_pack {width: 100%;}
+
+			#bg_pack_top {background: url('./img/page/bg_packV5_mainTop.jpg')center  -10px no-repeat; background-size: cover; overflow:hidden }
+				#bg_pack_top .cont2 {top:0; right: 20px}
+				#bg_pack_top .cont4 {bottom:0px }
+			#bg_pack_top .relative {width: 1000px;margin: auto}
+					#bg_pack_top .product img:not(.bg){position: absolute; left:0}
+			
+					.pack_hovEvent {left: 50%; top: 130px; margin-left: -391px}
+						.pack_hovEvent img {position: relative;}
+			#bg_pack_preview {background:#3489ff;}
+				#bg_pack_preview > div {position: relative;  width: 535px;}
+					#bg_pack_preview .prevwBox {width:535px;position: absolute; top:33%;left: 50%;margin-left: -267px;overflow: hidden;}
+					#myVideo {width:100%;}
+					#playBtn {position:absolute;width:100%; height:100%; top:-10px;z-index:999;cursor: pointer }
+
+
+			/*--구성혜택 배경--*/
+			#bg_pack_bottom{background: url('./img/page/bg_packV5_mainTop.jpg') no-repeat; background-size: cover;overflow:hidden }
+				#bg_pack_bottom .bg_bottom1{width: calc(100% + 30px);height:780px; top: -37%; left:-30px;background: url('./img/page/cont_packV4_img_04.png') center repeat-x;z-index:3}
+				#bg_pack_bottom .bg_bottom2{width: 100%;height:645px;bottom:-65px;background: url('./img/page/bg_packV3_img_01.png') no-repeat;background-size: cover}
+				#bg_pack_bottom .bg_bottom3 {width: 360px;height: 280px;bottom:8%; left: 0%; background: url('./img/page/cont_packV4_img_01.png') no-repeat; background-size: 100%;}
+				#bg_pack_bottom .bg_bottom4 {width: 20%;height: 310px;bottom:3%; right: 5%; background: url('./img/page/cont_packV4_img_02.png') no-repeat; background-size: 100%;}
+				#bg_pack_bottom .bg_bottom5 {width: calc(100% + 5%);height: 50%;bottom:-30%; background:#82885f; transform: rotate(-5deg); left: -2%; }
+				#bg_pack_bottom .bg_bottom6 {width: calc(100% + 5%);height: 50%;bottom:-30%; background:#a5ad71; transform: rotate(3deg); left: -2%; }
+			/*--//구성혜택 배경--*/
+
+			#paybackEvent_detail {border-bottom: 1px solid #d5d5d5;padding-bottom: 15px}
+				#paybackEvent_detail div{width: 1000px; margin: auto;position: relative;}
+					#paybackEvent_detail a {position: absolute; bottom: 0; right: 225px;background: #fff;margin: 10px auto;display: inline-block;padding:0 20px; border-radius: 15px; border: 1px solid #aaa;text-align: right;display:inline-block;line-height: 2.2;font-size: 13px}
+				#paybackEvent .notice_event {background: #fdfdfd;display: none;border-bottom: 2px solid #aaa;}
+					#paybackEvent .notice_event > div {text-align: left;width: 960px; margin: auto; padding: 40px 20px;}
+					#paybackEvent .notice_event > div div{font-size: 15px}
+
+			#packAnother_cont {margin-top: 10px;}
+				#btn_another {min-width: 1000px;height: 90px;}
+					#btn_another > .cont {position: absolute;top: 0;z-index: 0;width: 50%; height:90px;line-height:90px;font-size: 25px;font-family: 'f_Score_reg';letter-spacing: -1px;}
+						#btn_another > .cont a {display: inline-block; width: 500px; text-align: center}
+					#btn_another > .div1 {background: #7bc0ff;text-align: right;left: 0;}
+						#btn_another > .div1 a{background:linear-gradient(to right,#7bc0ff,#96ccff);color:#6088ad}
+						#btn_another > .div1.select { margin-top: -3px; border: 3px solid #549fe6;border-bottom: 0; border-left: 0; z-index: 22}
+							#btn_another > .div1.select a {color: #000000;font-family: 'f_Score_mid';}
+							#btn_another > .div1.select img {display: inline-block;margin-right: -60px;border-left:3px solid #549fe6; vertical-align: bottom}
+					#btn_another > .div2 {background: #313131;text-align: left; right: 0;}
+						#btn_another > .div2 a {background:linear-gradient(to right,#343434,#313131); color:#8b7a66}
+						#btn_another > .div2.select { margin-top: -3px; border: 3px solid #000000;border-bottom: 0; border-right: 0; z-index: 22}
+							#btn_another > .div2.select a {color:#e7c8a2;font-family: 'f_Score_mid';}
+							#btn_another > .div2.select img {display: inline-block;margin-left: -64px;border-right:3px solid #000000; vertical-align: bottom}
+
+			#paybackEvent .bg {width: 100%;height: 16px;background:url('./img/page/bg_onlineZoom_mid_07.jpg') repeat-x}
+
+		.endding div{width: 1000px; margin: auto;height: 88px; line-height: 88px;font-size: 20px}
+	</style>
+</head>
+<body>
+<div id="contents">
+	<div id="inner_contents">
+		<div id="bg_pack_top" class="bg_comm_pack">
+			<!--타이틀-->
+			<div class="relative">
+				<div class="absolute cont1 mt30 blinking"><img src='./img/page/cont_packV5_mainTop_left.png'></div>
+				<div class="absolute cont2"><img src='./img/page/cont_packV5_mainTop_right.png'></div>
+				<div class="absolute cont3 moving" data-aos="flip-right" data-aos-offset="0"><img src='./img/page/cont_packV5_mainTop_center1.png'></div>
+				<div class="absolute cont4"><img src='./img/page/cont_packV5_mainTop_center2.png'></div>
+				<img src="./img/page/cont_packV5_mainTop.png">
+			</div>
+			<!--//타이틀-->
+
+			<!-- 구성품 한눈에 보기 -->
+			<div class="product relative mb30" style="margin-top:-15px">
+				<img src="./img/page/cont_packv5_mainTop_prod01.png" class="bg">
+				<img src="./img/page/cont_packv4_mainTop_prod02.gif" style="margin:130px 0 0 70px">
+				<img src="./img/page/cont_packv4_mainTop_prod03_2.png">
+				<img src="./img/page/cont_packv5_mainTop_prod04.jpg" style="margin-left: 260px;top: 85px;">
+			</div>
+			<!--// 구성품 한눈에 보기 -->
+		</div>
+
+		<div class="bg_comm_pack" style="background:#a7f0e5; padding-top: 49px;">
+			<img src="./img/page/cont_packV5_mainTopMid_01.jpg"  usemap="#buyPage01">
+			<map name="buyPage01">
+				<area shape="rect" coords="230,620,467,665" href="javascript:;" class="pointer">
+				<area shape="rect" coords="723,620,955,665" href="javascript:;" class="pointer">
+				<area shape="rect" coords="235,912,775,985" href="javascript:;" class="pointer">
+			</map>
+		</div>
+
+		<!-- 왜 패키지? -->
+		<div class="bg_comm_pack" style="background:#ff5f79">
+			<img src="./img/page/cont_packV5_mid01.jpg">
+		</div>
+
+		<!-- 색성조, 동자동/이음 -->
+		<div class="bg_comm_pack pb20" style="background:#f9f5f2">
+			<img src="./img/page/cont_packV5_mid02_1.jpg">
+			<div class="relative">
+				<img src="./img/page/cont_packV5_mid02_2_box.jpg">
+				<div class="pack_hovEvent absolute">
+					<img src="./img/page/intro/cont_Intro_mid01_1_1_4.jpg" style="z-index:22">
+					<img src="./img/page/intro/cont_Intro_mid01_1_1_3.jpg" class="hide">
+				</div>
+			</div>
+			<img src="./img/page/cont_packV5_mid02_3.jpg">
+		</div>
+
+		<!--아아쏭 -->
+		<div id="bg_pack_preview" class="relative">
+			<img src="./img/page/cont_packV4_mid03.jpg">
+			<div class="prevwBox">
+				<div id="playBtn"><img src="./img/page/intro/cont_Intro_faceVideo.jpg"></div>
+				<video controls id="myVideo"><source type="video/mp4" src="http://www.cjiedu.com/movie_file/aasplay.mp4"></video>
+			</div> 
+		</div>
+
+		<!-- 특허 -->
+		<div class="bg_comm_pack" style="background:#4b090b;">
+			<img src="./img/page/cont_packV4_mid04.jpg">
+		</div>
+		<div class="bg_comm_pack" style="background:#2e0203">
+			<img src="./img/page/cont_packV4_mid04_2.jpg">
+		</div>
+		
+		<!-- 닥치고999 -->
+		<img src="./img/page/cont_packV2_mid05_1.jpg">
+		<div class="bg_comm_pack" style="background:url('./img/page/bg_packV2_mid05_2.jpg') repeat-x;">
+			<img src="./img/page/cont_packV5_mid05_2.jpg">
+		</div>
+
+		<!-- 커리큘럼 -->
+		<div style="margin-bottom: 50px">
+			<img src="./img/page/cont_packV5_mid06.jpg">
+		</div>
+		
+		<!-- 구성 혜택 -->
+		<div id="bg_pack_bottom" class="bg_comm_pack">
+			<img src="./img/page/cont_packV5_mainEnd.png">
+		</div>
+		<div class="bg_comm_pack" style="background:#a7f0e5; padding-top: 20px;">
+			<div class="mainPageImg">
+				<img src="./img/page/cont_packV5_end_02.jpg" usemap="#buyPage02">
+				<map name="buyPage02">
+					<area shape="rect" coords="593,1100,894,1147" href="javascript:;" class="pointer">
+					<area shape="rect" coords="649,1573,950,1618" href="#paybackEvent" class="goEvent pointer">
+					<area shape="rect" coords="228,1869,767,1939" href="javascript:;" class="pointer">
+				</map>
+			</div>
+		</div>
+
+		<!-- 환급 이벤트 -->
+		<div id="paybackEvent">
+			<img src="./img/page/cont_onlineZoom_mid_07_1.jpg">
+			<div style="background: #f1f1f1;">
+				<div class="bg"></div>
+				<img src="./img/page/cont_packV5_end_02_1.jpg" usemap="#EventDetail">
+				<map name="EventDetail">
+					<area shape="rect" coords="259,857,740,928" href="http://www.cjiedu.com/package.php?ptype=onlineZoom" class="pointer">
+				</map>
+
+				<a href="javascript:;"><img src="./img/page/cont_onlineZoom_mid_07_3_off.jpg" class="couponArea"></a>
+			</div>
+			<div style="background: url('./img/page/bg_packV5_end_03.jpg') repeat-x">
+				<img src="./img/page/cont_packV5_end_03_1.jpg">
+			</div>
+			<div id="paybackEvent_detail">
+				<div>
+					<img src="./img/page/cont_onlineZoom_mid_07.jpg">
+					<a href="javascript:;" onClick="$('.notice_event').slideToggle();$(this).parents('#paybackEvent_detail').next().toggleClass('on')">환급 EVENT 유의사항 확인</a>
+				</div>
+			</div>
+			<div class="notice_event">
+				<div>
+					<div class="bold mb20">■ 환급 유의사항 </div>
+					<div>
+						1) 환급은 화상수업 출석 100%, 인강 출석 100%, 과제 제출 100% 미션 달성 시, 5개월의 학습과정이 끝난 후 신청하시면 됩니다.<br><br>
+						2) 화상 수업 출석은 담임선생님이 관리하며, 인강 출석은 시스템으로 자동 관리 됩니다. <br><br>
+						3) 과제는 당일 저녁 12시까지 제출해야 인정됩니다. <br><br>
+						4) 환급은 결제하신 수단으로 진행됩니다. <span style="color:red">이때 제세공과금 22%가 공제됩니다.</span><br><br>
+						※ 본 환급 이벤트는 2021년 5월 15일~8월 8일 구매 고객에 한해 진행됩니다.
+					</div>
+					<div class="bold mt40 mb20">■ 환급 신청 안내</div>
+					<div>
+						1) 신청 방법 : 예금주(고객명과 일치해야 함), 은행명, 계좌번호, 주민등록번호 13자리를 담임선생님에게 제출합니다.<br><br>
+						※ 단, 신용카드 결제한 경우에는 카드 결제 내역 환불 처리 예정임.<br><br>
+						※ 회원의 주민등록 번호를 수집하는 목적은 원천세징수 신고 용도로만 사용되며, 환급처리 후 개인정보는 즉시 파기됩니다.<br><br>
+						※ 이름과 계좌번호 예금주명이 다를 경우, 환급이 진행되지 않을 수 있습니다.
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--// 환급 이벤트 -->
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collection detail</title>
+    <meta charset="UTF-8">
+    <!-- IE의 호환성 보기 모드 금지 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 스마트 장치에서의 해상도 균일화 처리 -->
+    
+    <!-- css 참조 -->
+    <link rel="stylesheet" href="../_assets/css/_public.css">
+    
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
+    <!-- JS / 플러그인 -->
+    <script type="text/javascript" src="../_assets/js/_public.js"></script>
+    <script>
+        $(document).ready(function(){
+            const video = document.getElementById("main_video");
+            video.playbackRate = 5;
+        });
+    </script>
+    <style>
+        .img_box > .grid_full {
+            height: 50vh;
+        }
+        .img_box > .bg_gr {
+            background-color: #6d6f6d !important;
+        }
+    </style>
+  </head>
+<body>
+    <div class="collection_detail">
+        <iframe name="topMenu" id="topMenu" title="탑프레임" src="../_inc/top.html" frameborder="0"></iframe>
+        <main>
+            <section class="tc">
+                <div class="txt_container">
+                    <div class="label_box"><span class="label ui"></span><span class="label pub"></span></div>
+                    <div class="fontibm bold" style="font-size: 3em;">SMOA 메시징사업자협회</div>
+                    <div class="txt_contdetail_box flex all_ct">
+                        <div class="tab_icon_box">
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="Photoshop" title="Photoshop"/>
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5" title="html-5"/>
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3" title="css3"/>
+                            <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript" title="javascript"/>
+                            <img width="48" height="48" src="https://img.icons8.com/ios-filled/48/jquery.png" alt="jquery" title="jquery"/>
+                        </div>
+                        <div class="c lightgray_7">2020.08 ~ 2020.06</div>
+                    </div>
+                </div>
+
+                <div class="img_container">
+                    <div class="img_box">
+                        <div class="grid_full"><video id="main_video" src="/_assets/img/publishing//smoa/smo_web_mp4.mov" autoplay loop></video></div>
+                        <div><img src="/_assets/img/publishing/smoa/smoa_web3.jpg" alt="smoa"></div>
+                        <div><img src="/_assets/img/publishing/smoa/smoa_web3_2.jpg" alt="smoa"></div>
+                        <div><img src="/_assets/img/publishing/smoa/smoa_web2.jpg" alt="smoa"></div>
+                        <div><img src="/_assets/img/publishing/smoa/smoa_web1.jpg" alt="smoa"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <iframe name="footer" id="footer" title="푸터프레임" src="../_inc/footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

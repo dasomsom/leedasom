@@ -1,0 +1,48 @@
+
+/**
+------------------------------------------------------------------
+  * 메인
+------------------------------------------------------------------
+*/
+
+
+/*  공통 CSS
+---------------------------------------------------------------*/
+.container {width: 1200px; margin:20px auto;}
+
+.title {font-size: 3em;line-height: 1.7; margin-bottom: 15px;font-weight: 700;}
+.sub_title {font-size: 1.5em; line-height: 1.7;margin-bottom: 20px;}
+
+
+/**
+  * #intro
+------------------------------------------------------------------
+*/
+main > section {border-bottom: 1px solid #aaa; margin: 100px auto;}
+/* #intro, #skill {border-bottom: 1px solid #aaa;} */
+
+
+/**
+  * #work_visual
+------------------------------------------------------------------
+*/
+#work_visual .title {line-height: 1.2; margin-bottom: 50px;}
+#work_visual .cont:first-child {width: 20%;}
+#work_visual .cont:last-child {width: 70%;}
+
+
+
+/**
+  * #work_web
+------------------------------------------------------------------
+*/
+@media (min-width: 668px) {
+
+	.web_list {flex-direction:column;}
+
+}
+.web_list {display: flex; flex-wrap: wrap;flex-direction: row;}
+.cont_box {background: #eee;}
+.web_list .cont_box {width: calc(33% - 10px); height: 240px; margin: 0 10px 10px 0;}
+.web_list .cont_box:nth-child(3n) {margin-right: 0;}
+

@@ -1,0 +1,18 @@
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+@import url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css);
+@import url(https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothiclight.css);
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Yanone+Kaffeesatz:400,700|Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Bungee|Caveat+Brush|Codystar:300,400|Delius+Unicase:400,700|Happy+Monkey|Julius+Sans+One|Petit+Formal+Script|Yeseva+One');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+html, body { 
+	font-family: 'Nanum Barun Gothic' !important;
+    font-family: 'Quicksand', sans-serif !important;
+}
+.fontbgt { font-family: 'Nanum Barun Gothic'; }   /* 400, 700*/
+.fontbgtl { font-family:'NanumBarunGothicLight'; }
+.fontQs { font-family: 'Quicksand', sans-serif; }
+.fontabril{font-family: "Abril Fatface"}
+.fontibm {font-family: "IBM Plex Sans KR", sans-serif;}
+.fontbhs {font-family: "Black Han Sans", sans-serif;}

@@ -1,0 +1,173 @@
+/*happy.php(검색어 newPaging) - 업체리스트추출태그 페이징출력*/
+/*bbs_page.php - 게시판 페이징디자인*/
+/*page.php - 마이페이지 포인트장부 리스트 페이징 디자인*/
+/*calendar_view_page_ajax.php 출석체크 댓글 페이징디자인*/
+/*관리자모드에서 출력되는 페이징은 admin/css/style.css 에서 아래와 같은 내용을 찾을수있습니다.*/
+
+
+/*현재 선택된 페이징*/
+.page_now {
+background:#6a6a6a;
+border:1px solid #393939;
+width:23px;
+color:#ffffff;
+display:inline-block;
+padding:5px 4px 7px 4px;
+text-align:center;
+margin-right:2px;
+}
+.page_now a {color:#ffffff; display:inline-block;}
+.page_now a:hover {color:#ffffff; display:inline-block;}
+
+
+/*선택안된 페이징*/
+.page_nomal {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:23px;
+color:#616161;
+display:inline-block;
+padding:5px 4px 7px 4px;
+text-align:center;
+margin-right:2px;
+}
+.page_nomal a {color:#616161; display:inline-block;}
+.page_nomal a:hover {color:#616161; display:inline-block;}
+
+
+
+/*이전으로 건너뛰기*/
+.page_prev {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:26px;
+color:#616161;
+display:inline-block;
+padding:5px 7px 6px 7px;
+text-align:center;
+margin-right:2px;
+}
+.page_prev a {color:#616161; display:inline-block;}
+.page_prev a:hover {color:#616161; display:inline-block;}
+
+
+
+
+/* 다음으로 건너뛰기*/
+.page_next {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:26px;
+color:#616161;
+display:inline-block;
+padding:5px 7px 6px 7px;
+text-align:center;
+margin-right:2px;
+}
+.page_prev_m a {color:#616161; display:inline-block; }
+.page_prev_m a:hover {color:#616161; display:inline-block; }
+
+
+
+/*한꺼번에 이전으로 건너뛰기*/
+.page_prev_m {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:23px;
+color:#616161;
+display:inline-block;
+padding:5px 7px 7px 7px;
+text-align:center;
+margin-right:2px;
+}
+.page_prev_m a {color:#616161; display:inline-block;}
+.page_prev_m a:hover {color:#616161; display:inline-block;}
+
+
+
+
+/* 한꺼번에 다음으로 건너뛰기*/
+.page_next_m {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:23px;
+color:#616161;
+display:inline-block;
+padding:5px 7px 7px 7px;
+text-align:center;
+margin-right:2px;
+}
+.page_next a {color:#616161; display:inline-block; }
+.page_next a:hover {color:#616161; display:inline-block; }
+
+
+
+
+
+
+
+
+
+
+
+/*현재 선택된 페이징(아작스페이징용)*/
+.page_now_small {
+background:#6a6a6a;
+border:1px solid #393939;
+width:27px;
+color:#ffffff;
+display:inline-block;
+padding:9px 4px 12px 4px;
+text-align:center;
+margin-right:2px;
+
+}
+.page_now_small a {color:#ffffff; display:inline-block;}
+.page_now_small a:hover {color:#ffffff; display:inline-block;}
+
+
+/*선택안된 페이징(아작스페이징용)*/
+.page_nomal_small {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:27px;
+color:#616161;
+display:inline-block;
+padding:9px 4px 12px 4px;
+text-align:center;
+margin-right:2px;
+}
+.page_nomal_small a {color:#616161; display:inline-block;}
+.page_nomal_small a:hover {color:#616161; display:inline-block;}
+
+
+
+/*한꺼번에 이전으로 건너뛰기(아작스페이징용)*/
+.page_prev_small {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:27px;
+color:#616161;
+display:inline-block;
+padding:9px 4px 12px 4px;
+text-align:center;
+margin-right:2px;
+}
+.page_prev_small a {color:#616161; display:inline-block;}
+.page_prev_small a:hover {color:#616161; display:inline-block;}
+
+
+
+
+/*한꺼번에 다음으로 건너뛰기(아작스페이징용)*/
+.page_next_small {
+background:#f1f1f1;
+border:1px solid #cccccc;
+width:27px;
+color:#616161;
+display:inline-block;
+padding:9px 4px 12px 4px;
+text-align:center;
+}
+.page_next_small a {color:#616161; display:inline-block; }
+.page_next_small a:hover {color:#616161; display:inline-block; }

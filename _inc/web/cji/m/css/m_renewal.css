@@ -1,0 +1,167 @@
+/*
+	------------------------------------------------------------
+	2020년 7월 리뉴얼 모바일 CSS
+	------------------------------------------------------------
+*/
+@import url("/html/edu/html/css/s-core-dream.css");
+
+.mContain {padding: 0 4%;margin: auto;}
+	.mContainDiv {width: 90%;margin:13% auto 0}
+	.color_Bk {color: #000}
+	.mTop_t {height: 75px; line-height: 80px;position: relative; background: #fff; z-index:99999}
+	.mTop_t.top {z-index:99999}
+		#btn_category {display:inline-block; margin-right: 15px; padding: 5px; padding-left: 0px;}
+		.mTop_t img{vertical-align: middle}
+		.btn_quickLect {position:absolute; width: 90px;text-align: center; right:2%;z-index: 9999}
+			.btn_quickLect div {border:1px solid #8e8e8e;line-height: 2.5; margin-top: 28px; border-radius: 5px;font-family:"f_Score_reg"}
+			.btn_quickLect .logBtn {width: 60px;}
+			.btn_quickLect .logBtn:after{content: ''; clear:both; float: none}
+			.btn_quickLect div.active {background:#cf4543; border-color: #cf4543; color: #fff;border-radius:5px 5px 0 0  }
+			.btn_quickLect ul {position: absolute;top: 60px;background: #fff;width:90px; text-align: center; z-index: 999999;  line-height: 20px;}
+				.btn_quickLect li {border:1px solid #cf4543; color:#5f5f5f; border-bottom:0;color:#cf4543;line-height: 2.5; font-size: 0.9em;font-family:"f_Score_reg"}
+				.btn_quickLect li:last-child {border-bottom:1px solid #cf4543;color:#cf4543; border-radius: 0 0 5px 5px}
+	.mTop_menu {border: 1px solid #E1E1E1;border-left: 0; border-right: 0; padding: 10px 0;background: #fff;position:relative; width: 100%; z-index:9999}
+	.mTop_menu.nav-up {position:fixed; top:0}
+		.mTop_menu li {display:inline-block;text-align: center;width:25%; height:30px; line-height:30px; font-size: 0.9em;}
+		.mTop_menu li:first-child {text-align: left}
+		.mTop_menu li:last-child {text-align: right}
+		.mTop_menu .fontUp {font-size:1em}
+	/*카테고리 CSS*/
+	.fillter_Div {width: 100%; height: 100%; position: absolute; top:0; left: 0;display: none;z-index: 9}
+	.contain_category {width:100%;height: 100%;display:none;background: #fff; position:fixed; top: 0; left:0; display:; z-index:99999;}
+	#div_new_category {width:100%;height: 100%;overflow-y:scroll}
+			.categ_top {height: 75px; line-height: 75px; border-bottom: 1px solid #E1E1E1}
+			.categ_top td {padding:0;font-size: 1.5em; font-family: 'noto sans KR'}
+			.loginBox a:not(.btn_mypage) {width: 100%;}
+				.loginBox img{width: 40px; margin-right: 1%;vertical-align: middle;}
+				.loginBox .btn_mypage {font-family:"f_Score_reg";border-radius:3px;position: absolute;top:35%; right: 4%;font-size: .7em;line-height: 22px;border:1px solid #ccc;padding:0 7px;}
+		.div_quick {background:#F5F5F5; padding:4% 0;}
+			.div_quick .f_l {text-align: center; width: 25%;}
+				.div_quick .img {height: 50px;}
+					.div_quick .img img {vertical-align: middle;}
+				.div_quick .txt {font-size: 1.2em; margin-top:10%; font-weight: bold}
+		.menuTitle {font-size: 1.2em;font-weight:bold;  font-family: 'noto sans KR'}
+		/* 최근 열람강좌 */
+		#lately_lecture {padding:5% 4%;}
+			#lately_lecture .menuTitle {font-size: 1.4em;}
+				#lately_lecture .menuTitle span {color: #BCBCBC;font-size: 0.8em; line-height: 2; font-weight: normal}
+				#lately_lecture .menuTitle span:after {content:''; float:none; clear: both;}
+			#lately_lecture > div:nth-child(2) {border: 3px solid #E8E8E8; border-radius: 10px; padding: 2% 4%; min-height: 60px;}
+			#lately_lecture .lectType1 {font-weight: bold; color:#9F9F9F; font-size: 1.6em; font-family: 'noto sans KR'; line-height: 60px; }
+			#lately_lecture .lectType2 {position: relative}
+				#lately_lecture .lectType2 > div > div {text-overflow: ellipsis; white-space: nowrap; overflow: hidden;letter-spacing: -1px; font-family: 'noto sans KR';}
+				#lately_lecture .lectType2 .title {color:#121212; font-size: 1.6em;line-height: 2; }
+				#lately_lecture .lectType2 .p {color:#121212; font-size: 1.1em; }
+				#lately_lecture .btn_lecture {position: absolute; right: 0; top: 50%; margin-top:-15px; display: inline-block; background:#cf4543;color: #fff; border-radius: 40px; padding: 0 4%;height: 35px;line-height: 35px; text-align: center; font-size: 1.2em;}
+			#lately_lecture .conts > div.textCenter {font-size: 1.3em;letter-spacing: -1px; font-family: 'noto sans KR';}
+		/* 카테고리 */
+		.categ_menu {}
+			.categ_menu > li {width: 100%;position: relative;}
+				.categ_menu > li > div {font-size: 1.2em; line-height: 3.3;text-indent:4%; border-top: 1px solid #E1E1E1;font-family: 'noto sans KR'}
+				.categ_menu > li > .menu:after {content:'';width: 15px; height: 15px;position: absolute; right: 4%; top: 20px;background:url('/img/m_renewal/icon_plus.png')center no-repeat;background-size: cover}
+				.categ_menu > li > .menu.Op:after { top: 23px; background:url('/img/m_renewal/icon_minus.png')center no-repeat;background-size: contain}
+				/* 2차메뉴 */
+				.sub_categ_menu {display: none; background:#FBF7F1;padding: 1% 0; border-top: 1px solid #E1E1E1;}
+					.sub_categ_menu > li {font-size: 1em;text-indent:4%; line-height: 2.5;}
+
+		.div_sns {background: #F8F8F8; padding:4% 0;}
+			.div_sns .f_l {width:20%; padding-top: 5%;text-align:center}
+				.div_sns img {width: 50px; vertical-align: middle}
+				.div_sns .txt {font-size: 1.2em; margin-top:10%}
+
+		.categ_foot {position:fixed; bottom: 0; z-index:999999;border:1px solid #eee; width: 100%; background: #FFF; }
+			.categ_foot > div:not(.clear) {padding:2% 0}
+			.categ_foot > div:first-child {border-right: 1px solid #eee;padding:2% 4% ; width: 31%; text-align: left}
+				.categ_login_chk a {height: 60px;}
+					.categ_login_chk span{font-size: 1.2em;color: #8e8e8e;line-height: 60px; /* border-bottom: 1px solid #eee */}
+
+	#mFooter {background: #fff; margin-top: 30px;}
+		.mFoot1 {background: #f7f7f7; border-left: 0; border-right: 0;text-align: center}
+			.mFoot1 li {display: inline-block; width: 20%; line-height: 3; font-size: 0.9em}
+		.mFoot2 {padding-top: 20px;}
+			.cs_center span{margin-right: 15px; font-size: 1.1em;line-height: 1.4}
+			.mFoot2 .cs_center .btn {display: inline-block;padding: 2px 5px;border: 1px solid #a7a7a7; border-radius: 5px;}
+			/*팝업창(커리큘럼, 플러스친구)*/
+			.contain_popUp {width:100%;height: 100%;display:none;background: rgba(255,255,255,0.8); position:fixed; top: 0; left:0; display:; z-index:99999;}
+				#pop_plusF {width: 100%; height: 100%;}
+					#pop_plusF .cont{display: none; width: 90%; height: 90%;background:#fff;position: absolute; top: 50%; left: 50%; transform:translate(-50%,-50%); overflow-y:scroll}
+						#pop_plusF .box {width: 100%; /*height: 450px;*/ overflow-x:scroll;background:#fff}
+							#pop_plusF .curriculumImg {overflow-y: hidden}
+						#pop_plusF .btn_close {font-size: 2em;width: 100%; height: 50px; line-height: 50px;background: #454545; color: #fff;}
+	.currcumBtn {}
+		.currcumBtn > a {font-size:1.1em;padding:7px 10px 5px;letter-spacing:-1px;border:1px solid #8e8e8e;line-height: 2.5; border-radius: 5px;}
+			.currcumBtn > a > img {vertical-align: sub; max-width: 15px}
+/*로그인, 아이디/비밀번호 찾기, 회원가입*/
+.mContainDiv .id_pass_area input{font-size: 1em;text-indent: 4%; height: 45px;margin-bottom: 10px;line-height: 3.5;border:1px solid #C5C5C5; background: #fff; color: #000;width: 100%}
+.mContainDiv .log_area2 {width: 100%;margin-top:3%}
+	.mContainDiv .log_in_btn {width: 100%;font-size: 1.2em;color: #fff;font-family:"f_Score_mid"; background:#565656; border-radius:45px; height:45px;}
+	.input_chk {width:100%}
+		.input_chk label{display: inline-block; width: 30%}
+	.div_userInfo {margin:4% auto 0}
+		.div_userInfo a {display: inline-block; padding:1% 3%; color:#6D6D6D;font-size: 1.1em }
+	.sns_log .menuTitle {position: relative; width: 100%; height: 80px;}
+		.sns_log .menuTitle .n1 {position: absolute;top:50%; width: 100%;height: 1px; background: #333;}
+		.sns_log .menuTitle .n2{position: absolute;top: 50%; left: 50%; transform:translate(-50%,-50%);text-align: center;z-index:44; background: #fff; font-size: 1.4em;color: #333;min-width: 55%; padding: 0 10px;letter-spacing: -1px;}
+
+	.happy_membBanner {margin: 5% auto }
+		.happy_membBanner .top {color:#000; font-family:"f_Score_mid";font-size: 2.5em;line-height:1.5}
+		.happy_membBanner .sub {color:#000; font-family:"f_Score_reg";font-size: 1.2em;}
+
+/** 회원가입 **/
+.joinForm {margin: 5% auto 10%;}
+	.btn_joinCheck {display: inline-block;width: 100%; background:#fff; color: #565656; border: 1px solid #565656;border-radius: 10px; text-align: center; font-family:"f_Score_mid"; font-size: 1.2em;height: 45px;line-height: 45px; }
+	.btn_joinCheck.all_Ok { color: #CF4543;border-color: #CF4543}
+	.btn_joinOk {display: inline-block;width: 100%; background:#828282; overflow: hidden;color: #fff; border-radius: 10px; text-align: center; font-family:"f_Score_mid"; font-size: 1.2em;height: 45px;line-height: 45px; }
+		.btn_joinOk a.nextStep {background:#CF4543; color: #fff;}
+	.joinForm label input {display:none}
+	.joinFormList {margin-top: 5%}
+		.joinFormList li {position: relative; border-top: 1px solid #D0D0D0; width: calc(100% - 10px); }
+			.joinFormList .tit {width:100%;padding: 15px 5px;font-size: 1em;}
+				.joinFormList .tit label:before{content:'';display: inline-block; width: 30px; height: 30px;vertical-align: middle; background: url('/img/m_renewal/icon_check_no.png'); background-size: 100%;margin-right: 10px;}
+				.joinFormList .tit.active label:before{background: url('/img/m_renewal/icon_check_ok.png');background-size: 100%;}
+				.joinFormList .tit label {display: inline-block; width: 80%; height: 100%;}
+				.joinFormList li > a {position: absolute;right: 10px; top:20px;color: #8B8B8B;font-size: 1em;}
+				.joinFormList .joinContent {display: none; padding:20px 15px;overflow-y: scroll; height: 100px;border-top: 1px solid #D0D0D0;}
+					.joinFormList .joinContent * {width:97%;margin:auto;text-align: justify !important;line-height:1.7;word-wrap:break-word;word-break:break-all}
+		.joinFormList li:last-child {border-bottom: 1px solid #D0D0D0; }
+#new_joinUsForm {}
+	#new_joinUsForm .dm {background:#f8f8f8; height: 10px; width: 100%}
+	#new_joinUsForm .mContainDiv {margin-top: 0}
+
+/*마이페이지*/
+.re_myPage {}
+	.re_myPage .happy_membBanner {margin-top: 40px; position: relative}
+		.re_myPage .nav_myP{position:absolute; top:-20px; display:}
+			.re_myPage .nav_myP a{font-size: 0.9em; color: #757575; border-bottom: 1px solid #aaa; }
+		.re_myPage .happy_membBanner .top {font-size:2.1em;margin-top:7px;letter-spacing: -1px}
+			.re_myPage .happy_membBanner .sub {color: #757575;line-height:1.5;font-size: 1em;letter-spacing: -1px}
+				.re_myPage .happy_membBanner .sub a {color: #757575;line-height:1; border-bottom: 1px solid #A8A8A8; }
+
+		.color_RedP {color:#cf4543 !important;}
+/*마이페이지용 퀵메뉴*/
+.quick_myP_menu{padding: 15px 0; background: #F8F8F8; }
+	.quick_myP_box {background:#fff;}
+		.quick_myP_cont {float: left; border-right: 1px solid #FFF; text-align: center; width: calc(25% - 1px);padding: 10px 0; min-height:65px}
+			.quick_myP_cont .tit {font-size: 1em;font-family:"f_Score_reg";line-height: 3}
+			.quick_myP_cont .count {font-size: 1.7em;font-family:"f_Score_mid";color: #cf4543}
+				.quick_myP_cont .count span{font-size: 0.6em;}
+				.quick_myP_cont .messege_count span {font-size:1em;font-family:"f_Score_mid";} /*쪽지함 폰트 css*/
+		/*선택됐을때 CSS*/
+		.quick_myP_cont.active { border-bottom: 3px solid #cf4543}
+			.quick_myP_cont.active .tit, .quick_myP_cont.active .count {color: #cf4543}
+		/*선택됐을때 CSS*/
+	/*기본CSS*/
+	.quick_myP_box.pageOff {}
+		.quick_myP_box.pageOff .quick_myP_cont{border-right-color: #EEEEEE; }
+	/*기본CSS*/
+		
+/*마이페이지 메뉴 리스트*/
+.myP_list_box {min-height: 250px;}
+	.myP_list_box li {padding:4% 4%; font-size: 1.2em;width: 92%;border-bottom: 1px solid #D0D0D0;}
+	.myP_list_box li:after{content:'>';font-weight: bold; float: right}
+
+/*My포인트*/
+.all_my_pointBox {background: #cf4543;padding: 5% 7% 3%; border-radius: 20px 20px 0 0; }
+	.all_my_pointBox .tit_point {font-size: 3em; color: #fff;font-family:"f_Score_bold";}
+			.all_my_pointBox .tit_point span{font-size: 0.7em;padding-left: 2%}
+		.all_my_pointBox .btn_small_dark {margin-top: 15px;border: 1px solid #fff; color:#fff; padding: 2% 4%; width: 100px; text-align: center; background: transparent;line-height: 20px;height: 20px;border-radius: 20px;}

@@ -1,0 +1,79 @@
+.word--swing {
+	font-size: 15vw;
+	font-family: 'Londrina Solid', serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	/*color: #0e0e19;*/
+	line-height: 1;
+	perspective: 800px;
+}
+
+.word--swing > span:first-child span:first-of-type,
+.word--swing > span:first-child span:last-of-type  {
+	color: #ea757f;
+}
+
+.word--swing > span:nth-child(2) span:first-of-type, 
+.word--swing > span:nth-child(2) span:last-of-type {
+	color: #7577ea;
+}
+
+.word--swing > span:nth-child(3) span:first-of-type,
+.word--swing > span:nth-child(3) span:last-of-type  {
+	color: #8dea75;
+}
+
+.word--swing > span:nth-child(4) span:first-of-type,
+.word--swing > span:nth-child(4) span:last-of-type  {
+	color: #e2e623;
+}
+
+.word--swing > span:nth-child(5) span:first-of-type,
+.word--swing > span:nth-child(5) span:last-of-type  {
+	color: #ffc107;
+}
+
+.word--swing > span:nth-child(6) span:first-of-type,
+.word--swing > span:nth-child(6) span:last-of-type  {
+	color: #6830cb;
+}
+
+.word--swing > span:nth-child(7) span:first-of-type,
+.word--swing > span:nth-child(7) span:last-of-type  {
+	color: #f02424;
+}
+
+.word--swing > span:nth-child(8) span:first-of-type,
+.word--swing > span:nth-child(8) span:last-of-type  {
+	color: #4cc5f4;
+}
+
+.word--swing svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 450px;
+	height: 510px;
+	margin: -255px 0 0 -225px;
+	pointer-events: none;
+}
+
+.word--swing svg circle {
+	fill: currentColor;
+	opacity: 0;
+	transform-origin: 50% 50%;
+}
+
+.word--swing span {
+	display: block;
+	position: relative;
+}
+
+.word--swing span span:first-of-type {
+	position: absolute;
+	font-family: 'Londrina Outline';
+}
+
+.word--swing span span:last-of-type {
+	transform-style: preserve-3d;
+}

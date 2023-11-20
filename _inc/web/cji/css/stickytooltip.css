@@ -1,0 +1,42 @@
+.stickytooltip{
+box-shadow: 5px 5px 8px #818181; /*shadow for CSS3 capable browsers.*/
+-webkit-box-shadow: 5px 5px 8px #818181;
+-moz-box-shadow: 5px 5px 8px #818181;
+display:none;
+position:absolute;
+display:none;
+border:2px solid black; /*Border around tooltip*/
+background:white;
+z-index:3000;
+}
+
+
+.stickytooltip .stickystatus{ /*Style for footer bar within tooltip*/
+background:black;
+color:white;
+padding-top:5px;
+text-align:center;
+font:11px 돋움;
+letter-spacing:-1px;
+}
+
+.stickytooltip_bar{
+display:none;
+position:absolute;
+color:#fff;
+background-color:#5a72e9;
+z-index:3000;
+padding:15px;
+letter-spacing:-1px;
+
+}
+
+
+.stickytooltip_bar .stickystatus{ /*Style for footer bar within tooltip*/
+background:black;
+color:white;
+padding-top:5px;
+text-align:center;
+font:11px 돋움;
+letter-spacing:-1px;
+}
