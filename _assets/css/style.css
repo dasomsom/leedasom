@@ -834,6 +834,7 @@ main > section {
   }*/
 }
 @media all and (max-width: 780px) {
+  #topMenu {left:15px}
   .collection_list {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -854,6 +855,7 @@ main > section {
   .collection_detail .img_container .img_box br {
     display: none !important;
   }
+  .footer a {display: none;}
 }
 
 /*# sourceMappingURL=style.css.map */
