@@ -48,6 +48,14 @@
         .collection_detail .txt_contdetail_box { margin: 0 !important; }
         .tab_icon_box img:nth-last-child(-n + 2) { border-radius: 5px; background-color: #fff;}
         .img_box iframe { width: 100%; height: 60vh;}
+        @media all and (max-width: 780px) {
+            .collection_detail .img_container {margin-top: 90px !important;}
+            .txt_contdetail_box  {flex-direction: column-reverse; }
+            .tab_icon_box{position: absolute;top: -70px;}
+            .tab_icon_box img {max-width: none;width: 30px;height: 30px;}
+            .img_container .title {font-size: 1.7em;margin-bottom: 0px !important;margin-top: 20px;}
+            .img_container p {display: block !important;font-size: 0.8em; color: #6f6f6f;margin-bottom: 30px;position: absolute;bottom: 10px;text-align: center;width: calc(100% - 115px);}
+        }
     </style>
   </head>
 <body>
@@ -60,7 +68,8 @@
                 <div class="fontibm bold" style="font-size: 3em;">중국어학사이트 컨텐츠 제작</div>                
             </div>
 
-            <div class="img_container"> 
+            <div class="img_container posi_r"> 
+                <p class="none">PC환경에서 확인하시길 바랍니다.</p>
                 <div class="txt_contdetail_box flex all_ct">
                     <div class="title" style="text-align: center;">학습원리소개 페이지</div>
                     <div class="tab_icon_box">

@@ -84,7 +84,7 @@ HTML에서 클래스 처럼 사용하는 버전 : (& + name) */
 /* nav
 ---------------------------------------------------------------*/
 #topMenu {
-  width: 100%;
+  /* width: 100%; */
   height: 52px;
   background: transparent;
   position: fixed;
@@ -94,7 +94,7 @@ HTML에서 클래스 처럼 사용하는 버전 : (& + name) */
 
 .nav-bar-bg {
   position: fixed;
-  width: calc(100% - 120px);
+  /* width: calc(100% - 120px); */
   height: 52px;
 }
 .nav-bar-bg nav {
@@ -551,6 +551,7 @@ main > section {
 
 #footer {
   position: absolute;
+  left: 0;
   bottom: -150px;
   width: 100%;
   border-top: 1px solid #eee;
@@ -835,6 +836,9 @@ main > section {
 @media all and (max-width: 780px) {
   .collection_list {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .collection_detail .txt_container .fontibm {
+    font-size: 1.7em !important;
   }
   .collection_detail .txt_container .txt_contdetail_box {
     flex-direction: column-reverse;
