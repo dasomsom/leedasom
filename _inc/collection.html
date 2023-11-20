@@ -25,6 +25,7 @@
         .collection_list li div {display: none;}
         @media all and (max-width: 780px){
          .collection {padding : 0 30px 150px;}
+         main > section {margin-top: 100px;}
          .fontabril {font-size: 4em !important;margin-bottom: 20px;}   
         }
     </style>
@@ -41,7 +42,7 @@
                 $(".tabmenu_round li").removeClass("active");
                 $(".collection_list li").show();
 
-                if(trim[1]){    
+                if(trim[1]){
                     $(".tabmenu_round #"+ trim[1]).addClass("active");
                     $(".collection_list li:not('."+ trim[1] +"')").hide();  
                 }
