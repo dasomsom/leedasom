@@ -27,6 +27,8 @@
                 var textTitle = $(this).find("img").attr("title");
                 var textAlt = $(this).find("img").attr("alt");
                 var mainIframe = $("#main_iframe");
+                var iFrameParent =mainIframe.parent(); 
+                mainIframe.remove();
                 
                 // 슬라이드 버튼
                 $(this).addClass("select");
@@ -39,6 +41,7 @@
                 text.text(textTitle);
                 // 슬라이드 내용 교체
                 mainIframe.attr("src","/_inc/web/cji/html/edu/html/" + textAlt + ".html");
+                iFrameParent.append(mainIframe);
             });
         });
     </script>
@@ -52,7 +55,6 @@
             .collection_detail .img_container {margin-top: 90px !important;}
             .txt_contdetail_box  {flex-direction: column-reverse; }
             .tab_icon_box{position: absolute;top: -70px;}
-            .tab_icon_box img {max-width: none;width: 30px;height: 30px;}
             .img_container .title {font-size: 1.7em;margin-bottom: 0px !important;margin-top: 20px;}
             .img_container p {display: block !important;font-size: 0.8em; color: #6f6f6f;margin-bottom: 30px;position: absolute;bottom: 10px;text-align: center;width: calc(100% - 115px);}
         }

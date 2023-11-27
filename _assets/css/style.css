@@ -566,7 +566,6 @@ main > section {
   top: 50%;
 }
 .footer > section {
-  width: 20%;
   opacity: 0.5;
 }
 
@@ -838,13 +837,18 @@ main > section {
   .collection_list {
     grid-template-columns: repeat(1, 1fr);
   }
-  .collection_detail{padding:100px 30px;}
+  .collection_detail{padding:100px 30px 150px;}
+  .label_box .label::after {font-size: 0.8em;}
   .collection_detail .txt_container .fontibm {
     font-size: 1.7em !important;
+    word-break: keep-all;
   }
   .collection_detail .txt_container .txt_contdetail_box {
     flex-direction: column-reverse;
   }
+
+  .tab_icon_box img {max-width: none;width: 30px;height: 30px;}
+  .collection_detail .img_container {padding: 40px;}
   .collection_detail .img_container .img_box {
     display: flex;
     flex-direction: column;

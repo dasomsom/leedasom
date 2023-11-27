@@ -20,6 +20,7 @@
       $(".ico_back img").hover(function(i, e){
           $(this).toggleClass("up");
       });
+      //parent.window.location='./'
     });
   </script>
   <style>
@@ -29,7 +30,7 @@
 <body>
   <header class="nav-bar-bg">
     <nav class="flex flex_btw">
-      <a href="javascript:;"  onclick="parent.window.location='/'" class="ico_back posi_r">
+      <a href="javascript:history.back();" class="ico_back posi_r">
         <img src="/_assets/img/icon_arrow_gray.png" alt="뒤로가기" title="뒤로가기" class="up">
         <img src="/_assets/img/icon_arrow_black.png" alt="뒤로가기" title="뒤로가기">
       </a>
